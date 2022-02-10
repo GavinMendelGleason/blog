@@ -218,6 +218,10 @@ the use-case we're actually working with. Making patch the unit of
 update gives us just the right granularity for our application, which
 really can't be known in advance.
 
+This is an advancement beyond the sort of isolation options usually
+provided by a database, and one that extends naturally to objects or
+graphs of interconnected objects (as exists in TerminusDB).
+
 ## What we have and where we are going
 
 I've implemented a simple JSON diff and patch in TerminusX. But we're
