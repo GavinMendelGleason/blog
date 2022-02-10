@@ -10,7 +10,7 @@ so effectively?
 
 Is it possible to do the same for structured data?
 
-# Web3
+## Web3
 
 These questions are really at the heart of the *distributed* part of
 web3. Web3 has other parts: immutability, cryptographic security,
