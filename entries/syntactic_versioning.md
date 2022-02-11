@@ -1,4 +1,4 @@
-# What if Git worked with Programming Languages?
+# Syntactic Versioning: What if Git worked with Programming Languages?
 
 I use git most days of the week. And for the vast majority of my
 commits, this means committing *code*.

@@ -3,7 +3,11 @@
 I use this "blog" to organize my thoughts on distributed data
 management.
 
-# [JSON diff and patch](./entries/json_diff_and_patch.md)
+# [What if MongoDB and Neo4j had a baby](./entries/mongo_neo4j_terminus.md)
+
+Fri, Feb 11, 2022
+
+# [What's the Difference: JSON diff and patch](./entries/json_diff_and_patch.md)
 
 Thurs, Feb 10, 2022
 
@@ -11,7 +15,7 @@ Thurs, Feb 10, 2022
 
 Tues, Sept 28, 2021
 
-# [Syntactic Versioning](./entries/syntactic_versioning.md)
+# [Syntactic Versioning: What if Git worked with Programming Languages?](./entries/syntactic_versioning.md)
 
 Sun, Sept 26, 2021
 
