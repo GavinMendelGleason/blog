@@ -11,7 +11,7 @@ Sun, Feb 13, 2022
 
 Thurs, Feb 10, 2022
 
-# [Many Worlds](./entries/many_worlds.md)
+# [Many Worlds: a philosophy of data collaboration](./entries/many_worlds.md)
 
 Fri, Oct 29, 2021
 
