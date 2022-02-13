@@ -5,7 +5,7 @@ management.
 
 # [What if MongoDB and Neo4j had a baby](./entries/mongo_neo4j_terminus.md)
 
-Fri, Feb 11, 2022
+Sun, Feb 13, 2022
 
 # [What's the Difference: JSON diff and patch](./entries/json_diff_and_patch.md)
 
