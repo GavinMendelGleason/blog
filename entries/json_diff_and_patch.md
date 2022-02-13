@@ -17,7 +17,7 @@ web3. Web3 has other parts: immutability, cryptographic security,
 etc. But these other elements do not answer how to perform
 updates on distributed data stores.[*](#crdt)
 
-In seeking the answer to these questions I was led to see a rather
+In seeking the answer to these questions, I was led to see a rather
 simple tool as foundational: JSON diff and patch.
 
 JSON, because JSON is the structured data format for the web.  This
@@ -26,7 +26,7 @@ everything in our web architecture. Other formats are going to be
 increasingly used as mere optimisations of JSON. Associative arrays
 have the beauty of (*reasonable*) human readability, combined with
 widespread native support in modern computer programming
-languages. Both compters and humans can read it, what's not to love!
+languages. Both computers and humans can read it, what's not to love!
 
 But what about the diff and patch part?
 
@@ -36,7 +36,7 @@ A fundamental tool in git's strategy for distributed management of
 source code is the concept of the *diff* and the *patch*. These
 foundational operations are what make git possible. *diff* is used to
 construct a *patch* which can be applied to an object such that the
-final state *makese sense* for some value of *makes sense*.
+final state *makes sense* for some value of *makes sense*.
 
 The application of patches happens because we want a certain *before*
 state to be lifted to a certain *after* state. The patch doesn't
@@ -76,8 +76,8 @@ online store.
 
 If Alice opens the object in an application and changes the name of
 the item to "Retro Encabulator Mark II", it should be possible for Bob
-to update the suppliers list simultanteously without either stepping
-on eachothers toes.
+to update the suppliers list simultaneously without either stepping
+on each others toes.
 
 In applications this sort of curation operation is often achieved with
 a *lock* on the object. Which means only one person can win. And locks
@@ -112,7 +112,7 @@ Now both can apply cleanly to the original document listed above. We
 can stack either patch in any order without difficulty. Perhaps we ask
 Bob and Alice to agree on the application order (using pull / push as
 is done with git). But maybe we just allow them to apply when they
-arrive. The answer depends on the work flow.
+arrive. The answer depends on the workflow.
 
 ## Conflict
 
@@ -134,11 +134,11 @@ This conflict can be surfaced to Alice, and Bob can be allowed to go
 about his business. Could this particular problem be resolved in a
 purely automatic way with a CRDT? Definitely, but it probably will not
 result in what you want. Last first will work of course, but then
-which is more right migth need human review, and even worse it might
+which is *more right* might need human review, and even worse it might
 result in both results being interleaved (a likely outcome!).
 
-We *could* make the before and after, however, be a text based patch
-using a textual diff. Probably gits line based approach is *not* what
+We *could* make the before and after, however, be a text-based patch
+using a textual diff. Probably gits line-based approach is *not* what
 we want here, but rather one that takes words as atoms. It will not
 solve this particular conflict, but it could make text fields much
 more flexible.
@@ -179,7 +179,7 @@ any fully automatic diff.
 But there are other workflows which might want slightly more flexible
 approach to ensuring data integrity. The *before* state is really
 sitting there to specify the *read object model*. It tells us what we
-want to be true when we aply the patch.
+want to be true when we apply the patch.
 
 With git this might be lines of text. For instance, to change a very
 simple `README.txt` which initially says `hello world` to one that
@@ -236,7 +236,7 @@ the wild. Do let me know!
 
 <a name="crdt">*</a> CRDTs answer this question for certain types of
 data structures - but not for all. Only certain *types* of
-datastructures can be updated with these approaches. In addition many
+data structures can be updated with these approaches. In addition, many
 updates require human aided review and will never require a
 CRDT. Still others will have *object read model* conditions which can
 not be specified in a CRDT. Ultimately our databases should support a
