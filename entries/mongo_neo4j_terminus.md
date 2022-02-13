@@ -262,6 +262,8 @@ This elaboration could be useful as a means of communicating the
 document with much of its schematic information included. But for most
 application development purposes, it simply is not needed.
 
+I'll be writing more about the elaboration process in a subsequent
+post.
 
 ## Thesis - Antithesis - Synthesis
 
