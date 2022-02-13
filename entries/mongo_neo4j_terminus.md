@@ -7,7 +7,8 @@ the relational enthusiasts think.
 The emergence of MongoDB brought the 0-to-60 for data storage in
 applications down by an order of magnitude. It's like a rocket sled
 for application development (and probably just as safe). But developer
-experience and ease of use are paramount, especially in a world over-burdened with complexity.
+experience and ease of use are paramount, especially in a world
+over-burdened with complexity.
 
 Neo4j is no slouch either. Before Neo4j, graph databases were
 virtually unknown. While it hasn't had the same impact of total
@@ -71,26 +72,28 @@ look something like:
 
 We write down the references relative to the base URL prefix which we
 assume for our collection, which might be something like
-`http://terminusdb.com/db/Terminators/Humans/`. The fully qualified URL would be rendered as something like: `http://terminusdb.com/db/Terminators/Humans/Person/Jim+Smith`. This makes it easier
-to read and write. But how do we know this is a reference and not a
-string? This is an important distinction for several reasons. It tells
-us how to index our objects such that traversals are fast, making it a
-real relationship rather than something that has to be calculated. It
-also keeps us from accidental misinterpretation - disambiguating a URL
-from a database relationship for instance. But it also allows us to
-ensure referential integrity, at least for links which are internal to
-our database. This is really important when dealing with large linked
-data stores, otherwise we could easily end up with lots of broken
-links. It's very similar to a foreign key-constraint in a relational
-database.
+`http://terminusdb.com/db/Terminators/Humans/`. The fully qualified
+URL would be rendered as something like:
+`http://terminusdb.com/db/Terminators/Humans/Person/Jim+Smith`. This
+makes it easier to read and write. But how do we know this is a
+reference and not a string? This is an important distinction for
+several reasons. It tells us how to index our objects such that
+traversals are fast, making it a real relationship rather than
+something that has to be calculated. It also keeps us from accidental
+misinterpretation - disambiguating a URL from a database relationship
+for instance. But it also allows us to ensure referential integrity,
+at least for links which are internal to our database. This is really
+important when dealing with large linked data stores, otherwise we
+could easily end up with lots of broken links. It's very similar to a
+foreign key-constraint in a relational database.
 
 These logical constraints are described with a schema. The one for a
-Person might be something like:
+person might be something like:
 
 ```javascript
 { "@type" : "Class",
   "@id" : "Person",
-  "@key" : { "@type" : "Lexical, "@fields" : [ "forename", "surname" ] },
+  "@key" : { "@type" : "Lexical", "@fields" : [ "forename", "surname" ] },
   "forename" : "xsd:string",
   "surname" : "xsd:string",
   "friends" : { "@type" : "Set", "@class" : "Person" }
@@ -98,7 +101,7 @@ Person might be something like:
 ```
 
 The use of JSON for a document database with hyperlinks gives us the
-best of both worlds. The cost we pay is that we have to be
+best of both worlds. The price we pay is that we have to be
 schema-first, something that is somewhat alien to both the MongoDB and
 GraphDB communities, but was common in the RDBMS era.
 
@@ -186,7 +189,7 @@ Let's extend the definition of a person above with an address.
 
 { "@type" : "Class",
   "@id" : "Person",
-  "@key" : { "@type" : "Lexical, "@fields" : [ "forename", "surname" ] },
+  "@key" : { "@type" : "Lexical", "@fields" : [ "forename", "surname" ] },
   "forename" : "xsd:string",
   "surname" : "xsd:string",
   "address" : "Address",
