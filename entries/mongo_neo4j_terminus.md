@@ -210,7 +210,7 @@ Now our record for Jim might be something like:
   "friends" : ["Person/Jill+Stone","Person/Peter+Miller"],
   "address" : { "line1" : "Ferdinand Bordewijkstraat 1",
                 "city" : "Wageningen",
-                "province : "Gelderland",
+                "province" : "Gelderland",
                 "postal_code" : "6708 RB",
                 "country" : "Netherlands" } }
 ```
