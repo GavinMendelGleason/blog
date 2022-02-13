@@ -32,7 +32,7 @@ strings.
 But trees are not really the only data structure we need even if they
 are the only thing that JSON can easily represent. Our programming
 languages have references or pointers because we need them to
-represent many of the datastructures that we encounter. Although not
+represent many of the data structures that we encounter. Although not
 everything is a graph, many things are. This is the insight which
 graph databases bring. Relationships *between* data are almost as
 important as the data itself.
@@ -41,7 +41,7 @@ But why not both? Can't we have a database that allows us to fully
 overcome the object-relational impedence mismatch of old? Which fuses
 the benefits of the document store with the benefits of the graph?
 
-Luckily we can have our cake and eat it to. What we need is a
+Luckily we can have our cake and eat it too. What we need is a
 love-child of Mongo and Neo4j.
 
 ## The Document Graph
@@ -52,7 +52,7 @@ reference and a way to ensure that we have referential integrity
 storage data structures such that we can follow these links
 efficiently.
 
-In TerminusDB we do this using URLs. This borrows from the original
+In TerminusDB, we do this using URLs. This borrows from the original
 concept of the HTML page, which is iself a structured document with
 hyper-links, but one designed for rendering rather than data
 manipulation.
@@ -71,7 +71,7 @@ look something like:
 
 We write down the references relative to the base URL prefix which we
 assume for our collection, which might be something like
-`http://terminusdb.com/db/Terminators/Humans/`. This makes it easier
+`http://terminusdb.com/db/Terminators/Humans/`. The fully qualified URL would be rendered as something like: `http://terminusdb.com/db/Terminators/Humans/Person/Jim+Smith`. This makes it easier
 to read and write. But how do we know this is a reference and not a
 string? This is an important distinction for several reasons. It tells
 us how to index our objects such that traversals are fast, making it a
