@@ -11,6 +11,10 @@ Sun, Feb 13, 2022
 
 Thurs, Feb 10, 2022
 
+# [Many Worlds](./entries/many_worlds.md)
+
+Fri, Oct 29, 2021
+
 # [Why TerminusX](./entries/why_terminusx.md)
 
 Tues, Sept 28, 2021
