@@ -1,7 +1,7 @@
 # Gavin's Blog
 
-I use this "blog" to organize my thoughts on distributed data
-management.
+This is Gavin Mendel-Gleason's technical blog. I use this primarily to
+organize my thoughts on distributed data management.
 
 # [What if MongoDB and Neo4j had a baby](./entries/mongo_neo4j_terminus.md)
 

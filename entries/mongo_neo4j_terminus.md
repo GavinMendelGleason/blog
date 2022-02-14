@@ -271,17 +271,16 @@ post.
 
 The use of subdocuments, the automatic generation of IDs, and the
 complete elimination of blank nodes is a major improvement over what
-exists already in the semantic web world. But instead of abandoning,
-TerminusDB has attempted to improve, by keeping around
+exists already in the semantic web world.
 
 The addition of native JSON document store capabilities as well as
 being a native graph database with fast link traversal means we have a
-synthesis which leverages the best advantages of both worlds.
+synthesis which leverages the advantages of both worlds. Documents and
+graphs can live together naturally and compliment eachother.
 
-We're not done yet, in the sense that we want to reduce the barrier to
-entry still futher, and eliminate some of the frictions of
-schema-first, but the current iteration of TerminusDB allows one to
-see the advantages already.
+There is work to be done to reduce the barrier to entry still futher,
+and eliminate some of the frictions of schema-first. However, we can
+already see the advantages of what we have already in TerminusDB.
 
 <a name="wordnet">*</a> To see a great example of this try sorting out
 how to navigate the Lemmata in WordNet.
