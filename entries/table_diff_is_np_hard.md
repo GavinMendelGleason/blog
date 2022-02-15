@@ -104,7 +104,7 @@ A table diff generates a patch from two different matrices of
 values. Tables of values are the types of things that you might find
 in an Excel spreadsheet or a CSV.
 
-```javacript
+```javascript
 var x = [[1,2,3],
          [4,5,6],
          [7,8,9]]
