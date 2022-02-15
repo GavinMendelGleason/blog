@@ -170,14 +170,16 @@ found helpful.
 
 ## Russian Dolls
 
-The first trick was inspired by *Russian Doll Envelopes*. We want to
-find maximal rectangles that exist in both matrix A and Matrix B. We
-can choose an area size A, and then test all windows between A and
-B. If we find a match, then we can try a bigger area. Using binary
-search we can find the largest overlap in a log-like way. Once we've
-found the largest, we *know* that we can exclude this region, and
-since all smaller areas are subsumed by this one, we can continue the
-search on sub-problems.
+The first trick was inspired by *Russian Doll Envelopes*. This is a
+commonly used attack strategy in combinatorial optimization.  We want
+to find maximal rectangles that exist in both matrix A and Matrix
+B. We can choose an area size A, and then test all windows between A
+and B. If we find a match, then we can try a bigger area. Using a
+[binary search](https://en.wikipedia.org/wiki/Binary_search_algorithm)
+we can find the largest overlap in a log-like way. Once we've found
+the largest, we *know* that we can exclude this region, and since all
+smaller areas are subsumed by this one, we can continue the search on
+sub-problems.
 
 ## Moves Matter
 
