@@ -3,6 +3,10 @@
 This is Gavin Mendel-Gleason's technical blog. I use this primarily to
 organize my thoughts on distributed data management.
 
+# [It turns out, Table Diff is NP-hard, but we tried it anyway](./entries/table_diff_is_np_hard.md)
+
+Tues, Feb 15, 2022
+
 # [What if MongoDB and Neo4j had a baby](./entries/mongo_neo4j_terminus.md)
 
 Sun, Feb 13, 2022
