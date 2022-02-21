@@ -3,6 +3,10 @@
 This is Gavin Mendel-Gleason's technical blog. I use this primarily to
 organize my thoughts on distributed data management.
 
+# [What's in a Name: URI Generation and Unique names for objects](./entries/iri_generation.md)
+
+Mon, Feb 21, 2022
+
 # [It turns out, Table Diff is NP-hard, but we tried it anyway](./entries/table_diff_is_np_hard.md)
 
 Tues, Feb 15, 2022
