@@ -101,7 +101,7 @@ and the *instance* or *document* level.
 These are specified in a context object. A typical context object will
 look something like:
 
-```javascript
+```json
 { "@type" : "Context",
   "@schema" : "https://lib.terminusdb.com/people#",
   "@base" : "https://lib.terminusdb.com/people/" }
@@ -131,7 +131,7 @@ individual person can have a uniquely designated object in our system.
 
 The schema document for a `Person` class might look like this:
 
-```javascript
+```json
 { "@type" : "Class",
   "@id" : "Person",
   "@key" : { "@type" : "Lexical", "@fields" : ["ssn"]},
@@ -143,7 +143,7 @@ The schema document for a `Person` class might look like this:
 Using this key specification, an individual for the class would like
 something like:
 
-```javascript
+```json
 { "@type" : "Person",
   "@id" : "Person/078-05-1120",
   "ssn" : "078-05-1120",
@@ -154,7 +154,7 @@ In fact, since we are using a key, we can simply leave out the `"@id"`
 field when we are submitting and the field can be calculated
 automatically. We could instead submit the following document:
 
-```javascript
+```json
 { "@type" : "Person",
   "ssn" : "078-05-1120",
   "name" : "Hilda Schrader Whitcher" }
@@ -171,7 +171,7 @@ should not be displayed to everyone who might want to be able to
 *reference* such a document. In order to avoid the disclosure of
 information in the name, or if the name does not display very useful.
 
-```javascript
+```json
 { "@type" : "Class",
   "@id" : "Person",
   "@key" : { "@type" : "Hash", "@fields" : ["ssn"]},
@@ -250,7 +250,7 @@ can be safely ignored.
 
 Our event schema might look as follows:
 
-```javascript
+```json
 { "@type" : "Enum",
   "@values" : ["Volcanic Eruption", "Hell Fire", "Plague"] }
 
@@ -263,7 +263,7 @@ Our event schema might look as follows:
 When we insert some events (using the document interface), they might
 look as follows:
 
-```javascript
+```json
 [{ "@type" : "Event",
    "event_type" : "Hell Fire",
    "actor" : "God" },
@@ -277,7 +277,7 @@ look as follows:
 
 The API will return a list of document IDs:
 
-```javascript
+```json
 ["Event/480d554f9357b974694a4ffc42f39b9ac38761bc28257cff14168ba18912c398",
  "Event/456691cbb7564edad50ffd4f4245f760b1d4eb4459a31761324180ef1fa75d50",
  "Event/ba629b086337d94c7ca89c02d04e6fa2e9cb28bbf03b7e93f30e74a9b5a7962c"]
