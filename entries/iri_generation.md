@@ -169,7 +169,7 @@ This particular case demonstrates a (famous!) leak of a social
 security number. We reference a private, but unique identifier which
 should not be displayed to everyone who might want to be able to
 *reference* such a document. In order to avoid the disclosure of
-information in the name, or if the name does not display very useful.
+information in the name, or if the name does not display very useful information we can use a *hash*.
 
 ```json
 { "@type" : "Class",
