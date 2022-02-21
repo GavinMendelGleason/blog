@@ -187,6 +187,44 @@ With this alternative naming strategy we have the id generated using sha256 as:
 Now we have the same ability to generate the name uniquely, but this
 time without leaking information the IRI.
 
+For those from an RDF background, it might be interesting to see that
+this consists of two graphs, one for the schema and one for instance,
+with the following turtle:
+
+Schema:
+```turtle
+@base <terminusdb:///schema#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix sys: <http://terminusdb.com/schema/sys#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix doc: <data/> .
+
+doc:Cons\/2387e9641235cbfcc495f3deadb79d209a97b48d0233dbf015399eb74f8629fc
+  a rdf:List ;
+  rdf:first <schema#ssn> ;
+  rdf:rest rdf:nil .
+
+<schema#Person>
+  a sys:Class ;
+  sys:key <schema#Person/key/Hash/ssn> ;
+  <schema#name> xsd:string ;
+  <schema#ssn> xsd:string .
+
+<schema#Person/key/Hash/ssn>
+  a sys:Hash ;
+  sys:fields doc:Cons\/2387e9641235cbfcc495f3deadb79d209a97b48d0233dbf015399eb74f8629fc .
+```
+
+Instance:
+```turtle
+@base <terminusdb:///data/> .
+@prefix scm: <../schema#> .
+<Person/ef6385e04468128770c86bf7e098c70fa7bbc1a50d81a071087f925283a4e7af>
+  a scm:Person ;
+  scm:name "Hilda Schrader Whitcher" ;
+  scm:ssn "078-05-1120" .
+```
+
 # When is a Thing not Another Thing
 
 Keeping the key in the name is a kind of content addressability. And
