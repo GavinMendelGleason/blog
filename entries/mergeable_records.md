@@ -190,7 +190,7 @@ and
   "@id" : "Company/DataChemist",
   "name" : [{ "@type" : "Employees",
               "at" : "2020-01-01T20:24:32+00:00",
-              "source" : "Lukee said so",
+              "source" : "Luke said so",
               "value" : "DataChemist" }],
   "employees" : [{ "@type" : "Employees",
                    "at" : "2020-01-01T20:24:32+00:00",
