@@ -101,7 +101,7 @@ record a bit to give it a bit more variety.
 { "@type" : "Class",
   "@id" : "Employees",
   "@inherits" : ["TemporalScope", "Source"],
-  "@key" : { "@type" : Lexical",
+  "@key" : { "@type" : "Lexical",
              "@fields" : ["name", "value", "at"] }
   "value" : "xsd:integer"
 }
@@ -145,7 +145,7 @@ of spelling etc.
 { "@type" : "Class",
   "@id" : "Name",
   "@inherits" : ["TemporalScope", "Source"],
-  "@key" : { "@type" : Lexical",
+  "@key" : { "@type" : "Lexical",
              "@fields" : ["name", "value", "at"] }
   "value" : "xsd:string"
 }
