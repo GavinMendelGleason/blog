@@ -3,6 +3,10 @@
 This is Gavin Mendel-Gleason's technical blog. I use this primarily to
 organize my thoughts on distributed data management.
 
+# [Mergeable Records: A Data Modelling Appraoch](./entries/mergeable_records.md)
+
+Tues, March 1st, 2022
+
 # [What's in a Name: URI Generation and Unique names for objects](./entries/iri_generation.md)
 
 Mon, Feb 21, 2022
