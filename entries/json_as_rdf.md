@@ -129,6 +129,21 @@ The ability to avoid having a garbage collection phase though means
 that implementation of the random version is simpler, and it's not
 clear that the benefits of sharing are sufficiently great.
 
+## Datatypes
+
+The datatypes of JSON need to have a one-to-one correspondence with
+RDF and XSD so we know how to marshall back and forth. I suggest the
+following:
+
+
+| JSON   | XSD            |
+| :----: | :------------: |
+| number | `xsd:decimal`  |
+| string | `xsd:string`   |
+| bool   | `xsd:boolean`  |
+| null   | `xsd:token`    |
+| array  | `rdf:List `    |
+
 ## Conclusion
 
 I'll be trying to implement a prototype of this, so if anyone has
