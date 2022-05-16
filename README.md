@@ -3,6 +3,10 @@
 This is Gavin Mendel-Gleason's technical blog. I use this primarily to
 organize my thoughts on distributed data management.
 
+# [JSON as RDF](./entries/json_as_rdf.md)
+
+Mon, May 16th, 2022
+
 # [TerminusDB CLI for Push / Pull / Clone](./entries/terminusdb_cli.md)
 
 Mon, April 25th, 2022
