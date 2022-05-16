@@ -144,6 +144,44 @@ following:
 | null   | `xsd:token`    |
 | array  | `rdf:List `    |
 
+## Object type
+
+And how should we mark an object as being of the appropriate type
+here? If we simply add a type specifier such as `sys:JSON` we could
+specify a freely defined JSON as follows:
+
+```json
+{"@type":"sys:JSON", "name":"John", "age":30, "car":null}
+```
+
+And if we want to add a field in the schema as free JSON, we could do
+so as with the following schema:
+
+```json
+{ "@type" : "Class",
+  "@id" : "Thingy",
+  "name" : "xsd:string",
+  "metadata" : "sys:JSON" }
+```
+
+Now an instance object for the following class might look like:
+
+```json
+{ "@type" : "Thingy",
+  "name" : "A Thingy",
+  "metadata" : { "colour" : "green",
+                 "headlight_configuration" : null }}
+```
+
+## Opaque JSON
+
+Even simpler than adding a graphified JSON representation would be a
+completely opaque and unindexed version which simply stored the above
+as a BLOB internally, but which parsed / unparsed the data when
+putting it into the database. This would be sufficient for many
+use-cases but kills the graph-like and queryable nature. The main
+advantage to this would be simplicity.
+
 ## Conclusion
 
 I'll be trying to implement a prototype of this, so if anyone has
