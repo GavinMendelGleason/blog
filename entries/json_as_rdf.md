@@ -28,7 +28,7 @@ Yes, as it turns out, we can.
 
 Let's take the following document which we have borrowed from [json.org](https://json.org/example.html):
 
-```javascript
+```json
 {"name":"John", "age":30, "car":null}
 ```
 
