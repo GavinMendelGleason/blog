@@ -3,6 +3,10 @@
 This is Gavin Mendel-Gleason's technical blog. I use this primarily to
 organize my thoughts on distributed data management.
 
+# [TerminusDB v10.1.0: The Mule](./terminudsb_v1.1.md)
+
+Tues, June 14th, 2022
+
 # [JSON as RDF](./entries/json_as_rdf.md)
 
 Mon, May 16th, 2022
