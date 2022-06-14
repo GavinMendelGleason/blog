@@ -3,7 +3,7 @@
 This is Gavin Mendel-Gleason's technical blog. I use this primarily to
 organize my thoughts on distributed data management.
 
-# [TerminusDB v10.1.0: The Mule](./terminusdb_v1.1.md)
+# [TerminusDB v10.1.0: The Mule](./entries/terminusdb_v1.1.md)
 
 Tues, June 14th, 2022
 
