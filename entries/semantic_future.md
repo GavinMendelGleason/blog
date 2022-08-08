@@ -17,7 +17,7 @@ ignorance on the part of data architects or software engineers. It was
 almost entirely the fault of deep problems with the ideas in the
 Semantic Web itself.
 
-## Why is the Semantic Web a Great Idea
+## Why the Semantic Web is a Great Idea
 
 The Semantic Web's demise is a tragedy, because we need the Semantic
 Web. But as with all things in life, one must adapt or die, and the
@@ -30,7 +30,7 @@ Why do we need the Semantic Web?
 Because distributed, interoperable, well defined data is literally the
 most *central* problem for the current and near future human
 economy. Knowledge is power, and distributable, actionable knowledge,
-creates opportunities and efficiencies impossible with out them.
+creates opportunities and efficiencies impossible with out it.
 
 We need this. And we do not have this. Yet.
 
@@ -86,15 +86,17 @@ as the information itself.
 ## Where it all went wrong
 
 But from here on out, the Semantic Web begins to make some serious
-errors that basically made it impossible to gain large
-acceptance.
+errors that basically made it impossible to gain wide-spread
+acceptance. And while things are improving inside of Semantic Web
+silos, interest is still waning.
 
 ### The Format
 
-The first problem is really 20/20 hindsight. Triples can be used to
-describe a labelled graph. That is, we can have three parts, S, P, and
-O and use this to denote the origin, labelled edge, and target
-respectively. It might look something like:
+The first problem is really one that is hard to see without 20/20
+hindsight. Triples can be used to describe a labelled graph. That is,
+we can have three parts, S, P, and O and use this to denote the
+origin, labelled edge, and target respectively. It might look
+something like:
 
 ```turtle
 http://example.com/a http://example.com#p http://example.com/b
@@ -310,26 +312,81 @@ frankly silly.
 
 ### Not much in the way of useable constraints, sorry
 
-And we can't use OWL to provide effective constraints over data. This meant that 
+And we can't use OWL to provide effective constraints over data. Open
+World precludes this. We can sometimes say when things are wrong, but
+we are never sure if things are right. We might always have one more
+element of a cardinality check that we just don't know yet.
 
+People who really wanted to use the Semantic Web in industry got
+fairly fed up with this difficulty and writing individual programmatic
+checkers and SPARQL queries to patch up the deficiency and eventually
+invented [SHACL](https://www.w3.org/TR/shacl/).
 
+SHACL goes a long way to alleviating this problem with OWL, but then
+it doesn't replace OWL. Instead of giving us a schematic ontology
+language, we are left with two different languages which must now be
+kept in sync. Or we ditch the more descriptive partner, OWL and just
+use SHACL and move RDF data closer to what is already done in SQL.
+
+This can work, and is an improvement to the data stack, but it also
+loses some of the main appeal of the Semantic Web vision of highly
+documented metadata about data.
 
 ### The Right Way (TM) is Right In Front Of Us
 
+Instead of all of this complexity, we should just have a standard
+schema language, which can be written in JSON or YAML. It should allow
+us to describe all of the data model in human language. It should make
+it easy for this to be internationalised.
 
-You can't actually use OWL as a language to ensure
+We could even specify what is derived here *explicitly* separating
+constraint from inference. And we should keep derived data segregated
+from other data so we know the provinence as long as we ensure that
+properties can not be either derived or concrete with the user being
+unable to distinguish.
 
-Then there is trying to 
+Already most of those using JSON in anger in industry are focusing on
+JSON Schema. This solves the easy problems for trees, but not the
+problems for graphs. It also doesn't solve the problem of describing
+the meaning of data, or give any help with inference or calculation.
 
-First, while knowledge representation and data modelling are critical, these sort of First-Order logical tools are an awkward 
+What we need is a
+[Literate](https://en.wikipedia.org/wiki/Literate_programming) Type
+Theory for JSON, which allows us to specify typed references, giving
+us the power of graphs, but the simplicity of JSON at the same time.
 
+We should keep the ideas of URIs because without them we will have a
+very hard time making interoperable data.
 
-There are of course many who will disagree with my takes
-here, but the proof is, as they say, in the pudding. And if you
-disagree with them, you're going to have to answer what the real
-problem is.
+But JSON-LD is more heavy weight than necessary. If we have
+information about our data, then we can know if something is a string
+or a reference or a collection and what type of collection. We
+needen't use something as elaborate as JSON-LD other than perhaps as
+an [elaboration](https://leodemoura.github.io/files/elaboration.pdf).
+
+> The good thing about standards is that there are so many to choose from.
+— Andrew S. Tanenbaum
+
+I've been working to try out some of these ideas at
+[TerminusDB](https://terminusdb.com/), but for this to work it needs
+to be a standard which is widely shared. And for that reason we need a
+standard. We need a movement to revitalise the Semantic Web with
+*ideas* that primarily serve to *do work*.
+
+And this mismatch is what leads me to my next rant...
 
 ## Academics and Industry
+
+The political economy of academia and its interaction with industry is
+part of the origin of our current lack of a functional Semantic
+Web. Academia is structured in a way that there is very little
+incentive for anyone to build useable software. Instead you are
+elevated for rapidly throwing together an idea, a tiny proof of
+concept, and to iterate on microscopic variations of this thing to
+produce as many papers as possible.
+
+In engineering the devil is in the detail. You need to really do the
+hard yards before you even
 
 ## The Future of the Semantic Web
 
