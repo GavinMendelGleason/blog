@@ -221,12 +221,13 @@ Maybe I'm not the sharpest knife in the drawer, but I've written
 significant proofs in these diverse languages, and never experienced
 the same pain.
 
-What is OWL *supposed* to do. It's supposed to be an Ontology
-language. That is a language that reasons about the categories of
-things, and how they inter-relate. It is related, and a superset of
-(Description Logics)[https://en.wikipedia.org/wiki/Description_logic]
-used in several specialised areas in which the codification is both
-complex and very important such as biomedical knowledge.
+What is OWL *supposed* to do. It's supposed to be an
+[Ontology](https://en.wikipedia.org/wiki/Ontology) language. That is,
+a language that helps us reasons about the categories of things, and
+how they inter-relate. It is closely related to [Description
+Logics](https://en.wikipedia.org/wiki/Description_logic) used in
+several specialised areas in which the codification is both complex
+and very important such as biomedical knowledge.
 
 It however makes some fatal errors that impede its use.
 
