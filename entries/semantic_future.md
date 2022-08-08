@@ -245,9 +245,7 @@ can see the problem.
 
 And this is not unsual. One of the formalisers of OWL said this:
 
-!(Inconsistencies produce nonsense more than obvious contradictions, and often when long inference chains are followed. @ImageSnippets
- found one in Wikidata that implied that native Americans are insects, another that Paris is an 'abstract media type'. I'm sure there are more.
-)[/home/gavin/Pictures/Screenshots/Screenshot from 2022-08-08 14-39-49.png]
+!(Inconsistencies produce nonsense more than obvious contradictions, and often when long inference chains are followed. \@ImageSnippets found one in Wikidata that implied that native Americans are insects, another that Paris is an "abstract media type". I'm sure there are more.)[../assets/pat_hayes_twitter.png]
 
 The logical approach simply gives the practitioner too much rope to
 hang themselves, with very little feedback. An advanced researcher can

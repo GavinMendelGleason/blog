@@ -3,6 +3,10 @@
 This is Gavin Mendel-Gleason's technical blog. I use this primarily to
 organize my thoughts on distributed data management.
 
+# [Semantic Future](./entries/semantic_future.md)
+
+Monday, Aug 8th, 2022
+
 # [TerminusDB v10.1.0: The Mule](./entries/terminusdb_v1.1.md)
 
 Tues, June 14th, 2022
