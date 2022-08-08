@@ -373,20 +373,49 @@ to be a standard which is widely shared. And for that reason we need a
 standard. We need a movement to revitalise the Semantic Web with
 *ideas* that primarily serve to *do work*.
 
-And this mismatch is what leads me to my next rant...
+Luckily, there is renewed interest in Semantic Web-like ideas in
+industry, but industry is not looking to the Semantic Web or to
+academia to solve them. It's looking to find them in the ideas of the
+[Data Mesh](https://www.datamesh-architecture.com/).
 
 ## Academics and Industry
 
 The political economy of academia and its interaction with industry is
-part of the origin of our current lack of a functional Semantic
-Web. Academia is structured in a way that there is very little
+the origin of our current lack of a functional Semantic
+Web.
+
+Academia is structured in a way that there is very little
 incentive for anyone to build useable software. Instead you are
 elevated for rapidly throwing together an idea, a tiny proof of
 concept, and to iterate on microscopic variations of this thing to
 produce as many papers as possible.
 
-In engineering the devil is in the detail. You need to really do the
-hard yards before you even
+In engineering the devil is in the detail. You really need to get into
+the weeds before you can know what the right thing to do is. This is
+simultaneously a devestating situation for industry and
+academia. Nobody is going to wait around for a team of engineers to
+finish building a system to write about it in Academia. You'll be
+passed immediately by legions of paper pushers. And in industry, you
+can't just be mucking about with a system that you might have to throw
+away.
+
+We have structured collaboration as the worst of both
+worlds. Academics drop in random ideas, and industry try them, find
+them useless, and move on.
+
+I'm not sure precisely of the right solution to this problem, but I
+think it genuinely has to change. Innovation in industry is rare and
+hard since deep tech is so high risk. And innovation in academia is as
+likely to be pie in the sky as the next big thing, because nobody has
+the capacity to work through the differences between the two.
 
 ## The Future of the Semantic Web
 
+The Future of the Semantic Web is there, the Semantic Web will rise,
+but it will not be the Semantic Web of the past. Humanities access to
+data is of ever increasing importance, and the ability to make
+resilient and distributed methods of curating, updating and utilising
+this information is key. The ideas which drove the creation of the
+Semantic Web are nowhere near obsolete, even if the toolchain and
+technologies which have defined it up to day are fated to go the way
+of the dinosaur.
