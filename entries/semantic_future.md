@@ -127,10 +127,10 @@ hard for a human to read. We can fix this by defining some prefixes
 `http://www.w3.org/2001/XMLSchema#`.
 
 ```turtle
-ex:a exs:p ex:b
-ex:a exs:name "a"^^xsd:string
-ex:b exs:q ex:a
-ex:b exs:name "b"^^xsd:string
+ex:a exs:p ex:b .
+ex:a exs:name "a"^^xsd:string .
+ex:b exs:q ex:a .
+ex:b exs:name "b"^^xsd:string .
 ```
 
 That's certainly a bit better. However, redunancy is not our friend
