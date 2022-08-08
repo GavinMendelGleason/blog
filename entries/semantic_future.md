@@ -1,9 +1,12 @@
 # The Semantic Web is Dead
 ## Long Live the Semantic Web!
 
-The Semantic Web is rarely mentioned these days, so seldom that the
-declaration of its death could be met by most of a younger generation
-of programmers with a question: "The Semantic Who?"
+[The Semantic Web](https://en.wikipedia.org/wiki/Semantic_Web) is
+rarely mentioned these days, so seldom that the declaration of its
+death could be met by most of a younger generation of programmers with
+a question: "The Semantic Who?"
+
+![Semantic web interest decreasing over time](../assets/semantic_web_over_time.png)
 
 This change in status is significant, but in some ways the Semantic
 Web was on life-support since inception, and it continued to survive
@@ -95,14 +98,14 @@ silos, interest is still waning.
 The first problem is really one that is hard to see without 20/20
 hindsight. Triples can be used to describe a labelled graph. That is,
 we can have three parts, S, P, and O and use this to denote the
-origin, labelled edge, and target respectively. It might look
-something like:
+origin, labelled edge, and target respectively as is done with
+[N-Triples](https://www.w3.org/TR/n-triples/). It might look something like:
 
-```turtle
-http://example.com/a http://example.com#p http://example.com/b
-http://example.com/a http://example.com#name "a"^^http://www.w3.org/2001/XMLSchema#string
-http://example.com/b http://example.com#q http://example.com/a
-http://example.com/b http://example.com#name "b"^^http://www.w3.org/2001/XMLSchema#string
+```n-triples
+<http://example.com/a> <http://example.com#p> <http://example.com/b>
+<http://example.com/a> <http://example.com#name> "a"^^<http://www.w3.org/2001/XMLSchema#string>
+<http://example.com/b> <http://example.com#q> <http://example.com/a>
+<http://example.com/b http://example.com#name> "b"^^<http://www.w3.org/2001/XMLSchema#string>
 ```
 
 This is great because we are representing our graph with long names,
