@@ -1,5 +1,4 @@
-# The Semantic Web is Dead
-## Long Live the Semantic Web!
+# The Semantic Web is Dead - Long Live the Semantic Web!
 
 [The Semantic Web](https://en.wikipedia.org/wiki/Semantic_Web) is
 rarely mentioned these days, so seldom that the declaration of its
@@ -170,30 +169,32 @@ directly to vastly popular datastructures which are ubiquitious now in
 programming languages (the associative array) and extremely well
 supported for lookup, iteration, pretty printing and update.
 
-XML by contrast is a bear to look at. And neither is it very fun to
+XML by contrast is awful to look at. And neither is it very fun to
 process XML documents while using a programming language (although
 [prolog](https://www.swi-prolog.org/pldoc/man?predicate=xpath/3)
 actually fits pretty naturally on XML as a query language).
 
 In an alternative world were Lisp won before the AI winter, we might
-have ended up with S-Expressions, but even these are probably worse as
-they do not make naming of the keys mandatory (as opposed to
-by-position arguments), leading to less readability without having
-more context.
+have ended up with
+[S-Expressions](https://en.wikipedia.org/wiki/S-expression), but even
+these are probably worse as they do not make naming of the keys
+mandatory (as opposed to by-position arguments), leading to less
+readability without having more context.
 
-I'm absolutely positive that people are going to complain that syntax
-is just syntax, how things are serialised is superfluous and that a
-good library can make it easy to use INSERT MY THING HERE. But these
-people are wrong and they will drift into obscurity the same way that
-Turtle and XML will. Naming is deeply important, it is no mere
-triviality, so how much more important is sentence structure?
+I'm absolutely positive that some people reading this are going to
+complain that syntax is just syntax, how things are serialised is
+superfluous and that a good library can make it easy to use INSERT MY
+THING HERE. But these people are wrong and their opinions will drift
+into obscurity the same way that Turtle and XML will. Naming is deeply
+important, it is no mere triviality; so how much more important is
+sentence structure?
 
-Of course there is JSON-LD. This was a very serious attempt to bring
-Linked Data into the JSON developments, and should be applauded. It is
-however, needlessly verbose as an interchange format. I'll explain
-more later.
+Of course there is [JSON-LD](https://json-ld.org/). This was a very
+serious attempt to bring Linked Data into the JSON developments, and
+should be applauded. It is however, needlessly verbose as an
+interchange format. I'll explain more later.
 
-JSON, and relatives are still expanding and will continue to do
+JSON, and relatives are still expanding in use and will continue to do
 so. The Semantic Web of the Future will embrace this fact.
 
 ### The Logic
@@ -264,7 +265,7 @@ every day use.
 
 What caused this problem to arise, and what do we do about it?
 
-### Lets make everything the same
+### Lets make everything *potentially* the same
 
 First, not having a [Unique name
 assumption](https://en.wikipedia.org/wiki/Unique_name_assumption) is a
@@ -389,9 +390,10 @@ properties can not be either derived or concrete with the user being
 unable to distinguish.
 
 Already most of those using JSON in anger in industry are focusing on
-JSON Schema. This solves the easy problems for trees, but not the
-problems for graphs. It also doesn't solve the problem of describing
-the meaning of data, or give any help with inference or calculation.
+[JSON Schema](https://json-schema.org/). This solves the easy problems
+for trees, but not the problems for graphs. It also doesn't solve the
+problem of describing the meaning of data, or give any help with
+inference or calculation.
 
 What we need is a
 [Literate](https://en.wikipedia.org/wiki/Literate_programming) Type
