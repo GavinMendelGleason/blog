@@ -287,6 +287,42 @@ become stupidly complicated with the overlap of the above two
 rules. OWL would rather make two people the same, then complain that
 you've done something wrong.
 
+### Things are too Far Apart
+
+It may seem banal and "just syntax", but when writing large
+Ontologies, OWL makes you wander far from home when trying to define
+the meaning of a class. The class requires lots of separately defined
+properties, each of which is verbose. When you add restrictions to them
+it becomes even worse: you have to add yet another class that you then
+intersect with your class to ensure the restriction.
+
+```turtle
+system:Capability
+  a owl:Class ;
+  rdfs:subClassOf system:Document, system:CapabilityScopeRestriction ;
+  rdfs:label "Capability"@en ;
+  rdfs:comment "A capability confers access to a database or server action"@en .
+
+system:capability
+  a owl:ObjectProperty ;
+  rdfs:label "capability"@en ;
+  rdfs:comment "associates a role with its capabilities"@en ;
+  rdfs:domain system:Role ;
+  rdfs:range system:Capability .
+
+system:capability_scope
+  a owl:ObjectProperty ;
+  rdfs:label "Capability Scope"@en ;
+  rdfs:comment "The scope of a capability - the resource that the capability applies to"@en ;
+  rdfs:domain system:Capability ;
+  rdfs:range system:Resource .
+```
+
+This may be expressive but extremely annoying and time consuming. In
+practice I've seen people completely skip ontologising because the
+pain barrier was so high specifically for this reason. Making routine
+tasks time consuming is a great way to ensure they don't happen.
+
 ### Polluting the Data with Inference
 
 While you can use OWL to talk about your data model, you can also use
