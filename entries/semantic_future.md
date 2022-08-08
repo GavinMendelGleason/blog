@@ -45,10 +45,10 @@ that really sticks.
 
 The analogy of the World Wide Web here is also deeply suggestive of
 what *might* be possible.  We have an incredible world wide system of
-document storage and retieval, the WWW. These documents are intended
-to be presented and (since Web 2.0) interacted with. But the problem
-of getting machines to talk to eachother about the most basic records
-in a sensible way is still open.
+document storage and retieval, the World Wide Web. These documents are
+intended to be presented and (since Web 2.0) interacted with. But the
+problem of getting machines to talk to eachother about the most basic
+records in a sensible way is still open.
 
 The Semantic Web was going to fix this. We would have not only
 structured documents, but structured data. We would be able to
@@ -78,8 +78,8 @@ graph, and abstract syntax trees can easily represent intended
 computations.
 
 The ability to reference data resources means that we need large
-unambiguous identifiers. IRIs are able to solve this problem (though
-there is still much ambiguity about the *meaning* of the IRI and its
+unambiguous identifiers. URIs are able to solve this problem (though
+there is still much ambiguity about the *meaning* of the URI and its
 relationship to dereferencing).
 
 We need a rich language to describe what the content *is* and what it
@@ -150,32 +150,36 @@ ex:b exs:q ex:a ;
      exs:name "b"^^xsd:string .
 ```
 
-So far so good. We now have a way to represent graphs which can be
-communicated. Unfortunately few programming tools have any way of
-reading this into an easily manipulable data object. XML was a
+So far so good. We now have a way
+([Turtle](https://www.w3.org/TR/turtle/)) to represent graphs which
+can be communicated. Unfortunately few programming tools have any way
+of reading this into an easily manipulable data object. XML was a
 contender, and XML indeed can represent these graphs in an alternative
 syntax. But XML, despite vastly larger uptake by industry, is falling
 into disuse itself because it is verbose, hard to read, and similarly
 hard to manipulate.
 
-While all of this was taking place, JSON was becaming the defacto data
-interchange standard. Many in the Semantic Web community scoff at JSON
-and vocally claim it is a mistake. But Vox populi vox Dei.
+While all of this was taking place,
+[JSON](https://www.json.org/json-en.html) was becaming the defacto
+data interchange standard. Many in the Semantic Web community scoff at
+JSON and vocally claim it is a mistake. But Vox populi vox Dei.
 
-JSON and the related YAML are among the best data interchange
-formats. They are fairly easily read by humans, they map directly to
-vastly popular datastructures which are ubiquitious now in programming
-languages (the associative array) and extremely well supported for
-lookup, iteration, pretty printing and update.
+JSON and the related [YAML](https://yaml.org/) are among the best data
+interchange formats. They are fairly easily read by humans, they map
+directly to vastly popular datastructures which are ubiquitious now in
+programming languages (the associative array) and extremely well
+supported for lookup, iteration, pretty printing and update.
 
 XML by contrast is a bear to look at. And neither is it very fun to
 process XML documents while using a programming language (although
-prolog actually fits pretty naturally on XML as a query language).
+[prolog](https://www.swi-prolog.org/pldoc/man?predicate=xpath/3)
+actually fits pretty naturally on XML as a query language).
 
 In an alternative world were Lisp won before the AI winter, we might
 have ended up with S-Expressions, but even these are probably worse as
-they do not make naming of the keys mandator, leading to less
-readability without more context.
+they do not make naming of the keys mandatory (as opposed to
+by-position arguments), leading to less readability without having
+more context.
 
 I'm absolutely positive that people are going to complain that syntax
 is just syntax, how things are serialised is superfluous and that a
@@ -195,7 +199,8 @@ so. The Semantic Web of the Future will embrace this fact.
 ### The Logic
 
 There are many different and overlapping standards which define
-Semantic Web technologies, but I think we can focus on OWL which
+Semantic Web technologies, but I think we can focus on
+[OWL](https://en.wikipedia.org/wiki/Web_Ontology_Language) which
 represents one of the most serious attempts to create a formal basis
 for the discription of data.
 
