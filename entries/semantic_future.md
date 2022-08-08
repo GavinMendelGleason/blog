@@ -230,15 +230,16 @@ complex and very important such as biomedical knowledge.
 
 It however makes some fatal errors that impede its use.
 
-First is that types are easier for programmers to work with than these
-logical languages. Types are important, not just in low level and
-compiled languages, but increasingly in dynamic languages such as
-python and javascript. Speed is just one benefit of telling the
-computer what you mean. Another benefit is that the computer can tell
-you if what you mean is garbage.
+Types are easier for programmers to work with than these logical
+languages. Types are important, not just in low level and compiled
+languages, but increasingly in dynamic languages such as python and
+javascript. Speed is just one benefit of telling the computer what you
+mean. Another benefit is that the computer can tell you if what you
+mean is garbage.
 
 And this is why OWL is such a bear. It is very easy to tell OWL you
-mean something and it just believes you.
+mean something and it just believes you. It provides very little
+support to the data architect in making sure that things make sense.
 
 For instance, in a programming language, if I define a class A as a
 subclass of class B, and then define a class B as a subclass of class
