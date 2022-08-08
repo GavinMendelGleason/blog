@@ -256,21 +256,20 @@ What caused this problem to arise, and what do we do about it?
 
 ### Lets make everything the same
 
-First, not having a (Unique name
-assumption)[https://en.wikipedia.org/wiki/Unique_name_assumption]"No
-Unique Names Assumption" is a mistake. Plain and simple. This is the
-idea that any two URIs might actually mean the same thing unless we
-explicitly say otherwise. This is a terrible idea for computers in
-much the same way as it is for humans attempting knowledge
-representation.
+First, not having a [Unique name
+assumption](https://en.wikipedia.org/wiki/Unique_name_assumption) is a
+mistake. Plain and simple. This is the idea that any two URIs might
+actually mean the same thing unless we explicitly say otherwise. This
+is a terrible idea for computers in much the same way as it is for
+humans attempting knowledge representation.
 
 If you want something to be the same you should be forced to say
 it. Aliasing is a nightmare, computationally expensive and leads to
 difficult to understand reasoning.
 
 The second mistake serious mistake is the Open World Assumption, the
-converse of the (Closed World
-Assumption)[https://en.wikipedia.org/wiki/Closed-world_assumption]. This
+converse of the [Closed World
+Assumption](https://en.wikipedia.org/wiki/Closed-world_assumption). This
 assumes that there is as yet ungathered data, forcing us to reason
 only about what we have at the minute. This might sound like a clever
 proposal but in practice makes reasoning weak.
@@ -285,7 +284,7 @@ you've done something wrong.
 While you can use OWL to talk about your data model, you can also use
 it to enrich your data from the model. This sounds brilliant because
 we often want calculated information. However, in practice this is
-never so nice as a (view)[https://en.wikipedia.org/wiki/View_(SQL)] is
+never so nice as a [view](https://en.wikipedia.org/wiki/View_(SQL)) is
 in SQL. Why?
 
 The reason is that with a view you create a new distinct resource
@@ -305,7 +304,7 @@ course a ridiculous way to work with a large database.
 
 The dream of computers which reasoned about data as it arrived to
 create some great symbolic AI, without a
-(Doxastic)[https://en.wikipedia.org/wiki/Doxastic_logic] approach is
+[Doxastic](https://en.wikipedia.org/wiki/Doxastic_logic) approach is
 frankly silly.
 
 ### Not much in the way of useable constraints, sorry
