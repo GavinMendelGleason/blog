@@ -14,9 +14,9 @@ need to produce useable software or solve serious industry needs.
 
 That's not to say that Semantic Web technologies *never* served any
 industry needs. They certainly did so, but their penetration was
-limited. And this limited penetration was not the result of mere
+limited. And this limited penetration was not only the result of
 ignorance on the part of data architects or software engineers. It was
-almost entirely the fault of deep problems with the ideas in the
+also the fault of deep problems with the ideas in the
 Semantic Web itself.
 
 ## Why the Semantic Web is a Great Idea
@@ -57,9 +57,9 @@ infer consequences from the data. We were going to have a rich distributed
 data environment that would get richer with contributions from people
 all over the world.
 
-It would be like wikipedia, but even more all encompassing, and for
+It would be like wikipedia, but even more all encompassing, and far
 more transformational. The effect of the Weather in Ireland on cow
-prices, would be directly accessible in a live manner, and could be
+prices, would be directly accessible and live, and could be
 used to compute the likely costs of a steak at the super market. Live
 feeds of wind data could be accessed to provide continental balancing
 operations for the grid.
@@ -109,7 +109,7 @@ origin, labelled edge, and target respectively as is done with
 
 This is great because we are representing our graph with long names,
 presumably within a context where *our* definitions are under our
-control. This is deeply important if we want a large world of
+control. This is important if we want a large world of
 distributed data. We even have some terminals in our graph with *data*
 which can allow us to representing typical datatypes which we do not
 want to weave out of the graph individually (Peano arithemetic would
@@ -134,7 +134,7 @@ ex:b exs:name "b"^^xsd:string .
 
 That's certainly a bit better. However, redunancy is not our friend
 here. It's easier again to read using the Turtle format, which allows
-us to refer to prior lines of inromation as a short hand. This is good
+us to refer to prior lines of information as a short hand. This is good
 for human readability, but also for computers, which have to read less
 information (which becomes an issue when graphs are huge).
 
@@ -165,9 +165,9 @@ JSON and vocally claim it is a mistake. But Vox populi vox Dei.
 
 JSON and the related [YAML](https://yaml.org/) are among the best data
 interchange formats. They are fairly easily read by humans, they map
-directly to vastly popular datastructures which are ubiquitious now in
-programming languages (the associative array) and extremely well
-supported for lookup, iteration, pretty printing and update.
+directly to vastly popular data structures which are ubiquitious now in
+programming languages (the associative array) and are extremely well
+supported for lookup, iteration, pretty printing, and update.
 
 XML by contrast is awful to look at. And neither is it very fun to
 process XML documents while using a programming language (although
@@ -195,7 +195,7 @@ should be applauded. It is however, needlessly verbose as an
 interchange format. I'll explain more later.
 
 JSON, and relatives are still expanding in use and will continue to do
-so. The Semantic Web of the Future will embrace this fact.
+so. The Semantic Web of the Future must embrace this fact.
 
 ### The Logic
 
@@ -212,15 +212,15 @@ same kind of turtle format as above.
 
 The problem with OWL is that it solved a problem, but not one that
 anyone wanted solved. It also did it in a very hard to use way. So
-hard to use that almost nobody has successfully used it. I've tried,
-and I've written many machine checked proofs in everything ranging
+hard to use that almost nobody has successfully used it. I've tried.
+And I've written many machine checked proofs in everything ranging
 from [Atelier B](https://www.atelierb.eu/en/atelier-b-tools/), through
 [FDR4](https://cocotec.io/fdr/) to [Agda](https://github.com/agda/agda)
 and [Coq](https://coq.inria.fr/).
 
 Maybe I'm not the sharpest knife in the drawer, but I've written
 significant proofs in these diverse languages, and never experienced
-the same pain.
+the same pain as with OWL.
 
 What is OWL *supposed* to do. It's supposed to be an
 [Ontology](https://en.wikipedia.org/wiki/Ontology) language. That is,
@@ -412,8 +412,7 @@ an [elaboration](https://leodemoura.github.io/files/elaboration.pdf).
 > The good thing about standards is that there are so many to choose from.
 — Andrew S. Tanenbaum
 
-I've been working to try out some of these ideas at
-[TerminusDB](https://terminusdb.com/), but for this to work it needs
+I've been working to try out some of these ideas at [TerminusDB](https://github.com/terminusdb/terminusdb) (stars welcome), but for this to work it needs
 to be a standard which is widely shared. And for that reason we need a
 standard. We need a movement to revitalise the Semantic Web with
 *ideas* that primarily serve to *do work*.
