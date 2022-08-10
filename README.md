@@ -3,7 +3,7 @@
 This is Gavin Mendel-Gleason's technical blog. I use this primarily to
 organize my thoughts on distributed data management.
 
-# [Semantic Future](./entries/semantic_future.md)
+# [The Semantic Web is Dead - Long Live the Semantic Web!](./entries/semantic_future.md)
 
 Monday, Aug 8th, 2022
 
