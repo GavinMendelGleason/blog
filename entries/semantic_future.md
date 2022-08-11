@@ -44,7 +44,7 @@ that really sticks.
 
 The analogy of the World Wide Web here is also deeply suggestive of
 what *might* be possible.  We have an incredible world wide system of
-document storage and retieval, the World Wide Web. These documents are
+document storage and retrieval, the World Wide Web. These documents are
 intended to be presented and (since Web 2.0) interacted with. But the
 problem of getting machines to talk to eachother about the most basic
 records in a sensible way is still open.
@@ -132,7 +132,7 @@ ex:b exs:q ex:a .
 ex:b exs:name "b"^^xsd:string .
 ```
 
-That's certainly a bit better. However, redunancy is not our friend
+That's certainly a bit better. However, redundancy is not our friend
 here. It's easier again to read using the Turtle format, which allows
 us to refer to prior lines of information as a short hand. This is good
 for human readability, but also for computers, which have to read less
@@ -203,7 +203,7 @@ There are many different and overlapping standards which define
 Semantic Web technologies, but I think we can focus on
 [OWL](https://en.wikipedia.org/wiki/Web_Ontology_Language) which
 represents one of the most serious attempts to create a formal basis
-for the discription of data.
+for the description of data.
 
 The idea of representing the structure of data in a data structure
 that is the same as the data is of course not a new idea (Think S-Exp)
@@ -254,7 +254,7 @@ OWL. Nobody noticed them because OWL really had no problem with them,
 and it is not unless you actually check what inferences arise that you
 can see the problem.
 
-And this is not unsual. One of the formalisers of OWL said this:
+And this is not unusual. One of the formalisers of OWL said this:
 
 ![Inconsistencies produce nonsense more than obvious contradictions, and often when long inference chains are followed. \@ImageSnippets found one in Wikidata that implied that native Americans are insects, another that Paris is an "abstract media type". I'm sure there are more.](../assets/pat_hayes_twitter.png)
 
@@ -429,14 +429,14 @@ the origin of our current lack of a functional Semantic
 Web.
 
 Academia is structured in a way that there is very little
-incentive for anyone to build useable software. Instead you are
+incentive for anyone to build usable software. Instead you are
 elevated for rapidly throwing together an idea, a tiny proof of
 concept, and to iterate on microscopic variations of this thing to
 produce as many papers as possible.
 
 In engineering the devil is in the detail. You really need to get into
 the weeds before you can know what the right thing to do is. This is
-simultaneously a devestating situation for industry and
+simultaneously a devastating situation for industry and
 academia. Nobody is going to wait around for a team of engineers to
 finish building a system to write about it in Academia. You'll be
 passed immediately by legions of paper pushers. And in industry, you
