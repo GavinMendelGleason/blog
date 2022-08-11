@@ -57,7 +57,7 @@ infer consequences from the data. We were going to have a rich distributed
 data environment that would get richer with contributions from people
 all over the world.
 
-It would be like wikipedia, but even more all encompassing, and far
+It would be like Wikipedia, but even more all encompassing, and far
 more transformational. The effect of the Weather in Ireland on cow
 prices, would be directly accessible and live, and could be
 used to compute the likely costs of a steak at the super market. Live
