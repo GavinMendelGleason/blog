@@ -456,7 +456,7 @@ the capacity to work through the differences between the two.
 ## The Future of the Semantic Web
 
 The Future of the Semantic Web is there, the Semantic Web will rise,
-but it will not be the Semantic Web of the past. Humanities access to
+but it will not be the Semantic Web of the past. Humanity's access to
 data is of ever increasing importance, and the ability to make
 resilient and distributed methods of curating, updating and utilising
 this information is key. The ideas which drove the creation of the
