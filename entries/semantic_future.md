@@ -67,7 +67,7 @@ operations for the grid.
 In short, the information age needs an information super-highway and
 not just a big pipe for interactive documents.
 
-## Key Innvoations
+## Key Innovations
 
 The core ideas and aims of the Semantic Web were largely correct.
 
