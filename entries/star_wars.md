@@ -279,7 +279,7 @@ the vehicles in order, taking only 3 of them, sorting by manufacturer.
 
 ```graphql
 {
-	Vehicle(limit:3, orderBy: { manufacturer : ASC }){
+  Vehicle(limit:3, orderBy: { manufacturer : ASC }){
     manufacturer
     model
     url
@@ -325,7 +325,7 @@ We can also page these results by setting an offset:
 
 ```graphql
 {
-	Vehicle(limit:3, offset: 3, orderBy: { manufacturer : ASC }){
+  Vehicle(limit:3, offset: 3, orderBy: { manufacturer : ASC }){
     manufacturer
     model
     url
