@@ -3,6 +3,10 @@
 This is Gavin Mendel-Gleason's technical blog. I use this primarily to
 organize my thoughts on distributed data management.
 
+# [Star Wars in TerminusDB - GraphQL and RDF](./entries/star_wars.md)
+
+Wednesday, Oct 12th, 2022
+
 # [The Semantic Web is Dead - Long Live the Semantic Web!](./entries/semantic_future.md)
 
 Monday, Aug 8th, 2022
