@@ -390,7 +390,7 @@ we can write:
 
 And we will just get the "74-Z speeder bike"
 
-```
+```json
 {
   "data": {
     "Vehicle": [
