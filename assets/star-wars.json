@@ -35,6 +35,8 @@
       "planet" : { "@type" : "Set", "@class" : "Planet" },
       "url" : {"@type" : "Optional", "@class" : "xsd:anyURI"},
       "desc" : {"@type" : "Set", "@class" : "xsd:string"},
+      "created" : {"@type" : "Optional", "@class" : "xsd:dateTime"},
+      "edited" : {"@type" : "Optional", "@class" : "xsd:dateTime"},
       "label" : { "@type" : "Optional", "@class" : "xsd:string"}
     },
 

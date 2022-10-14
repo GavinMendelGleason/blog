@@ -89,7 +89,7 @@ WOQL. You can do this in the dashboard query panel, perhaps by using the query:
 
 ```javascript
 let [a, b, c] = vars("a", "b", "c")
-limit(10,triples(a,b,c))
+limit(10,triple(a,b,c))
 ```
 
 However, TerminusDB is much more useable when you give it a bit of a
@@ -169,7 +169,7 @@ can be anything. The datatypes we use are from
 with the RDF we have imported.
 
 I repeated this process for `Film`, `Planet`, etc. until I got what I
-felt was a complete schema.
+felt was a [complete TerminusDB Star Wars schema](../assets/star-wars.json).
 
 When I did the development, I'd add the classes, and properties I
 thought I needed, and then I'd load the schema and have a browse in
@@ -195,7 +195,7 @@ Then will see something like:
 Then when I thought I was completely done, I'd do this:
 
 ```shell
-$ terminusdb update db admin/starwars --schema=true
+$ terminusdb db update admin/starwars --schema=true
 ```
 
 If there are any problems with the schema, this results in an error which will look something like:
