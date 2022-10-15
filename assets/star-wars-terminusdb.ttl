@@ -7,8 +7,8 @@ sw:people-1  a  schema:People .
 sw:people-1  rdfs:label  "Luke Skywalker" .
 sw:people-1  schema:height  "172" .
 sw:people-1  schema:mass  "77" .
-sw:people-1  schema:hair_color  "blond" .
-sw:people-1  schema:skin_color  "fair" .
+sw:people-1  schema:hair_colors  "blond" .
+sw:people-1  schema:skin_colors  "fair" .
 sw:people-1  schema:eye_color  "blue" .
 sw:people-1  schema:birth_year  "19BBY" .
 sw:people-1  schema:gender  "male" .
@@ -33,7 +33,7 @@ sw:people-2  a  schema:People .
 sw:people-2  rdfs:label  "C-3PO" .
 sw:people-2  schema:height  "167" .
 sw:people-2  schema:mass  "75" .
-sw:people-2  schema:skin_color  "gold" .
+sw:people-2  schema:skin_colors  "gold" .
 sw:people-2  schema:eye_color  "yellow" .
 sw:people-2  schema:birth_year  "112BBY" .
 sw:people-2  schema:homeworld  sw:planet-1 .
@@ -54,7 +54,7 @@ sw:people-3  a  schema:People .
 sw:people-3  rdfs:label  "R2-D2" .
 sw:people-3  schema:height  "96" .
 sw:people-3  schema:mass  "32" .
-sw:people-3  schema:skin_color  "white, blue" .
+sw:people-3  schema:skin_colors  "white, blue" .
 sw:people-3  schema:eye_color  "red" .
 sw:people-3  schema:birth_year  "33BBY" .
 sw:people-3  schema:homeworld  sw:planet-8 .
@@ -76,8 +76,8 @@ sw:people-4  a  schema:People .
 sw:people-4  rdfs:label  "Darth Vader" .
 sw:people-4  schema:height  "202" .
 sw:people-4  schema:mass  "136" .
-sw:people-4  schema:hair_color  "none" .
-sw:people-4  schema:skin_color  "white" .
+sw:people-4  schema:hair_colors  "none" .
+sw:people-4  schema:skin_colors  "white" .
 sw:people-4  schema:eye_color  "yellow" .
 sw:people-4  schema:birth_year  "41.9BBY" .
 sw:people-4  schema:gender  "male" .
@@ -99,8 +99,8 @@ sw:people-5  a  schema:People .
 sw:people-5  rdfs:label  "Leia Organa" .
 sw:people-5  schema:height  "150" .
 sw:people-5  schema:mass  "49" .
-sw:people-5  schema:hair_color  "brown" .
-sw:people-5  schema:skin_color  "light" .
+sw:people-5  schema:hair_colors  "brown" .
+sw:people-5  schema:skin_colors  "light" .
 sw:people-5  schema:eye_color  "brown" .
 sw:people-5  schema:birth_year  "19BBY" .
 sw:people-5  schema:gender  "female" .
@@ -123,8 +123,8 @@ sw:people-6  a  schema:People .
 sw:people-6  rdfs:label  "Owen Lars" .
 sw:people-6  schema:height  "178" .
 sw:people-6  schema:mass  "120" .
-sw:people-6  schema:hair_color  "brown, grey" .
-sw:people-6  schema:skin_color  "light" .
+sw:people-6  schema:hair_colors  "brown, grey" .
+sw:people-6  schema:skin_colors  "light" .
 sw:people-6  schema:eye_color  "blue" .
 sw:people-6  schema:birth_year  "52BBY" .
 sw:people-6  schema:gender  "male" .
@@ -141,8 +141,8 @@ sw:people-7  a  schema:People .
 sw:people-7  rdfs:label  "Beru Whitesun lars" .
 sw:people-7  schema:height  "165" .
 sw:people-7  schema:mass  "75" .
-sw:people-7  schema:hair_color  "brown" .
-sw:people-7  schema:skin_color  "light" .
+sw:people-7  schema:hair_colors  "brown" .
+sw:people-7  schema:skin_colors  "light" .
 sw:people-7  schema:eye_color  "blue" .
 sw:people-7  schema:birth_year  "47BBY" .
 sw:people-7  schema:gender  "female" .
@@ -159,7 +159,7 @@ sw:people-8  a  schema:People .
 sw:people-8  rdfs:label  "R5-D4" .
 sw:people-8  schema:height  "97" .
 sw:people-8  schema:mass  "32" .
-sw:people-8  schema:skin_color  "white, red" .
+sw:people-8  schema:skin_colors  "white, red" .
 sw:people-8  schema:eye_color  "red" .
 sw:people-8  schema:homeworld  sw:planet-1 .
 sw:people-8  schema:film  sw:film-1 .
@@ -172,8 +172,8 @@ sw:people-9  a  schema:People .
 sw:people-9  rdfs:label  "Biggs Darklighter" .
 sw:people-9  schema:height  "183" .
 sw:people-9  schema:mass  "84" .
-sw:people-9  schema:hair_color  "black" .
-sw:people-9  schema:skin_color  "light" .
+sw:people-9  schema:hair_colors  "black" .
+sw:people-9  schema:skin_colors  "light" .
 sw:people-9  schema:eye_color  "brown" .
 sw:people-9  schema:birth_year  "24BBY" .
 sw:people-9  schema:gender  "male" .
@@ -191,8 +191,8 @@ sw:people-10  a  schema:People .
 sw:people-10  rdfs:label  "Obi-Wan Kenobi" .
 sw:people-10  schema:height  "182" .
 sw:people-10  schema:mass  "77" .
-sw:people-10  schema:hair_color  "auburn, white" .
-sw:people-10  schema:skin_color  "fair" .
+sw:people-10  schema:hair_colors  "auburn, white" .
+sw:people-10  schema:skin_colors  "fair" .
 sw:people-10  schema:eye_color  "blue-gray" .
 sw:people-10  schema:birth_year  "57BBY" .
 sw:people-10  schema:gender  "male" .
@@ -220,8 +220,8 @@ sw:people-11  a  schema:People .
 sw:people-11  rdfs:label  "Anakin Skywalker" .
 sw:people-11  schema:height  "188" .
 sw:people-11  schema:mass  "84" .
-sw:people-11  schema:hair_color  "blond" .
-sw:people-11  schema:skin_color  "fair" .
+sw:people-11  schema:hair_colors  "blond" .
+sw:people-11  schema:skin_colors  "fair" .
 sw:people-11  schema:eye_color  "blue" .
 sw:people-11  schema:birth_year  "41.9BBY" .
 sw:people-11  schema:gender  "male" .
@@ -245,8 +245,8 @@ sw:people-11  schema:desc  "Darth Vader has become one of the most iconic villai
 sw:people-12  a  schema:People .
 sw:people-12  rdfs:label  "Wilhuff Tarkin" .
 sw:people-12  schema:height  "180" .
-sw:people-12  schema:hair_color  "auburn, grey" .
-sw:people-12  schema:skin_color  "fair" .
+sw:people-12  schema:hair_colors  "auburn, grey" .
+sw:people-12  schema:skin_colors  "fair" .
 sw:people-12  schema:eye_color  "blue" .
 sw:people-12  schema:birth_year  "64BBY" .
 sw:people-12  schema:gender  "male" .
@@ -263,7 +263,7 @@ sw:people-13  a  schema:People .
 sw:people-13  rdfs:label  "Chewbacca" .
 sw:people-13  schema:height  "228" .
 sw:people-13  schema:mass  "112" .
-sw:people-13  schema:hair_color  "brown" .
+sw:people-13  schema:hair_colors  "brown" .
 sw:people-13  schema:eye_color  "blue" .
 sw:people-13  schema:birth_year  "200BBY" .
 sw:people-13  schema:gender  "male" .
@@ -286,8 +286,8 @@ sw:people-14  a  schema:People .
 sw:people-14  rdfs:label  "Han Solo" .
 sw:people-14  schema:height  "180" .
 sw:people-14  schema:mass  "80" .
-sw:people-14  schema:hair_color  "brown" .
-sw:people-14  schema:skin_color  "fair" .
+sw:people-14  schema:hair_colors  "brown" .
+sw:people-14  schema:skin_colors  "fair" .
 sw:people-14  schema:eye_color  "brown" .
 sw:people-14  schema:birth_year  "29BBY" .
 sw:people-14  schema:gender  "male" .
@@ -308,7 +308,7 @@ sw:people-15  a  schema:People .
 sw:people-15  rdfs:label  "Greedo" .
 sw:people-15  schema:height  "173" .
 sw:people-15  schema:mass  "74" .
-sw:people-15  schema:skin_color  "green" .
+sw:people-15  schema:skin_colors  "green" .
 sw:people-15  schema:eye_color  "black" .
 sw:people-15  schema:birth_year  "44BBY" .
 sw:people-15  schema:gender  "male" .
@@ -324,7 +324,7 @@ sw:people-16  a  schema:People .
 sw:people-16  rdfs:label  "Jabba Desilijic Tiure" .
 sw:people-16  schema:height  "175" .
 sw:people-16  schema:mass  "1,358" .
-sw:people-16  schema:skin_color  "green-tan, brown" .
+sw:people-16  schema:skin_colors  "green-tan, brown" .
 sw:people-16  schema:eye_color  "orange" .
 sw:people-16  schema:birth_year  "600BBY" .
 sw:people-16  schema:gender  "hermaphrodite" .
@@ -344,8 +344,8 @@ sw:people-18  a  schema:People .
 sw:people-18  rdfs:label  "Wedge Antilles" .
 sw:people-18  schema:height  "170" .
 sw:people-18  schema:mass  "77" .
-sw:people-18  schema:hair_color  "brown" .
-sw:people-18  schema:skin_color  "fair" .
+sw:people-18  schema:hair_colors  "brown" .
+sw:people-18  schema:skin_colors  "fair" .
 sw:people-18  schema:eye_color  "hazel" .
 sw:people-18  schema:birth_year  "21BBY" .
 sw:people-18  schema:gender  "male" .
@@ -365,8 +365,8 @@ sw:people-19  a  schema:People .
 sw:people-19  rdfs:label  "Jek Tono Porkins" .
 sw:people-19  schema:height  "180" .
 sw:people-19  schema:mass  "110" .
-sw:people-19  schema:hair_color  "brown" .
-sw:people-19  schema:skin_color  "fair" .
+sw:people-19  schema:hair_colors  "brown" .
+sw:people-19  schema:skin_colors  "fair" .
 sw:people-19  schema:eye_color  "blue" .
 sw:people-19  schema:gender  "male" .
 sw:people-19  schema:homeworld  sw:planet-26 .
@@ -381,8 +381,8 @@ sw:people-20  a  schema:People .
 sw:people-20  rdfs:label  "Yoda" .
 sw:people-20  schema:height  "66" .
 sw:people-20  schema:mass  "17" .
-sw:people-20  schema:hair_color  "white" .
-sw:people-20  schema:skin_color  "green" .
+sw:people-20  schema:hair_colors  "white" .
+sw:people-20  schema:skin_colors  "green" .
 sw:people-20  schema:eye_color  "brown" .
 sw:people-20  schema:birth_year  "896BBY" .
 sw:people-20  schema:gender  "male" .
@@ -402,8 +402,8 @@ sw:people-21  a  schema:People .
 sw:people-21  rdfs:label  "Palpatine" .
 sw:people-21  schema:height  "170" .
 sw:people-21  schema:mass  "75" .
-sw:people-21  schema:hair_color  "grey" .
-sw:people-21  schema:skin_color  "pale" .
+sw:people-21  schema:hair_colors  "grey" .
+sw:people-21  schema:skin_colors  "pale" .
 sw:people-21  schema:eye_color  "yellow" .
 sw:people-21  schema:birth_year  "82BBY" .
 sw:people-21  schema:gender  "male" .
@@ -425,8 +425,8 @@ sw:people-22  a  schema:People .
 sw:people-22  rdfs:label  "Boba Fett" .
 sw:people-22  schema:height  "183" .
 sw:people-22  schema:mass  "78.2" .
-sw:people-22  schema:hair_color  "black" .
-sw:people-22  schema:skin_color  "fair" .
+sw:people-22  schema:hair_colors  "black" .
+sw:people-22  schema:skin_colors  "fair" .
 sw:people-22  schema:eye_color  "brown" .
 sw:people-22  schema:birth_year  "31.5BBY" .
 sw:people-22  schema:gender  "male" .
@@ -445,8 +445,8 @@ sw:people-23  a  schema:People .
 sw:people-23  rdfs:label  "IG-88" .
 sw:people-23  schema:height  "200" .
 sw:people-23  schema:mass  "140" .
-sw:people-23  schema:hair_color  "none" .
-sw:people-23  schema:skin_color  "metal" .
+sw:people-23  schema:hair_colors  "none" .
+sw:people-23  schema:skin_colors  "metal" .
 sw:people-23  schema:eye_color  "red" .
 sw:people-23  schema:birth_year  "15BBY" .
 sw:people-23  schema:gender  "none" .
@@ -461,8 +461,8 @@ sw:people-24  a  schema:People .
 sw:people-24  rdfs:label  "Bossk" .
 sw:people-24  schema:height  "190" .
 sw:people-24  schema:mass  "113" .
-sw:people-24  schema:hair_color  "none" .
-sw:people-24  schema:skin_color  "green" .
+sw:people-24  schema:hair_colors  "none" .
+sw:people-24  schema:skin_colors  "green" .
 sw:people-24  schema:eye_color  "red" .
 sw:people-24  schema:birth_year  "53BBY" .
 sw:people-24  schema:gender  "male" .
@@ -477,8 +477,8 @@ sw:people-25  a  schema:People .
 sw:people-25  rdfs:label  "Lando Calrissian" .
 sw:people-25  schema:height  "177" .
 sw:people-25  schema:mass  "79" .
-sw:people-25  schema:hair_color  "black" .
-sw:people-25  schema:skin_color  "dark" .
+sw:people-25  schema:hair_colors  "black" .
+sw:people-25  schema:skin_colors  "dark" .
 sw:people-25  schema:eye_color  "brown" .
 sw:people-25  schema:birth_year  "31BBY" .
 sw:people-25  schema:gender  "male" .
@@ -496,8 +496,8 @@ sw:people-26  a  schema:People .
 sw:people-26  rdfs:label  "Lobot" .
 sw:people-26  schema:height  "175" .
 sw:people-26  schema:mass  "79" .
-sw:people-26  schema:hair_color  "none" .
-sw:people-26  schema:skin_color  "light" .
+sw:people-26  schema:hair_colors  "none" .
+sw:people-26  schema:skin_colors  "light" .
 sw:people-26  schema:eye_color  "blue" .
 sw:people-26  schema:birth_year  "37BBY" .
 sw:people-26  schema:gender  "male" .
@@ -512,8 +512,8 @@ sw:people-27  a  schema:People .
 sw:people-27  rdfs:label  "Ackbar" .
 sw:people-27  schema:height  "180" .
 sw:people-27  schema:mass  "83" .
-sw:people-27  schema:hair_color  "none" .
-sw:people-27  schema:skin_color  "brown mottle" .
+sw:people-27  schema:hair_colors  "none" .
+sw:people-27  schema:skin_colors  "brown mottle" .
 sw:people-27  schema:eye_color  "orange" .
 sw:people-27  schema:birth_year  "41BBY" .
 sw:people-27  schema:gender  "male" .
@@ -528,8 +528,8 @@ sw:people-27  schema:url  "http://swapi.co/api/people/27/" .
 sw:people-28  a  schema:People .
 sw:people-28  rdfs:label  "Mon Mothma" .
 sw:people-28  schema:height  "150" .
-sw:people-28  schema:hair_color  "auburn" .
-sw:people-28  schema:skin_color  "fair" .
+sw:people-28  schema:hair_colors  "auburn" .
+sw:people-28  schema:skin_colors  "fair" .
 sw:people-28  schema:eye_color  "blue" .
 sw:people-28  schema:birth_year  "48BBY" .
 sw:people-28  schema:gender  "female" .
@@ -542,8 +542,8 @@ sw:people-28  schema:url  "http://swapi.co/api/people/28/" .
 
 sw:people-29  a  schema:People .
 sw:people-29  rdfs:label  "Arvel Crynyd" .
-sw:people-29  schema:hair_color  "brown" .
-sw:people-29  schema:skin_color  "fair" .
+sw:people-29  schema:hair_colors  "brown" .
+sw:people-29  schema:skin_colors  "fair" .
 sw:people-29  schema:eye_color  "brown" .
 sw:people-29  schema:gender  "male" .
 sw:people-29  schema:homeworld  sw:planet-28 .
@@ -558,8 +558,8 @@ sw:people-30  a  schema:People .
 sw:people-30  rdfs:label  "Wicket Systri Warrick" .
 sw:people-30  schema:height  "88" .
 sw:people-30  schema:mass  "20" .
-sw:people-30  schema:hair_color  "brown" .
-sw:people-30  schema:skin_color  "brown" .
+sw:people-30  schema:hair_colors  "brown" .
+sw:people-30  schema:skin_colors  "brown" .
 sw:people-30  schema:eye_color  "brown" .
 sw:people-30  schema:birth_year  "8BBY" .
 sw:people-30  schema:gender  "male" .
@@ -574,8 +574,8 @@ sw:people-31  a  schema:People .
 sw:people-31  rdfs:label  "Nien Nunb" .
 sw:people-31  schema:height  "160" .
 sw:people-31  schema:mass  "68" .
-sw:people-31  schema:hair_color  "none" .
-sw:people-31  schema:skin_color  "grey" .
+sw:people-31  schema:hair_colors  "none" .
+sw:people-31  schema:skin_colors  "grey" .
 sw:people-31  schema:eye_color  "black" .
 sw:people-31  schema:gender  "male" .
 sw:people-31  schema:homeworld  sw:planet-33 .
@@ -592,8 +592,8 @@ sw:people-32  a  schema:People .
 sw:people-32  rdfs:label  "Qui-Gon Jinn" .
 sw:people-32  schema:height  "193" .
 sw:people-32  schema:mass  "89" .
-sw:people-32  schema:hair_color  "brown" .
-sw:people-32  schema:skin_color  "fair" .
+sw:people-32  schema:hair_colors  "brown" .
+sw:people-32  schema:skin_colors  "fair" .
 sw:people-32  schema:eye_color  "blue" .
 sw:people-32  schema:birth_year  "92BBY" .
 sw:people-32  schema:gender  "male" .
@@ -610,8 +610,8 @@ sw:people-33  a  schema:People .
 sw:people-33  rdfs:label  "Nute Gunray" .
 sw:people-33  schema:height  "191" .
 sw:people-33  schema:mass  "90" .
-sw:people-33  schema:hair_color  "none" .
-sw:people-33  schema:skin_color  "mottled green" .
+sw:people-33  schema:hair_colors  "none" .
+sw:people-33  schema:skin_colors  "mottled green" .
 sw:people-33  schema:eye_color  "red" .
 sw:people-33  schema:gender  "male" .
 sw:people-33  schema:homeworld  sw:planet-18 .
@@ -626,8 +626,8 @@ sw:people-33  schema:url  "http://swapi.co/api/people/33/" .
 sw:people-34  a  schema:People .
 sw:people-34  rdfs:label  "Finis Valorum" .
 sw:people-34  schema:height  "170" .
-sw:people-34  schema:hair_color  "blond" .
-sw:people-34  schema:skin_color  "fair" .
+sw:people-34  schema:hair_colors  "blond" .
+sw:people-34  schema:skin_colors  "fair" .
 sw:people-34  schema:eye_color  "blue" .
 sw:people-34  schema:birth_year  "91BBY" .
 sw:people-34  schema:gender  "male" .
@@ -642,8 +642,8 @@ sw:people-36  a  schema:People .
 sw:people-36  rdfs:label  "Jar Jar Binks" .
 sw:people-36  schema:height  "196" .
 sw:people-36  schema:mass  "66" .
-sw:people-36  schema:hair_color  "none" .
-sw:people-36  schema:skin_color  "orange" .
+sw:people-36  schema:hair_colors  "none" .
+sw:people-36  schema:skin_colors  "orange" .
 sw:people-36  schema:eye_color  "orange" .
 sw:people-36  schema:birth_year  "52BBY" .
 sw:people-36  schema:gender  "male" .
@@ -661,8 +661,8 @@ sw:people-37  a  schema:People .
 sw:people-37  rdfs:label  "Roos Tarpals" .
 sw:people-37  schema:height  "224" .
 sw:people-37  schema:mass  "82" .
-sw:people-37  schema:hair_color  "none" .
-sw:people-37  schema:skin_color  "grey" .
+sw:people-37  schema:hair_colors  "none" .
+sw:people-37  schema:skin_colors  "grey" .
 sw:people-37  schema:eye_color  "orange" .
 sw:people-37  schema:gender  "male" .
 sw:people-37  schema:homeworld  sw:planet-8 .
@@ -675,8 +675,8 @@ sw:people-37  schema:url  "http://swapi.co/api/people/37/" .
 sw:people-38  a  schema:People .
 sw:people-38  rdfs:label  "Rugor Nass" .
 sw:people-38  schema:height  "206" .
-sw:people-38  schema:hair_color  "none" .
-sw:people-38  schema:skin_color  "green" .
+sw:people-38  schema:hair_colors  "none" .
+sw:people-38  schema:skin_colors  "green" .
 sw:people-38  schema:eye_color  "orange" .
 sw:people-38  schema:gender  "male" .
 sw:people-38  schema:homeworld  sw:planet-8 .
@@ -689,8 +689,8 @@ sw:people-38  schema:url  "http://swapi.co/api/people/38/" .
 sw:people-39  a  schema:People .
 sw:people-39  rdfs:label  "Ric Olié" .
 sw:people-39  schema:height  "183" .
-sw:people-39  schema:hair_color  "brown" .
-sw:people-39  schema:skin_color  "fair" .
+sw:people-39  schema:hair_colors  "brown" .
+sw:people-39  schema:skin_colors  "fair" .
 sw:people-39  schema:eye_color  "blue" .
 sw:people-39  schema:gender  "male" .
 sw:people-39  schema:homeworld  sw:planet-8 .
@@ -703,8 +703,8 @@ sw:people-39  schema:url  "http://swapi.co/api/people/39/" .
 sw:people-40  a  schema:People .
 sw:people-40  rdfs:label  "Watto" .
 sw:people-40  schema:height  "137" .
-sw:people-40  schema:hair_color  "black" .
-sw:people-40  schema:skin_color  "blue, grey" .
+sw:people-40  schema:hair_colors  "black" .
+sw:people-40  schema:skin_colors  "blue, grey" .
 sw:people-40  schema:eye_color  "yellow" .
 sw:people-40  schema:gender  "male" .
 sw:people-40  schema:homeworld  sw:planet-34 .
@@ -720,8 +720,8 @@ sw:people-41  a  schema:People .
 sw:people-41  rdfs:label  "Sebulba" .
 sw:people-41  schema:height  "112" .
 sw:people-41  schema:mass  "40" .
-sw:people-41  schema:hair_color  "none" .
-sw:people-41  schema:skin_color  "grey, red" .
+sw:people-41  schema:hair_colors  "none" .
+sw:people-41  schema:skin_colors  "grey, red" .
 sw:people-41  schema:eye_color  "orange" .
 sw:people-41  schema:gender  "male" .
 sw:people-41  schema:homeworld  sw:planet-35 .
@@ -734,8 +734,8 @@ sw:people-41  schema:url  "http://swapi.co/api/people/41/" .
 sw:people-42  a  schema:People .
 sw:people-42  rdfs:label  "Quarsh Panaka" .
 sw:people-42  schema:height  "183" .
-sw:people-42  schema:hair_color  "black" .
-sw:people-42  schema:skin_color  "dark" .
+sw:people-42  schema:hair_colors  "black" .
+sw:people-42  schema:skin_colors  "dark" .
 sw:people-42  schema:eye_color  "brown" .
 sw:people-42  schema:birth_year  "62BBY" .
 sw:people-42  schema:gender  "male" .
@@ -748,8 +748,8 @@ sw:people-42  schema:url  "http://swapi.co/api/people/42/" .
 sw:people-43  a  schema:People .
 sw:people-43  rdfs:label  "Shmi Skywalker" .
 sw:people-43  schema:height  "163" .
-sw:people-43  schema:hair_color  "black" .
-sw:people-43  schema:skin_color  "fair" .
+sw:people-43  schema:hair_colors  "black" .
+sw:people-43  schema:skin_colors  "fair" .
 sw:people-43  schema:eye_color  "brown" .
 sw:people-43  schema:birth_year  "72BBY" .
 sw:people-43  schema:gender  "female" .
@@ -765,8 +765,8 @@ sw:people-44  a  schema:People .
 sw:people-44  rdfs:label  "Darth Maul" .
 sw:people-44  schema:height  "175" .
 sw:people-44  schema:mass  "80" .
-sw:people-44  schema:hair_color  "none" .
-sw:people-44  schema:skin_color  "red" .
+sw:people-44  schema:hair_colors  "none" .
+sw:people-44  schema:skin_colors  "red" .
 sw:people-44  schema:eye_color  "yellow" .
 sw:people-44  schema:birth_year  "54BBY" .
 sw:people-44  schema:gender  "male" .
@@ -783,8 +783,8 @@ sw:people-44  schema:desc  "Darth Maul, later known simply as Maul, is a fiction
 sw:people-45  a  schema:People .
 sw:people-45  rdfs:label  "Bib Fortuna" .
 sw:people-45  schema:height  "180" .
-sw:people-45  schema:hair_color  "none" .
-sw:people-45  schema:skin_color  "pale" .
+sw:people-45  schema:hair_colors  "none" .
+sw:people-45  schema:skin_colors  "pale" .
 sw:people-45  schema:eye_color  "pink" .
 sw:people-45  schema:gender  "male" .
 sw:people-45  schema:homeworld  sw:planet-37 .
@@ -798,8 +798,8 @@ sw:people-46  a  schema:People .
 sw:people-46  rdfs:label  "Ayla Secura" .
 sw:people-46  schema:height  "178" .
 sw:people-46  schema:mass  "55" .
-sw:people-46  schema:hair_color  "none" .
-sw:people-46  schema:skin_color  "blue" .
+sw:people-46  schema:hair_colors  "none" .
+sw:people-46  schema:skin_colors  "blue" .
 sw:people-46  schema:eye_color  "hazel" .
 sw:people-46  schema:birth_year  "48BBY" .
 sw:people-46  schema:gender  "female" .
@@ -816,8 +816,8 @@ sw:people-48  a  schema:People .
 sw:people-48  rdfs:label  "Dud Bolt" .
 sw:people-48  schema:height  "94" .
 sw:people-48  schema:mass  "45" .
-sw:people-48  schema:hair_color  "none" .
-sw:people-48  schema:skin_color  "blue, grey" .
+sw:people-48  schema:hair_colors  "none" .
+sw:people-48  schema:skin_colors  "blue, grey" .
 sw:people-48  schema:eye_color  "yellow" .
 sw:people-48  schema:gender  "male" .
 sw:people-48  schema:homeworld  sw:planet-39 .
@@ -830,8 +830,8 @@ sw:people-48  schema:url  "http://swapi.co/api/people/48/" .
 sw:people-49  a  schema:People .
 sw:people-49  rdfs:label  "Gasgano" .
 sw:people-49  schema:height  "122" .
-sw:people-49  schema:hair_color  "none" .
-sw:people-49  schema:skin_color  "white, blue" .
+sw:people-49  schema:hair_colors  "none" .
+sw:people-49  schema:skin_colors  "white, blue" .
 sw:people-49  schema:eye_color  "black" .
 sw:people-49  schema:gender  "male" .
 sw:people-49  schema:homeworld  sw:planet-40 .
@@ -845,8 +845,8 @@ sw:people-50  a  schema:People .
 sw:people-50  rdfs:label  "Ben Quadinaros" .
 sw:people-50  schema:height  "163" .
 sw:people-50  schema:mass  "65" .
-sw:people-50  schema:hair_color  "none" .
-sw:people-50  schema:skin_color  "grey, green, yellow" .
+sw:people-50  schema:hair_colors  "none" .
+sw:people-50  schema:skin_colors  "grey, green, yellow" .
 sw:people-50  schema:eye_color  "orange" .
 sw:people-50  schema:gender  "male" .
 sw:people-50  schema:homeworld  sw:planet-41 .
@@ -860,8 +860,8 @@ sw:people-51  a  schema:People .
 sw:people-51  rdfs:label  "Mace Windu" .
 sw:people-51  schema:height  "188" .
 sw:people-51  schema:mass  "84" .
-sw:people-51  schema:hair_color  "none" .
-sw:people-51  schema:skin_color  "dark" .
+sw:people-51  schema:hair_colors  "none" .
+sw:people-51  schema:skin_colors  "dark" .
 sw:people-51  schema:eye_color  "brown" .
 sw:people-51  schema:birth_year  "72BBY" .
 sw:people-51  schema:gender  "male" .
@@ -879,8 +879,8 @@ sw:people-52  a  schema:People .
 sw:people-52  rdfs:label  "Ki-Adi-Mundi" .
 sw:people-52  schema:height  "198" .
 sw:people-52  schema:mass  "82" .
-sw:people-52  schema:hair_color  "white" .
-sw:people-52  schema:skin_color  "pale" .
+sw:people-52  schema:hair_colors  "white" .
+sw:people-52  schema:skin_colors  "pale" .
 sw:people-52  schema:eye_color  "yellow" .
 sw:people-52  schema:birth_year  "92BBY" .
 sw:people-52  schema:gender  "male" .
@@ -897,8 +897,8 @@ sw:people-53  a  schema:People .
 sw:people-53  rdfs:label  "Kit Fisto" .
 sw:people-53  schema:height  "196" .
 sw:people-53  schema:mass  "87" .
-sw:people-53  schema:hair_color  "none" .
-sw:people-53  schema:skin_color  "green" .
+sw:people-53  schema:hair_colors  "none" .
+sw:people-53  schema:skin_colors  "green" .
 sw:people-53  schema:eye_color  "black" .
 sw:people-53  schema:gender  "male" .
 sw:people-53  schema:homeworld  sw:planet-44 .
@@ -913,8 +913,8 @@ sw:people-53  schema:url  "http://swapi.co/api/people/53/" .
 sw:people-54  a  schema:People .
 sw:people-54  rdfs:label  "Eeth Koth" .
 sw:people-54  schema:height  "171" .
-sw:people-54  schema:hair_color  "black" .
-sw:people-54  schema:skin_color  "brown" .
+sw:people-54  schema:hair_colors  "black" .
+sw:people-54  schema:skin_colors  "brown" .
 sw:people-54  schema:eye_color  "brown" .
 sw:people-54  schema:gender  "male" .
 sw:people-54  schema:homeworld  sw:planet-45 .
@@ -929,8 +929,8 @@ sw:people-55  a  schema:People .
 sw:people-55  rdfs:label  "Adi Gallia" .
 sw:people-55  schema:height  "184" .
 sw:people-55  schema:mass  "50" .
-sw:people-55  schema:hair_color  "none" .
-sw:people-55  schema:skin_color  "dark" .
+sw:people-55  schema:hair_colors  "none" .
+sw:people-55  schema:skin_colors  "dark" .
 sw:people-55  schema:eye_color  "blue" .
 sw:people-55  schema:gender  "female" .
 sw:people-55  schema:homeworld  sw:planet-9 .
@@ -944,8 +944,8 @@ sw:people-55  schema:url  "http://swapi.co/api/people/55/" .
 sw:people-56  a  schema:People .
 sw:people-56  rdfs:label  "Saesee Tiin" .
 sw:people-56  schema:height  "188" .
-sw:people-56  schema:hair_color  "none" .
-sw:people-56  schema:skin_color  "pale" .
+sw:people-56  schema:hair_colors  "none" .
+sw:people-56  schema:skin_colors  "pale" .
 sw:people-56  schema:eye_color  "orange" .
 sw:people-56  schema:gender  "male" .
 sw:people-56  schema:homeworld  sw:planet-47 .
@@ -959,8 +959,8 @@ sw:people-56  schema:url  "http://swapi.co/api/people/56/" .
 sw:people-57  a  schema:People .
 sw:people-57  rdfs:label  "Yarael Poof" .
 sw:people-57  schema:height  "264" .
-sw:people-57  schema:hair_color  "none" .
-sw:people-57  schema:skin_color  "white" .
+sw:people-57  schema:hair_colors  "none" .
+sw:people-57  schema:skin_colors  "white" .
 sw:people-57  schema:eye_color  "yellow" .
 sw:people-57  schema:gender  "male" .
 sw:people-57  schema:homeworld  sw:planet-48 .
@@ -974,8 +974,8 @@ sw:people-58  a  schema:People .
 sw:people-58  rdfs:label  "Plo Koon" .
 sw:people-58  schema:height  "188" .
 sw:people-58  schema:mass  "80" .
-sw:people-58  schema:hair_color  "none" .
-sw:people-58  schema:skin_color  "orange" .
+sw:people-58  schema:hair_colors  "none" .
+sw:people-58  schema:skin_colors  "orange" .
 sw:people-58  schema:eye_color  "black" .
 sw:people-58  schema:birth_year  "22BBY" .
 sw:people-58  schema:gender  "male" .
@@ -992,8 +992,8 @@ sw:people-58  schema:url  "http://swapi.co/api/people/58/" .
 sw:people-59  a  schema:People .
 sw:people-59  rdfs:label  "Mas Amedda" .
 sw:people-59  schema:height  "196" .
-sw:people-59  schema:hair_color  "none" .
-sw:people-59  schema:skin_color  "blue" .
+sw:people-59  schema:hair_colors  "none" .
+sw:people-59  schema:skin_colors  "blue" .
 sw:people-59  schema:eye_color  "blue" .
 sw:people-59  schema:gender  "male" .
 sw:people-59  schema:homeworld  sw:planet-50 .
@@ -1008,8 +1008,8 @@ sw:people-60  a  schema:People .
 sw:people-60  rdfs:label  "Gregar Typho" .
 sw:people-60  schema:height  "185" .
 sw:people-60  schema:mass  "85" .
-sw:people-60  schema:hair_color  "black" .
-sw:people-60  schema:skin_color  "dark" .
+sw:people-60  schema:hair_colors  "black" .
+sw:people-60  schema:skin_colors  "dark" .
 sw:people-60  schema:eye_color  "brown" .
 sw:people-60  schema:gender  "male" .
 sw:people-60  schema:homeworld  sw:planet-8 .
@@ -1023,8 +1023,8 @@ sw:people-60  schema:url  "http://swapi.co/api/people/60/" .
 sw:people-61  a  schema:People .
 sw:people-61  rdfs:label  "Cordé" .
 sw:people-61  schema:height  "157" .
-sw:people-61  schema:hair_color  "brown" .
-sw:people-61  schema:skin_color  "light" .
+sw:people-61  schema:hair_colors  "brown" .
+sw:people-61  schema:skin_colors  "light" .
 sw:people-61  schema:eye_color  "brown" .
 sw:people-61  schema:gender  "female" .
 sw:people-61  schema:homeworld  sw:planet-8 .
@@ -1037,8 +1037,8 @@ sw:people-61  schema:url  "http://swapi.co/api/people/61/" .
 sw:people-62  a  schema:People .
 sw:people-62  rdfs:label  "Cliegg Lars" .
 sw:people-62  schema:height  "183" .
-sw:people-62  schema:hair_color  "brown" .
-sw:people-62  schema:skin_color  "fair" .
+sw:people-62  schema:hair_colors  "brown" .
+sw:people-62  schema:skin_colors  "fair" .
 sw:people-62  schema:eye_color  "blue" .
 sw:people-62  schema:birth_year  "82BBY" .
 sw:people-62  schema:gender  "male" .
@@ -1053,8 +1053,8 @@ sw:people-63  a  schema:People .
 sw:people-63  rdfs:label  "Poggle the Lesser" .
 sw:people-63  schema:height  "183" .
 sw:people-63  schema:mass  "80" .
-sw:people-63  schema:hair_color  "none" .
-sw:people-63  schema:skin_color  "green" .
+sw:people-63  schema:hair_colors  "none" .
+sw:people-63  schema:skin_colors  "green" .
 sw:people-63  schema:eye_color  "yellow" .
 sw:people-63  schema:gender  "male" .
 sw:people-63  schema:homeworld  sw:planet-11 .
@@ -1069,8 +1069,8 @@ sw:people-64  a  schema:People .
 sw:people-64  rdfs:label  "Luminara Unduli" .
 sw:people-64  schema:height  "170" .
 sw:people-64  schema:mass  "56.2" .
-sw:people-64  schema:hair_color  "black" .
-sw:people-64  schema:skin_color  "yellow" .
+sw:people-64  schema:hair_colors  "black" .
+sw:people-64  schema:skin_colors  "yellow" .
 sw:people-64  schema:eye_color  "blue" .
 sw:people-64  schema:birth_year  "58BBY" .
 sw:people-64  schema:gender  "female" .
@@ -1086,8 +1086,8 @@ sw:people-65  a  schema:People .
 sw:people-65  rdfs:label  "Barriss Offee" .
 sw:people-65  schema:height  "166" .
 sw:people-65  schema:mass  "50" .
-sw:people-65  schema:hair_color  "black" .
-sw:people-65  schema:skin_color  "yellow" .
+sw:people-65  schema:hair_colors  "black" .
+sw:people-65  schema:skin_colors  "yellow" .
 sw:people-65  schema:eye_color  "blue" .
 sw:people-65  schema:birth_year  "40BBY" .
 sw:people-65  schema:gender  "female" .
@@ -1101,8 +1101,8 @@ sw:people-65  schema:url  "http://swapi.co/api/people/65/" .
 sw:people-66  a  schema:People .
 sw:people-66  rdfs:label  "Dormé" .
 sw:people-66  schema:height  "165" .
-sw:people-66  schema:hair_color  "brown" .
-sw:people-66  schema:skin_color  "light" .
+sw:people-66  schema:hair_colors  "brown" .
+sw:people-66  schema:skin_colors  "light" .
 sw:people-66  schema:eye_color  "brown" .
 sw:people-66  schema:gender  "female" .
 sw:people-66  schema:homeworld  sw:planet-8 .
@@ -1116,8 +1116,8 @@ sw:people-67  a  schema:People .
 sw:people-67  rdfs:label  "Dooku" .
 sw:people-67  schema:height  "193" .
 sw:people-67  schema:mass  "80" .
-sw:people-67  schema:hair_color  "white" .
-sw:people-67  schema:skin_color  "fair" .
+sw:people-67  schema:hair_colors  "white" .
+sw:people-67  schema:skin_colors  "fair" .
 sw:people-67  schema:eye_color  "brown" .
 sw:people-67  schema:birth_year  "102BBY" .
 sw:people-67  schema:gender  "male" .
@@ -1135,8 +1135,8 @@ sw:people-67  schema:desc  "Once a respected Jedi Master, he falls to the dark s
 sw:people-68  a  schema:People .
 sw:people-68  rdfs:label  "Bail Prestor Organa" .
 sw:people-68  schema:height  "191" .
-sw:people-68  schema:hair_color  "black" .
-sw:people-68  schema:skin_color  "tan" .
+sw:people-68  schema:hair_colors  "black" .
+sw:people-68  schema:skin_colors  "tan" .
 sw:people-68  schema:eye_color  "brown" .
 sw:people-68  schema:birth_year  "67BBY" .
 sw:people-68  schema:gender  "male" .
@@ -1153,8 +1153,8 @@ sw:people-69  a  schema:People .
 sw:people-69  rdfs:label  "Jango Fett" .
 sw:people-69  schema:height  "183" .
 sw:people-69  schema:mass  "79" .
-sw:people-69  schema:hair_color  "black" .
-sw:people-69  schema:skin_color  "tan" .
+sw:people-69  schema:hair_colors  "black" .
+sw:people-69  schema:skin_colors  "tan" .
 sw:people-69  schema:eye_color  "brown" .
 sw:people-69  schema:birth_year  "66BBY" .
 sw:people-69  schema:gender  "male" .
@@ -1171,8 +1171,8 @@ sw:people-70  a  schema:People .
 sw:people-70  rdfs:label  "Zam Wesell" .
 sw:people-70  schema:height  "168" .
 sw:people-70  schema:mass  "55" .
-sw:people-70  schema:hair_color  "blonde" .
-sw:people-70  schema:skin_color  "fair, green, yellow" .
+sw:people-70  schema:hair_colors  "blonde" .
+sw:people-70  schema:skin_colors  "fair, green, yellow" .
 sw:people-70  schema:eye_color  "yellow" .
 sw:people-70  schema:gender  "female" .
 sw:people-70  schema:homeworld  sw:planet-54 .
@@ -1187,8 +1187,8 @@ sw:people-71  a  schema:People .
 sw:people-71  rdfs:label  "Dexter Jettster" .
 sw:people-71  schema:height  "198" .
 sw:people-71  schema:mass  "102" .
-sw:people-71  schema:hair_color  "none" .
-sw:people-71  schema:skin_color  "brown" .
+sw:people-71  schema:hair_colors  "none" .
+sw:people-71  schema:skin_colors  "brown" .
 sw:people-71  schema:eye_color  "yellow" .
 sw:people-71  schema:gender  "male" .
 sw:people-71  schema:homeworld  sw:planet-55 .
@@ -1202,8 +1202,8 @@ sw:people-72  a  schema:People .
 sw:people-72  rdfs:label  "Lama Su" .
 sw:people-72  schema:height  "229" .
 sw:people-72  schema:mass  "88" .
-sw:people-72  schema:hair_color  "none" .
-sw:people-72  schema:skin_color  "grey" .
+sw:people-72  schema:hair_colors  "none" .
+sw:people-72  schema:skin_colors  "grey" .
 sw:people-72  schema:eye_color  "black" .
 sw:people-72  schema:gender  "male" .
 sw:people-72  schema:homeworld  sw:planet-10 .
@@ -1216,8 +1216,8 @@ sw:people-72  schema:url  "http://swapi.co/api/people/72/" .
 sw:people-73  a  schema:People .
 sw:people-73  rdfs:label  "Taun We" .
 sw:people-73  schema:height  "213" .
-sw:people-73  schema:hair_color  "none" .
-sw:people-73  schema:skin_color  "grey" .
+sw:people-73  schema:hair_colors  "none" .
+sw:people-73  schema:skin_colors  "grey" .
 sw:people-73  schema:eye_color  "black" .
 sw:people-73  schema:gender  "female" .
 sw:people-73  schema:homeworld  sw:planet-10 .
@@ -1230,8 +1230,8 @@ sw:people-73  schema:url  "http://swapi.co/api/people/73/" .
 sw:people-74  a  schema:People .
 sw:people-74  rdfs:label  "Jocasta Nu" .
 sw:people-74  schema:height  "167" .
-sw:people-74  schema:hair_color  "white" .
-sw:people-74  schema:skin_color  "fair" .
+sw:people-74  schema:hair_colors  "white" .
+sw:people-74  schema:skin_colors  "fair" .
 sw:people-74  schema:eye_color  "blue" .
 sw:people-74  schema:gender  "female" .
 sw:people-74  schema:homeworld  sw:planet-9 .
@@ -1245,8 +1245,8 @@ sw:people-47  a  schema:People .
 sw:people-47  rdfs:label  "Ratts Tyerell" .
 sw:people-47  schema:height  "79" .
 sw:people-47  schema:mass  "15" .
-sw:people-47  schema:hair_color  "none" .
-sw:people-47  schema:skin_color  "grey, blue" .
+sw:people-47  schema:hair_colors  "none" .
+sw:people-47  schema:skin_colors  "grey, blue" .
 sw:people-47  schema:gender  "male" .
 sw:people-47  schema:homeworld  sw:planet-38 .
 sw:people-47  schema:film  sw:film-4 .
@@ -1258,8 +1258,8 @@ sw:people-47  schema:url  "http://swapi.co/api/people/47/" .
 sw:people-75  a  schema:People .
 sw:people-75  rdfs:label  "R4-P17" .
 sw:people-75  schema:height  "96" .
-sw:people-75  schema:hair_color  "none" .
-sw:people-75  schema:skin_color  "silver, red" .
+sw:people-75  schema:hair_colors  "none" .
+sw:people-75  schema:skin_colors  "silver, red" .
 sw:people-75  schema:eye_color  "red, blue" .
 sw:people-75  schema:gender  "female" .
 sw:people-75  schema:homeworld  sw:planet-28 .
@@ -1273,8 +1273,8 @@ sw:people-76  a  schema:People .
 sw:people-76  rdfs:label  "Wat Tambor" .
 sw:people-76  schema:height  "193" .
 sw:people-76  schema:mass  "48" .
-sw:people-76  schema:hair_color  "none" .
-sw:people-76  schema:skin_color  "green, grey" .
+sw:people-76  schema:hair_colors  "none" .
+sw:people-76  schema:skin_colors  "green, grey" .
 sw:people-76  schema:gender  "male" .
 sw:people-76  schema:homeworld  sw:planet-56 .
 sw:people-76  schema:film  sw:film-5 .
@@ -1286,8 +1286,8 @@ sw:people-76  schema:url  "http://swapi.co/api/people/76/" .
 sw:people-77  a  schema:People .
 sw:people-77  rdfs:label  "San Hill" .
 sw:people-77  schema:height  "191" .
-sw:people-77  schema:hair_color  "none" .
-sw:people-77  schema:skin_color  "grey" .
+sw:people-77  schema:hair_colors  "none" .
+sw:people-77  schema:skin_colors  "grey" .
 sw:people-77  schema:eye_color  "gold" .
 sw:people-77  schema:gender  "male" .
 sw:people-77  schema:homeworld  sw:planet-57 .
@@ -1301,8 +1301,8 @@ sw:people-78  a  schema:People .
 sw:people-78  rdfs:label  "Shaak Ti" .
 sw:people-78  schema:height  "178" .
 sw:people-78  schema:mass  "57" .
-sw:people-78  schema:hair_color  "none" .
-sw:people-78  schema:skin_color  "red, blue, white" .
+sw:people-78  schema:hair_colors  "none" .
+sw:people-78  schema:skin_colors  "red, blue, white" .
 sw:people-78  schema:eye_color  "black" .
 sw:people-78  schema:gender  "female" .
 sw:people-78  schema:homeworld  sw:planet-58 .
@@ -1317,8 +1317,8 @@ sw:people-79  a  schema:People .
 sw:people-79  rdfs:label  "Grievous" .
 sw:people-79  schema:height  "216" .
 sw:people-79  schema:mass  "159" .
-sw:people-79  schema:hair_color  "none" .
-sw:people-79  schema:skin_color  "brown, white" .
+sw:people-79  schema:hair_colors  "none" .
+sw:people-79  schema:skin_colors  "brown, white" .
 sw:people-79  schema:eye_color  "green, yellow" .
 sw:people-79  schema:gender  "male" .
 sw:people-79  schema:homeworld  sw:planet-59 .
@@ -1336,8 +1336,8 @@ sw:people-80  a  schema:People .
 sw:people-80  rdfs:label  "Tarfful" .
 sw:people-80  schema:height  "234" .
 sw:people-80  schema:mass  "136" .
-sw:people-80  schema:hair_color  "brown" .
-sw:people-80  schema:skin_color  "brown" .
+sw:people-80  schema:hair_colors  "brown" .
+sw:people-80  schema:skin_colors  "brown" .
 sw:people-80  schema:eye_color  "blue" .
 sw:people-80  schema:gender  "male" .
 sw:people-80  schema:homeworld  sw:planet-14 .
@@ -1351,8 +1351,8 @@ sw:people-81  a  schema:People .
 sw:people-81  rdfs:label  "Raymus Antilles" .
 sw:people-81  schema:height  "188" .
 sw:people-81  schema:mass  "79" .
-sw:people-81  schema:hair_color  "brown" .
-sw:people-81  schema:skin_color  "light" .
+sw:people-81  schema:hair_colors  "brown" .
+sw:people-81  schema:skin_colors  "light" .
 sw:people-81  schema:eye_color  "brown" .
 sw:people-81  schema:gender  "male" .
 sw:people-81  schema:homeworld  sw:planet-2 .
@@ -1367,8 +1367,8 @@ sw:people-82  a  schema:People .
 sw:people-82  rdfs:label  "Sly Moore" .
 sw:people-82  schema:height  "178" .
 sw:people-82  schema:mass  "48" .
-sw:people-82  schema:hair_color  "none" .
-sw:people-82  schema:skin_color  "pale" .
+sw:people-82  schema:hair_colors  "none" .
+sw:people-82  schema:skin_colors  "pale" .
 sw:people-82  schema:eye_color  "white" .
 sw:people-82  schema:gender  "female" .
 sw:people-82  schema:homeworld  sw:planet-60 .
@@ -1382,8 +1382,8 @@ sw:people-83  a  schema:People .
 sw:people-83  rdfs:label  "Tion Medon" .
 sw:people-83  schema:height  "206" .
 sw:people-83  schema:mass  "80" .
-sw:people-83  schema:hair_color  "none" .
-sw:people-83  schema:skin_color  "grey" .
+sw:people-83  schema:hair_colors  "none" .
+sw:people-83  schema:skin_colors  "grey" .
 sw:people-83  schema:eye_color  "black" .
 sw:people-83  schema:gender  "male" .
 sw:people-83  schema:homeworld  sw:planet-12 .
@@ -1395,8 +1395,8 @@ sw:people-83  schema:url  "http://swapi.co/api/people/83/" .
 
 sw:people-84  a  schema:People .
 sw:people-84  rdfs:label  "Finn" .
-sw:people-84  schema:hair_color  "black" .
-sw:people-84  schema:skin_color  "dark" .
+sw:people-84  schema:hair_colors  "black" .
+sw:people-84  schema:skin_colors  "dark" .
 sw:people-84  schema:eye_color  "dark" .
 sw:people-84  schema:gender  "male" .
 sw:people-84  schema:homeworld  sw:planet-28 .
@@ -1409,8 +1409,8 @@ sw:people-84  schema:desc  "Finn, designation number FN-2187, is a fictional cha
 
 sw:people-85  a  schema:People .
 sw:people-85  rdfs:label  "Rey" .
-sw:people-85  schema:hair_color  "brown" .
-sw:people-85  schema:skin_color  "light" .
+sw:people-85  schema:hair_colors  "brown" .
+sw:people-85  schema:skin_colors  "light" .
 sw:people-85  schema:eye_color  "hazel" .
 sw:people-85  schema:gender  "female" .
 sw:people-85  schema:homeworld  sw:planet-28 .
@@ -1422,8 +1422,8 @@ sw:people-85  schema:url  "http://swapi.co/api/people/85/" .
 
 sw:people-86  a  schema:People .
 sw:people-86  rdfs:label  "Poe Dameron" .
-sw:people-86  schema:hair_color  "brown" .
-sw:people-86  schema:skin_color  "light" .
+sw:people-86  schema:hair_colors  "brown" .
+sw:people-86  schema:skin_colors  "light" .
 sw:people-86  schema:eye_color  "brown" .
 sw:people-86  schema:gender  "male" .
 sw:people-86  schema:homeworld  sw:planet-28 .
@@ -1437,8 +1437,8 @@ sw:people-86  schema:desc  "Poe Dameron is a fictional character in the Star War
 
 sw:people-87  a  schema:People .
 sw:people-87  rdfs:label  "BB8" .
-sw:people-87  schema:hair_color  "none" .
-sw:people-87  schema:skin_color  "none" .
+sw:people-87  schema:hair_colors  "none" .
+sw:people-87  schema:skin_colors  "none" .
 sw:people-87  schema:eye_color  "black" .
 sw:people-87  schema:gender  "none" .
 sw:people-87  schema:homeworld  sw:planet-28 .
@@ -1464,8 +1464,8 @@ sw:people-35  a  schema:People .
 sw:people-35  rdfs:label  "Padmé Amidala" .
 sw:people-35  schema:height  "165" .
 sw:people-35  schema:mass  "45" .
-sw:people-35  schema:hair_color  "brown" .
-sw:people-35  schema:skin_color  "light" .
+sw:people-35  schema:hair_colors "brown" .
+sw:people-35  schema:skin_colors "light" .
 sw:people-35  schema:eye_color  "brown" .
 sw:people-35  schema:birth_year  "46BBY" .
 sw:people-35  schema:gender  "female" .
@@ -3552,7 +3552,7 @@ sw:species-2  a  schema:Species .
 sw:species-2  rdfs:label  "Droid" .
 sw:species-2  schema:classification  "artificial" .
 sw:species-2  schema:designation  "sentient" .
-sw:species-2  schema:average_lifespan  "indefinite" .
+
 sw:species-2  schema:people  sw:people-2 .
 sw:species-2  schema:people  sw:people-3 .
 sw:species-2  schema:people  sw:people-8 .
@@ -3725,7 +3725,7 @@ sw:vehicle-14  schema:max_atmosphering_speed  650 .
 sw:vehicle-14  schema:crew  2 .
 sw:vehicle-14  schema:passengers  0 .
 sw:vehicle-14  schema:cargo_capacity  10 .
-sw:vehicle-14  schema:consumables  "none" .
+sw:vehicle-14  schema:consumables  0 .
 sw:vehicle-14  schema:vehicle_class  "airspeeder" .
 sw:vehicle-14  schema:pilot  sw:people-1 .
 sw:vehicle-14  schema:pilot  sw:people-18 .
@@ -3742,7 +3742,7 @@ sw:vehicle-16  schema:length  7.8 .
 sw:vehicle-16  schema:max_atmosphering_speed  850 .
 sw:vehicle-16  schema:crew  1 .
 sw:vehicle-16  schema:passengers  0 .
-sw:vehicle-16  schema:cargo_capacity  "none" .
+sw:vehicle-16  schema:cargo_capacity  0 .
 sw:vehicle-16  schema:consumables  "2 days" .
 sw:vehicle-16  schema:vehicle_class  "space/planetary bomber" .
 sw:vehicle-16  schema:film  sw:film-3 .
@@ -3779,7 +3779,7 @@ sw:vehicle-19  schema:max_atmosphering_speed  90 .
 sw:vehicle-19  schema:crew  2 .
 sw:vehicle-19  schema:passengers  0 .
 sw:vehicle-19  schema:cargo_capacity  200 .
-sw:vehicle-19  schema:consumables  "none" .
+sw:vehicle-19  schema:consumables  0 .
 sw:vehicle-19  schema:vehicle_class  "walker" .
 sw:vehicle-19  schema:pilot  sw:people-13 .
 sw:vehicle-19  schema:film  sw:film-3 .
@@ -3885,7 +3885,7 @@ sw:vehicle-33  schema:max_atmosphering_speed  1200 .
 sw:vehicle-33  schema:crew  0 .
 sw:vehicle-33  schema:passengers  0 .
 sw:vehicle-33  schema:cargo_capacity  0 .
-sw:vehicle-33  schema:consumables  "none" .
+sw:vehicle-33  schema:consumables  0 .
 sw:vehicle-33  schema:vehicle_class  "starfighter" .
 sw:vehicle-33  schema:film  sw:film-4 .
 sw:vehicle-33  schema:film  sw:film-6 .
@@ -3932,8 +3932,8 @@ sw:vehicle-36  schema:length  2 .
 sw:vehicle-36  schema:max_atmosphering_speed  400 .
 sw:vehicle-36  schema:crew  1 .
 sw:vehicle-36  schema:passengers  0 .
-sw:vehicle-36  schema:cargo_capacity  "none" .
-sw:vehicle-36  schema:consumables  "none" .
+sw:vehicle-36  schema:cargo_capacity  0 .
+sw:vehicle-36  schema:consumables  0 .
 sw:vehicle-36  schema:vehicle_class  "repulsorcraft" .
 sw:vehicle-36  schema:film  sw:film-4 .
 sw:vehicle-36  schema:created  "2014-12-19T17:15:09.511000Z"^^xs:dateTime .
@@ -4002,7 +4002,7 @@ sw:vehicle-44  schema:max_atmosphering_speed  350 .
 sw:vehicle-44  schema:crew  1 .
 sw:vehicle-44  schema:passengers  1 .
 sw:vehicle-44  schema:cargo_capacity  200 .
-sw:vehicle-44  schema:consumables  "none" .
+sw:vehicle-44  schema:consumables  0 .
 sw:vehicle-44  schema:vehicle_class  "repulsorcraft" .
 sw:vehicle-44  schema:pilot  sw:people-11 .
 sw:vehicle-44  schema:film  sw:film-5 .
@@ -4082,7 +4082,7 @@ sw:vehicle-60  schema:max_atmosphering_speed  330 .
 sw:vehicle-60  schema:crew  1 .
 sw:vehicle-60  schema:passengers  1 .
 sw:vehicle-60  schema:cargo_capacity  10 .
-sw:vehicle-60  schema:consumables  "none" .
+sw:vehicle-60  schema:consumables  0 .
 sw:vehicle-60  schema:vehicle_class  "wheeled walker" .
 sw:vehicle-60  schema:pilot  sw:people-79 .
 sw:vehicle-60  schema:film  sw:film-6 .
@@ -4110,7 +4110,7 @@ sw:vehicle-67  schema:max_atmosphering_speed  1180 .
 sw:vehicle-67  schema:crew  1 .
 sw:vehicle-67  schema:passengers  0 .
 sw:vehicle-67  schema:cargo_capacity  0 .
-sw:vehicle-67  schema:consumables  "none" .
+sw:vehicle-67  schema:consumables  0 .
 sw:vehicle-67  schema:vehicle_class  "droid starfighter" .
 sw:vehicle-67  schema:film  sw:film-6 .
 sw:vehicle-67  schema:created  "2014-12-20T20:05:19.992000Z"^^xs:dateTime .
@@ -4144,7 +4144,7 @@ sw:vehicle-70  schema:max_atmosphering_speed  310 .
 sw:vehicle-70  schema:crew  2 .
 sw:vehicle-70  schema:passengers  0 .
 sw:vehicle-70  schema:cargo_capacity  20 .
-sw:vehicle-70  schema:consumables  "none" .
+sw:vehicle-70  schema:consumables  0 .
 sw:vehicle-70  schema:vehicle_class  "air speeder" .
 sw:vehicle-70  schema:film  sw:film-6 .
 sw:vehicle-70  schema:created  "2014-12-20T20:21:55.648000Z"^^xs:dateTime .
@@ -4177,8 +4177,8 @@ sw:vehicle-72  schema:length  10.96 .
 sw:vehicle-72  schema:max_atmosphering_speed  100 .
 sw:vehicle-72  schema:crew  0 .
 sw:vehicle-72  schema:passengers  4 .
-sw:vehicle-72  schema:cargo_capacity  "none" .
-sw:vehicle-72  schema:consumables  "none" .
+sw:vehicle-72  schema:cargo_capacity  0 .
+sw:vehicle-72  schema:consumables  0 .
 sw:vehicle-72  schema:vehicle_class  "droid tank" .
 sw:vehicle-72  schema:film  sw:film-6 .
 sw:vehicle-72  schema:created  "2014-12-20T20:26:55.522000Z"^^xs:dateTime .
@@ -4195,7 +4195,7 @@ sw:vehicle-73  schema:max_atmosphering_speed  820 .
 sw:vehicle-73  schema:crew  0 .
 sw:vehicle-73  schema:passengers  0 .
 sw:vehicle-73  schema:cargo_capacity  0 .
-sw:vehicle-73  schema:consumables  "none" .
+sw:vehicle-73  schema:consumables  0 .
 sw:vehicle-73  schema:vehicle_class  "airspeeder" .
 sw:vehicle-73  schema:film  sw:film-6 .
 sw:vehicle-73  schema:created  "2014-12-20T20:32:05.687000Z"^^xs:dateTime .

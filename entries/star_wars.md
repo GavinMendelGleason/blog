@@ -219,6 +219,10 @@ If there are any problems with the schema, this results in an error which will l
 This is telling us that we are still missing a `pilot` property for
 `Vehicle`. I missed about 10 or 15 properties in total and then I was done!
 
+I had to modify some brokenness in the `ttl` file too, since some
+properties were mispelled, and some had ranges which were
+inconvenient, mixing strings and integers for instance. But after
+reloading the triples I was able to do:
 
 ```shell
 $ terminusdb update db admin/starwars --schema=true
