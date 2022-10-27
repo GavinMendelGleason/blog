@@ -3,6 +3,10 @@
 This is Gavin Mendel-Gleason's technical blog. I use this primarily to
 organize my thoughts on distributed data management.
 
+# [How to implement GraphQL in fourteen days](./entries/graphql_in_fourteen_days.md)
+
+Thursday, Oct 27th, 2022
+
 # [Star Wars in TerminusDB - GraphQL and RDF](./entries/star_wars.md)
 
 Wednesday, Oct 12th, 2022
