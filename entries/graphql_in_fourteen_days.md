@@ -35,6 +35,10 @@ We didn't do it from scratch of course, we leveraged the already
 existing, and very well designed (if not so brilliantly documented)
 [Juniper](https://github.com/graphql-rust/juniper).
 
+Juniper is really great and we can recommend it, but be wary of the
+Junpier book. It is pretty badly out of date. You're better off reading the
+code examples and automatically generated rust docs.
+
 This toolkit lets you develop GraphQL endpoints directly from your
 rust datastructures when you have a static schema, or to generate a
 dynamic schema yourself.
@@ -59,40 +63,74 @@ database, or explore which branches exist.
 ## Dynamic - Modelling TerminusDB Documents in GraphQL
 
 TerminusDB is build around the concept of a document.  In order to
-expose this to GraphQL, we automatically create a number of queries
-which correspond to the data as modelled in TerminusDB
+expose this to GraphQL, we automatically create a number of *Object
+type definitions* and *input Object type definitions* which enable the
+GraphQL user to explore content in a TerminusDB and filter and order
+it without any additional work.
 
-The basic idea is that each type gets a query at the top level, and
-each property of this object which has a range of an object type also
-gets this type of query.
+The basic idea is that each TerminusDB document type yields an object
+type along with some selection query paramters and a few input object
+types.  The input types can be used to filter our queries when passed
+as parameters.
 
-In order to faciiliate aggregation, paging, metadata and query, we
-segment the query for document types into two parts (as per best
-practice [regarding pagination and
-cursors](https://graphql.org/learn/pagination/))
-
-At the top level, we will mention the type of document we are
-interested in.
+Using the [Star Wars Schema](../assets/star-wars.json) schema, with
+the [Star Wars Turtle](../assets/star-wars-terminusdb.ttl) loaded, we
+can perform a query which searches all star ships, for the one called
+"Millenium Falcon", and then obtain the name of its pilot.
 
 ```graphql
 {
-  Starship(name="Millenium Falcon"){
+  Starship(label: "Millennium Falcon"){
+    label,
     pilot{
-      name
-    }
-  }
-  People{
-    name
-    pilot_of_Starship {
-      name
+      label
     }
   }
 }
 ```
 
+To which we will get an answer such as the following:
 
+![Millenium Falcon Query Result](../assets/millenium_falcon.png)
 
+Juniper made adding these queries automatically from the schema
+dynamically fairly straightfoward. We simply traverse TerminusDB's
+schema and create acceptable Juniper GraphQL objects as a result.
+
+In order to perform searches, We also use Juniper's resolution with
+little modification. We implemented parameters for these queries by
+directly connecting to Terminus's storage backend and created
+appropriate iterators in rust. The whole thing is pretty responsive
+and surprisngly robust for a couple of weeks of work!
 
 ## The Future
+
+We will be extending the GraphQL interface with additional features as
+we go forward. We see this as the primary method of interaction for
+many front-end applications which use TerminusDB so we want to make it
+completely painless.
+
+First we will extend the parameters for queries with a more elaborate
+filtering system. We want to be able to filter your documents on the
+properties of the documents which are linked to it as easily as the
+top-level document.
+
+Adding an intermediate [pagination and
+-cursor](https://graphql.org/learn/pagination/)) object type is also
+on our list. This will let us return cursors as well as metadata about
+queries, such as the number of total results.
+
+We also want to implement *back links* which will show you all things
+that *link to* a given object, and not just what an object links to.
+
+Finally we would like to be able to do path queries directly in
+GraphQL. This would let you specify a path expression which links you
+from the current object, to any other object of interest. This would
+really make GraphQL much more *graphy*.
+
+We're interested in people playing around with this system and we're
+very interested in feed back and suggestions.
+
+To the Stars and Beyond!
 
 
