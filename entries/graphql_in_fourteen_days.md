@@ -36,8 +36,10 @@ existing, and very well designed (if not so brilliantly documented)
 [Juniper](https://github.com/graphql-rust/juniper).
 
 Juniper is really great and we can recommend it, but be wary of the
-Junpier book. It is pretty badly out of date. You're better off reading the
-code examples and automatically generated rust docs.
+[Junpier
+book](https://graphql-rust.github.io/juniper/master/quickstart.html). It
+is pretty badly out of date. You're better off reading the code
+examples and automatically generated rust docs.
 
 This toolkit lets you develop GraphQL endpoints directly from your
 rust datastructures when you have a static schema, or to generate a
