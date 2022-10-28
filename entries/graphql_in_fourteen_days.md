@@ -125,10 +125,16 @@ queries, such as the number of total results.
 We also want to implement *back links* which will show you all things
 that *link to* a given object, and not just what an object links to.
 
-Finally we would like to be able to do path queries directly in
-GraphQL. This would let you specify a path expression which links you
-from the current object, to any other object of interest. This would
+We would also like to introduce path queries directly to GraphQL. This
+would let you specify a path expression which links you from the
+current object, to any other object of interest. This will let you do
+shortest path type operations, or ordered path operations. This would
 really make GraphQL much more *graphy*.
+
+Finally, we would like to be able to specify TerminusDB schemata in
+GraphQL's schema language. Since GraphQL's class system is strictly
+simpler, we can embed a GraphQL schema in TerminusDB without loss of
+information.
 
 We're interested in people playing around with this system and we're
 very interested in feed back and suggestions.
