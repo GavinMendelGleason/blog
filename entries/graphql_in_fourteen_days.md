@@ -7,8 +7,8 @@ calculators and automatically generated user interfaces.
 
 Given our focus on content management and delivery, it might seem
 strange then that it took us so long to start trying to position
-TerminusDB as an ideal platform for headless CMSs. It took our
-community proding us into it, but we're taking the plunge.
+TerminusDB as an ideal platform for headless CMSes. It took our
+community prodding us into it, but we're taking the plunge.
 
 To be a content platform it helps if you can plug in to existing data
 ecosystems. And this has been a point of friction for TerminusDB.
@@ -21,13 +21,13 @@ schemata and the associated Query engine in a little over a week.
 I'm extremely excited about this development, since it means that now
 TerminusDB will be available to many more languages (anything with a
 GraphQL client), there will be a high quality open-source method of
-developing with GrahpQL, and a straightforward method of exposing RDF
+developing with GraphQL, and a straightforward method of exposing RDF
 as a GraphQL endpoint.
 
-It feels like a lot of unnessary frictions simply fall away, and
+It feels like a lot of unnecessary frictions simply fall away, and
 TerminusDB seems to fit so naturally into the GraphQL environment that
 I'm confident it will quickly be one of the best platforms around for
-serving convent via GraphQL.
+serving content via GraphQL.
 
 ## Juniper
 
@@ -47,7 +47,7 @@ dynamic schema yourself.
 
 We used both approaches to expose different parts of TerminusDB.
 
-## Static - Exposing TerminusDB's inards
+## Static - Exposing TerminusDB's innards
 
 The internal aspects of TerminusDB, the system database (`_system`),
 the repository graph (`_meta`) and the commit graph (`_commits`) are
@@ -71,9 +71,12 @@ GraphQL user to explore content in a TerminusDB and filter and order
 it without any additional work.
 
 The basic idea is that each TerminusDB document type yields an object
-type along with some selection query paramters and a few input object
-types.  The input types can be used to filter our queries when passed
-as parameters.
+type, which has all the fields of the document type as retrieval
+operations. If a field points at another document type, this operation
+allows the retrieval of additiona linked documents, optionally
+filtering and ordering on any of its properties. Each document type
+also yields an operation in the top-level query object that similarly
+allows filtering and ordering.
 
 Using the [Star Wars Schema](../assets/star-wars.json) schema, with
 the [Star Wars Turtle](../assets/star-wars-terminusdb.ttl) loaded, we
@@ -101,9 +104,9 @@ schema and create acceptable Juniper GraphQL objects as a result.
 
 In order to perform searches, We also use Juniper's resolution with
 little modification. We implemented parameters for these queries by
-directly connecting to Terminus's storage backend and created
+directly connecting to TerminusDB's storage backend and created
 appropriate iterators in rust. The whole thing is pretty responsive
-and surprisngly robust for a couple of weeks of work!
+and surprisingly robust for a couple of weeks of work!
 
 ## The Future
 
