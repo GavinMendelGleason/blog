@@ -250,11 +250,10 @@ address lexical encodings of data types in another future blog.
 ### The Adjacency List
 
 Once we have our id, we need to see how we are connected. Let's
-imagine we are starting with `Jim` and our access mode is `(+,-,-)`.
+imagine we are starting with `Joan` and our access mode is `(+,-,-)`.
 
-let us say we look up `Jim` to find he is index 0. Perhaps there are
-only two people in our database for the moment, and our graph looks
-like this:
+Perhaps there are only two people in our database for the moment, and
+our graph looks like this:
 
 ```
 Jim -address-> "12 Mulberry Lane"
