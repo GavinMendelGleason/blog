@@ -3,6 +3,10 @@
 This is Gavin Mendel-Gleason's technical blog. I use this primarily to
 organize my thoughts on distributed data management.
 
+# [TerminusDB internals part 1: Smaller, Faster, Stronger](./entries/graph_representation.md)
+
+Sunday, Oct 30th, 2022
+
 # [How to implement GraphQL in fourteen days](./entries/graphql_in_fourteen_days.md)
 
 Thursday, Oct 27th, 2022
