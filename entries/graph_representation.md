@@ -114,7 +114,7 @@ By way of example, let's think of a data point named `Joe`. If we
 wanted to see everything which `Joe` is connected to, we might say (in
 WOQL):
 
-```
+```javascript
 let v = Vars("p","x");
 triple("Joe", v.p, v.x)
 ```
@@ -125,7 +125,7 @@ If we wanted to see everything that was connected to everything that
 Joe was connected to, we might say:
 
 
-```
+```javascript
 let v = Vars("p","x","q","y");
 and(triple("Joe", v.p, v.x),
     triple(v.x, v.q, v.y))
