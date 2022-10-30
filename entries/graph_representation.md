@@ -396,7 +396,8 @@ get 8. Now we look up where we are in the Object to SP bit index, by
 asking for the (8-1)th 0, and add 1 and find that we are at SP index
 of 6. If we look up this index (6) in the SP_array, we find that it
 corresponds with name (4), and we can count the number of zeros in the
-SP BitIndex up to this point to our Subject identifier which is 2!
+SP BitIndex up to this point to our Subject identifier which is 2, the
+id of Jane!
 
 ### Bit Indexes
 
