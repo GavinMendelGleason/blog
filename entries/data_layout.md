@@ -67,7 +67,7 @@ prefix queries and range queries.
 
 ### Integers
 
-So how do we get 2 to be larger than 100? If we have *fixed* size
+So how do we get 100 to be larger than 2? If we have *fixed* size
 integers, such as Int32, the answer is relatively simple. We break
 Int32 into 4 bytes written out in [big
 endian](https://en.wikipedia.org/wiki/Endianness). We're almost done
