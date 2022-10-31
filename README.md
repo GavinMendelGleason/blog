@@ -3,6 +3,10 @@
 This is Gavin Mendel-Gleason's technical blog. I use this primarily to
 organize my thoughts on distributed data management.
 
+# [TerminusDB internals part 2: Change is Gonna Come](./entries/mutable_graphs.md)
+
+Monday, Oct 31st, 2022
+
 # [TerminusDB internals part 1: Smaller, Faster, Stronger](./entries/graph_representation.md)
 
 Sunday, Oct 30th, 2022
