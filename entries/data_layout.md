@@ -122,6 +122,9 @@ Notice, flipping all of the bits is just an
 [xor](https://en.wikipedia.org/wiki/Exclusive_or) with a complement
 mask which has every bit set.
 
+Perhaps surprisingly, this trick also works for NaN and Negative and
+Positive Infinity!
+
 ### BigInts
 
 But what about big integers? If the size is not fixed, what are we to
