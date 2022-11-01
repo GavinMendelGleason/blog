@@ -256,8 +256,8 @@ element can be negative, can be larger than 4 digits, and can have a
 time-zone offset, and an arbitrary precision float for sub-second
 portions of the date.
 
-Further, the format is a string, which is far too large to represent
-the data contained, effeciently.
+Further, the format is a string, which is far too large to efficienty represent
+the data contained.
 
 In TerminusDB we deal with this simply by converting the number into a
 decimal encoding of the number of seconds since 1970 with an arbitrary
