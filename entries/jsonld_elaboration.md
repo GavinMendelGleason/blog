@@ -1,2 +1,0 @@
-# JSON-LD and Elaboration
-

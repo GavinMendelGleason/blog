@@ -35,7 +35,7 @@ But not everything is naturally designed to be stored lexically. Take
 the classic example of the directory in linux:
 
 
-```
+```shell
 gavin@titan:~/tmp/sort$ touch 2
 gavin@titan:~/tmp/sort$ touch 11
 gavin@titan:~/tmp/sort$ touch 10
@@ -84,7 +84,7 @@ thing. Because it means that smaller numbers are bigger, and bigger
 numbers are smaller. Which is exactly how we expect negative numbers
 to sort! That is, -10 should be smaller than -1.
 
-```
+```rust
 -1 = 0bffff_fffe
 ```
 
@@ -235,7 +235,7 @@ same.
 
 Schematically:
 
-```
+```diagram
 
    BCD
     |     continuation bit
