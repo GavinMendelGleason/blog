@@ -3,6 +3,10 @@
 This is Gavin Mendel-Gleason's technical blog. I use this primarily to
 organize my thoughts on distributed data management.
 
+# [Terminus Blog](/.entries/terminus_blog.md)
+
+Thursday, Nov 3rd, 2022
+
 # [TerminusDB internals part 3: Soting Every Sort of Thing](./entries/data_layout.md)
 
 Monday, Oct 31st, 2022
