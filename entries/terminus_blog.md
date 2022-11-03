@@ -259,6 +259,8 @@ a datetime from the unix timestamp of the file.
 I never really used the Author object, as I'm the only Author, but
 otherwise it's a fairly useable blogging engine as is.
 
+![Blog engine in TerminusDB](../assets/blog.png)
+
 I'm keen to put this up on TerminusX, and try to host the front end on
 something like [Heroku](https://www.heroku.com/).
 
