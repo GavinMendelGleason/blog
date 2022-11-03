@@ -1,4 +1,4 @@
-# Terminus Blog
+# A Blogging Platform in TerminusDB
 
 How easy is it to make a blog-focused CMS in TerminusDB?
 
