@@ -3,6 +3,10 @@
 This is Gavin Mendel-Gleason's technical blog. I use this primarily to
 organize my thoughts on distributed data management.
 
+# [Graph Query Optimization in TerminusDB](./entries/query-optimization.md)
+
+Wendesday, Nov 9th, 2022
+
 # [A Blogging platform in TerminusDB](./entries/terminus_blog.md)
 
 Thursday, Nov 3rd, 2022
