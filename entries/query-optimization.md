@@ -225,4 +225,4 @@ first, and then back-port the strategies to WOQL to improve the
 performance of our data log.
 
 And of course, ultimately, I want all of the strategies compiled to
-the LLVM :D
+the [LLVM](https://llvm.org/) :D
