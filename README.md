@@ -3,82 +3,82 @@
 This is Gavin Mendel-Gleason's technical blog. I use this primarily to
 organize my thoughts on distributed data management.
 
-# [Graph Query Optimization in TerminusDB](./entries/query-optimization.md)
+## [Graph Query Optimization in TerminusDB](./entries/query-optimization.md)
 
 Wendesday, Nov 9th, 2022
 
-# [A Blogging platform in TerminusDB](./entries/terminus_blog.md)
+## [A Blogging platform in TerminusDB](./entries/terminus_blog.md)
 
 Thursday, Nov 3rd, 2022
 
-# [TerminusDB internals part 3: Soting Every Sort of Thing](./entries/data_layout.md)
+## [TerminusDB internals part 3: Soting Every Sort of Thing](./entries/data_layout.md)
 
 Monday, Oct 31st, 2022
 
-# [TerminusDB internals part 2: Change is Gonna Come](./entries/mutable_graphs.md)
+## [TerminusDB internals part 2: Change is Gonna Come](./entries/mutable_graphs.md)
 
 Monday, Oct 31st, 2022
 
-# [TerminusDB internals part 1: Smaller, Faster, Stronger](./entries/graph_representation.md)
+## [TerminusDB internals part 1: Smaller, Faster, Stronger](./entries/graph_representation.md)
 
 Sunday, Oct 30th, 2022
 
-# [How to implement GraphQL in fourteen days](./entries/graphql_in_fourteen_days.md)
+## [How to implement GraphQL in fourteen days](./entries/graphql_in_fourteen_days.md)
 
 Thursday, Oct 27th, 2022
 
-# [Star Wars in TerminusDB - GraphQL and RDF](./entries/star_wars.md)
+## [Star Wars in TerminusDB - GraphQL and RDF](./entries/star_wars.md)
 
 Wednesday, Oct 12th, 2022
 
-# [The Semantic Web is Dead - Long Live the Semantic Web!](./entries/semantic_future.md)
+## [The Semantic Web is Dead - Long Live the Semantic Web!](./entries/semantic_future.md)
 
 Monday, Aug 8th, 2022
 
-# [TerminusDB v10.1.0: The Mule](./entries/terminusdb_v1.1.md)
+## [TerminusDB v10.1.0: The Mule](./entries/terminusdb_v1.1.md)
 
 Tues, June 14th, 2022
 
-# [JSON as RDF](./entries/json_as_rdf.md)
+## [JSON as RDF](./entries/json_as_rdf.md)
 
 Mon, May 16th, 2022
 
-# [TerminusDB CLI for Push / Pull / Clone](./entries/terminusdb_cli.md)
+## [TerminusDB CLI for Push / Pull / Clone](./entries/terminusdb_cli.md)
 
 Mon, April 25th, 2022
 
-# [Mergeable Records: A Data Modelling Appraoch](./entries/mergeable_records.md)
+## [Mergeable Records: A Data Modelling Appraoch](./entries/mergeable_records.md)
 
 Tues, March 1st, 2022
 
-# [What's in a Name: URI Generation and Unique names for objects](./entries/iri_generation.md)
+## [What's in a Name: URI Generation and Unique names for objects](./entries/iri_generation.md)
 
 Mon, Feb 21, 2022
 
-# [It turns out, Table Diff is NP-hard, but we tried it anyway](./entries/table_diff_is_np_hard.md)
+## [It turns out, Table Diff is NP-hard, but we tried it anyway](./entries/table_diff_is_np_hard.md)
 
 Tues, Feb 15, 2022
 
-# [What if MongoDB and Neo4j had a baby](./entries/mongo_neo4j_terminus.md)
+## [What if MongoDB and Neo4j had a baby](./entries/mongo_neo4j_terminus.md)
 
 Sun, Feb 13, 2022
 
-# [What's the Difference: JSON diff and patch](./entries/json_diff_and_patch.md)
+## [What's the Difference: JSON diff and patch](./entries/json_diff_and_patch.md)
 
 Thurs, Feb 10, 2022
 
-# [Many Worlds: a philosophy of data collaboration](./entries/many_worlds.md)
+## [Many Worlds: a philosophy of data collaboration](./entries/many_worlds.md)
 
 Fri, Oct 29, 2021
 
-# [Why TerminusX](./entries/why_terminusx.md)
+## [Why TerminusX](./entries/why_terminusx.md)
 
 Tues, Sept 28, 2021
 
-# [Syntactic Versioning: What if Git worked with Programming Languages?](./entries/syntactic_versioning.md)
+## [Syntactic Versioning: What if Git worked with Programming Languages?](./entries/syntactic_versioning.md)
 
 Sun, Sept 26, 2021
 
-# [Excel as code](./entries/excel_as_code.md)
+## [Excel as code](./entries/excel_as_code.md)
 
 Sun, Sept 19, 2021
