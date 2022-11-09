@@ -89,7 +89,7 @@ When we create objects in our database, we need to choose a large
 number of different things to model.
 
 1. Identifiers: First and foremost is choice of *object
-   bidentifier*. We need to have some way to represent the objects
+   identifier*. We need to have some way to represent the objects
    identity, so that updates to the object is reflected in
    storage. What constitutes identity is also of issue (what kinds of
    *keys* do we want on our data).
