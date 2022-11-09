@@ -3,6 +3,10 @@
 This is Gavin Mendel-Gleason's technical blog. I use this primarily to
 organize my thoughts on distributed data management.
 
+## [The Object Relational Impedence Mismatch and ORMs](./entries/object_relational.md)
+
+Wendesday, Nov 9th, 2022
+
 ## [Graph Query Optimization in TerminusDB](./entries/query-optimization.md)
 
 Wendesday, Nov 9th, 2022
