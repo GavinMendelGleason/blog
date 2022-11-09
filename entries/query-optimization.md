@@ -156,7 +156,7 @@ We could also specify a slightly more constrained query such as:
 
 ```graphql
 {
- 	Person(filter: {dob : {le : "1992-01-01T00:00:00Z",
+    Person(filter: {dob : {le : "1992-01-01T00:00:00Z",
                            gt : "1975-01-03T01:33:05Z"} }){
     name
   }
