@@ -170,7 +170,7 @@ well supported in virtually every modern programming language. This
 makes it easy to manipulate in your language of choice, whether it be
 functional or object oriented.
 
-For instance, some data retrieved from our [Star Wars](star_wars.md)
+For instance, some data retrieved from our [Star Wars](../entries/star_wars.md)
 example:
 
 ```json
@@ -187,6 +187,8 @@ example:
         ]}
 ```
 
-## The Path Not Taken
+Give TerminusDB a try and I think you'll find that modelling is both
+simpler and more satisfying than attempting to wedge the problem into
+an ORM. Good luck!
 
 [^1]: In the near future we intend to include tools to mode everything you need in GraphQL's schema language, which will be useable directly by many popular programming languages leading to *one* modelling tool for objects rather than two.
