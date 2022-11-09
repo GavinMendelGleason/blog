@@ -94,8 +94,7 @@ Now supposing we want to search by `dob` (date of birth). And suppose
 we only want people older than 30. We can construct a filter which looks like:
 
 ```graphql
-{
-  Person(filter: {dob : {le : "1992-01-01T00:00:00Z"} }){
+{ Person(filter: {dob : {le : "1992-01-01T00:00:00Z"} }){
     name
   }
 }
