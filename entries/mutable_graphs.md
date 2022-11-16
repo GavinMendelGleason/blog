@@ -76,9 +76,9 @@ plane, and then bubble back up.
 | +(joe,dob,"1979-01-01")  | -(joe,dob,"1979-01-01")  | -(joe,name,"Joe")     |
           ||                         ||                      ||
           ||                         ||                      \/
-          ||                         ||               (joe,name,"Joe Bob") =>Answer
+          ||                         ||               (joe,name,"Joe Bob") => Answer
           ||                         \/
-          ||                   (joe,dob,"Joe Bob")    ======================>Answer
+          ||                   (joe,dob,"1978-01-01") ======================> Answer
           \/
     (joe,name,"Joe")  ======================================> X
     (joe,dob,"1979-01-01") ==========> X
