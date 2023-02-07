@@ -3,6 +3,10 @@
 This is Gavin Mendel-Gleason's technical blog. I use this primarily to
 organize my thoughts on distributed data management.
 
+## [Putting the Graph in GraphQL](./entries/putting_the_graph_in_graphql.md)
+
+Tuesday, Feb 7, 2022
+
 ## [The Object Relational Impedence Mismatch and ORMs](./entries/object_relational.md)
 
 Wendesday, Nov 9th, 2022
