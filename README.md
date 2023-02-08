@@ -3,9 +3,13 @@
 This is Gavin Mendel-Gleason's technical blog. I use this primarily to
 organize my thoughts on distributed data management.
 
+## [Content Revolution](./entries/content_revolution.md)
+
+Wednesday, Feb 8, 2023
+
 ## [Putting the Graph in GraphQL](./entries/putting_the_graph_in_graphql.md)
 
-Tuesday, Feb 7, 2022
+Tuesday, Feb 7, 2023
 
 ## [The Object Relational Impedence Mismatch and ORMs](./entries/object_relational.md)
 
