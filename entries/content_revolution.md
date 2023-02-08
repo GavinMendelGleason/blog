@@ -179,7 +179,7 @@ other machines.
   "party" : "xsd:string",
   "start" : "xsd:date",
   "end" : "xsd:date",
-  "position" : xsd:date",
+  "position" : "xsd:date",
 }
 { "@type" : "Class",
   "@id" : "Politician",
