@@ -1,6 +1,11 @@
 # The Content Revolution
 ** Building the Headless Content Management System of the Future **
 
+Myself and team just finished preparring our new cloud headless CMS
+offering, TerminusCMS. It feels like a pretty long journey getting
+here, but we feel like we have the basis of a truly next generation
+CMS for devs.
+
 We live in the information age, and unsurprisingly that means a *lot*
 of what we do with computers is about marshalling, finding or
 transforming data.
