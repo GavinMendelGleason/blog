@@ -1,4 +1,4 @@
-# Knwolwedge Graph Schema Design Patterns and Principles
+# Knowledge Graph Schema Design Patterns and Principles
 
 Graphs are extremely expressive, which actually can be a bit of a
 problem if we create them without a well defined *schema*. The schema

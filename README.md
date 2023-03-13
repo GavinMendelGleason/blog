@@ -3,7 +3,7 @@
 This is Gavin Mendel-Gleason's technical blog. I use this primarily to
 organize my thoughts on distributed data management.
 
-## [Knwolwedge Graph Schema Design Patterns and Principles](./entries/graph_schema_design.md)
+## [Knowledge Graph Schema Design Patterns and Principles](./entries/graph_schema_design.md)
 
 Monday, Mar 13, 2023
 
