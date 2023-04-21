@@ -3,6 +3,10 @@
 This is Gavin Mendel-Gleason's technical blog. I use this primarily to
 organize my thoughts on distributed data management.
 
+## [Schema Migration](./entries/schema_migration.md)
+
+Friday, April 21, 2023
+
 ## [Knowledge Graph Schema Design Patterns and Principles](./entries/graph_schema_design.md)
 
 Monday, Mar 13, 2023
