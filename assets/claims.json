@@ -1,0 +1,359 @@
+[
+    {
+        "@base": "terminusdb:///data/",
+        "@metadata": {
+            "restrictions": [
+                {
+                    "@comment": "The Country of death is not the same as the country of issue",
+                    "@given": [
+                        {
+                            "death_certificate_for_claim": {
+                                "country_of_death": {
+                                    "@var": "CountryOfDeath"
+                                }
+                            },
+                            "policy_of_claim": {
+                                "country_of_issue": {
+                                    "@var": "CountryOfIssue"
+                                }
+                            }
+                        }
+                    ],
+                    "@has": {
+                        "@ne": {
+                            "@var": "CountryOfIssue"
+                        },
+                        "@with": "CountryOfDeath"
+                    },
+                    "@on": "ClaimCase",
+                    "_id": "CountryOfDeath",
+                    "_type": "Restriction"
+                },
+                {
+                    "@comment": "Cause is one of manslaughter, murder, accidental, suicide",
+                    "@has": {
+                        "death_certificate_for_claim": {
+                            "cause_of_death": {
+                                "@or": [
+                                    {
+                                        "@eq": "@schema:CauseOfDeath/manslaughter"
+                                    },
+                                    {
+                                        "@eq": "@schema:CauseOfDeath/murder"
+                                    },
+                                    {
+                                        "@eq": "@schema:CauseOfDeath/accidental"
+                                    },
+                                    {
+                                        "@eq": "@schema:CauseOfDeath/suicide"
+                                    }
+                                ]
+                            }
+                        }
+                    },
+                    "@on": "ClaimCase",
+                    "_id": "CauseOfDeathAssessed",
+                    "_type": "Restriction"
+                },
+                {
+                    "@anyOf": [
+                        "CauseOfDeathAssessed",
+                        "CountryOfDeath"
+                    ],
+                    "@comment": "Claim requires assessment",
+                    "@on": "ClaimCase",
+                    "_id": "ReferralForAssessment",
+                    "_type": "Restriction"
+                },
+                {
+                    "@comment": "Claim is eligible for a premium refund",
+                    "@given": [
+                        {
+                            "death_certificate_for_claim": {
+                                "date_of_death": {
+                                    "@var": "DateOfDeath"
+                                }
+                            },
+                            "policy_of_claim": {
+                                "moratorium_end": {
+                                    "@var": "MoratoriumEnd"
+                                },
+                                "moratorium_start": {
+                                    "@var": "MoratoriumStart"
+                                }
+                            }
+                        }
+                    ],
+                    "@has": {
+                        "@ge": {
+                            "@var": "MoratoriumStart"
+                        },
+                        "@le": {
+                            "@var": "MoratoriumEnd"
+                        },
+                        "@with": "DateOfDeath"
+                    },
+                    "@noneOf": [
+                        "ReferralForAssessment",
+                        "ReferralForService",
+                        "ClaimClosed"
+                    ],
+                    "@on": "ClaimCase",
+                    "_id": "PremiumRefund",
+                    "_type": "Restriction"
+                },
+                {
+                    "@comment": "Claim is eligible for a sum assured refund",
+                    "@noneOf": [
+                        "ReferralForAssessment",
+                        "ReferralForService",
+                        "PremiumRefund",
+                        "ClaimClosed"
+                    ],
+                    "@on": "ClaimCase",
+                    "_id": "SumAssuredRefund",
+                    "_type": "Restriction"
+                },
+                {
+                    "@has": {
+                        "incur": {
+                            "@var": "_"
+                        }
+                    },
+                    "@on": "ClaimCase",
+                    "_id": "ClaimClosed",
+                    "_type": "Restriction"
+                },
+                {
+                    "@comment": "Claim had no associated death certificate",
+                    "@has": {
+                        "death_certificate_for_claim": null
+                    },
+                    "@on": "ClaimCase",
+                    "_id": "NoDeathCert",
+                    "_type": "Restriction"
+                },
+                {
+                    "@comment": "Claim had no associated policy",
+                    "@has": {
+                        "policy_of_claim": null
+                    },
+                    "@on": "ClaimCase",
+                    "_id": "NoPolicy",
+                    "_type": "Restriction"
+                },
+                {
+                    "@comment": "Date of death on certificate is prior to start date of policy.",
+                    "@given": [
+                        {
+                            "death_certificate_for_claim": {
+                                "date_of_death": {
+                                    "@var": "DateOfDeath"
+                                }
+                            },
+                            "policy_of_claim": {
+                                "start_date": {
+                                    "@var": "StartDate"
+                                }
+                            }
+                        }
+                    ],
+                    "@has": {
+                        "@ge": {
+                            "@var": "DateOfDeath"
+                        },
+                        "@with": "StartDate"
+                    },
+                    "@on": "ClaimCase",
+                    "_id": "DeathAfterStart",
+                    "_type": "Restriction"
+                },
+                {
+                    "@comment": "The beneficiary is flagged.",
+                    "@has": {
+                        "policy_of_claim": {
+                            "beneficiary": {
+                                "flagged": {
+                                    "@eq": true
+                                }
+                            }
+                        }
+                    },
+                    "@on": "ClaimCase",
+                    "_id": "BeneficiaryIsFlagged",
+                    "_type": "Restriction"
+                },
+                {
+                    "@anyOf": [
+                        "NoDeathCert",
+                        "NoPolicy",
+                        "NamesDontMatch",
+                        "DateOfBirthDoesntMatch",
+                        "DeathAfterStart",
+                        "BeneficiaryIsFlagged"
+                    ],
+                    "@comment": "Claim requires servicing",
+                    "@on": "ClaimCase",
+                    "_id": "ReferralForService",
+                    "_type": "Restriction"
+                },
+                {
+                    "@comment": "The death certificate and policy names do not match",
+                    "@given": [
+                        {
+                            "death_certificate_for_claim": {
+                                "name": {
+                                    "@var": "DeathCertName"
+                                }
+                            },
+                            "policy_of_claim": {
+                                "life_assured_name": {
+                                    "@var": "PolicyName"
+                                }
+                            }
+                        }
+                    ],
+                    "@has": {
+                        "@ne": {
+                            "@var": "PolicyName"
+                        },
+                        "@with": "DeathCertName"
+                    },
+                    "@on": "ClaimCase",
+                    "_id": "NamesDontMatch",
+                    "_type": "Restriction"
+                },
+                {
+                    "@comment": "The death certificate and policy dates of birth do not match",
+                    "@given": [
+                        {
+                            "death_certificate_for_claim": {
+                                "date_of_birth": {
+                                    "@var": "DeathCertDateOfBirth"
+                                }
+                            },
+                            "policy_of_claim": {
+                                "life_assured_date_of_birth": {
+                                    "@var": "PolicyDateOfBirth"
+                                }
+                            }
+                        }
+                    ],
+                    "@has": {
+                        "@ne": {
+                            "@var": "PolicyDateOfBirth"
+                        },
+                        "@with": "DeathCertDateOfBirth"
+                    },
+                    "@on": "ClaimCase",
+                    "_id": "DateOfBirthDoesntMatch",
+                    "_type": "Restriction"
+                }
+            ]
+        },
+        "@schema": "terminusdb:///schema#",
+        "@type": "@context"
+    },
+    {
+        "@id": "Country",
+        "@key": {
+            "@fields": [
+                "name"
+            ],
+            "@type": "Lexical"
+        },
+        "@type": "Class",
+        "name": "xsd:string"
+    },
+    {
+        "@id": "DeathCertificate",
+        "@type": "Class",
+        "@unfoldable": [],
+        "cause_of_death": {
+            "@class": "CauseOfDeath",
+            "@type": "Optional"
+        },
+        "country_of_death": "Country",
+        "date_of_birth": "xsd:dateTime",
+        "date_of_death": "xsd:dateTime",
+        "name": "xsd:string"
+    },
+    {
+        "@id": "Beneficiary",
+        "@type": "Class",
+        "@unfoldable": [],
+        "bank_account": "xsd:string",
+        "date_of_birth": {
+            "@class": "xsd:dateTime",
+            "@type": "Optional"
+        },
+        "is_flagged": "xsd:boolean",
+        "name": "xsd:string"
+    },
+    {
+        "@id": "ClaimCase",
+        "@type": "Class",
+        "death_certificate_for_claim": {
+            "@class": "DeathCertificate",
+            "@type": "Optional"
+        },
+        "incur": {
+            "@class": "Refund",
+            "@type": "Optional"
+        },
+        "policy_of_claim": {
+            "@class": "Policy",
+            "@type": "Optional"
+        }
+    },
+    {
+        "@id": "CauseOfDeath",
+        "@type": "Enum",
+        "@value": [
+            "natural",
+            "manslaughter",
+            "murder",
+            "accidental",
+            "suicide"
+        ]
+    },
+    {
+        "@id": "Policy",
+        "@type": "Class",
+        "@unfoldable": [],
+        "beneficiary": "Beneficiary",
+        "country_of_issue": "Country",
+        "covered_countries": {
+            "@class": "Country",
+            "@type": "Set"
+        },
+        "life_assured_date_of_birth": {
+            "@class": "xsd:dateTime",
+            "@type": "Optional"
+        },
+        "life_assured_name": "xsd:string",
+        "moratorium_end": {
+            "@class": "xsd:dateTime",
+            "@type": "Optional"
+        },
+        "moratorium_start": {
+            "@class": "xsd:dateTime",
+            "@type": "Optional"
+        },
+        "premium_paid_to_date": "xsd:double",
+        "start_date": {
+            "@class": "xsd:dateTime",
+            "@type": "Optional"
+        },
+        "sum_assured": "xsd:double"
+    },
+    {
+        "@id": "Refund",
+        "@type": "Enum",
+        "@value": [
+            "SumAssured",
+            "Premium",
+            "Denied"
+        ]
+    }
+]

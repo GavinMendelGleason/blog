@@ -3,6 +3,9 @@
 This is Gavin Mendel-Gleason's technical blog. I use this primarily to
 organize my thoughts on distributed data management.
 
+## [Straight Through Processing of Insurance](./entries/stp_insurance.md)
+
+
 ## [Schema Migration](./entries/schema_migration.md)
 
 Friday, April 21, 2023
