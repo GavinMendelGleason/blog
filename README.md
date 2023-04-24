@@ -5,6 +5,7 @@ organize my thoughts on distributed data management.
 
 ## [Straight Through Processing of Insurance](./entries/stp_insurance.md)
 
+Monday, April 24, 2023
 
 ## [Schema Migration](./entries/schema_migration.md)
 
