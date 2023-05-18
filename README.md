@@ -3,6 +3,10 @@
 This is Gavin Mendel-Gleason's technical blog. I use this primarily to
 organize my thoughts on distributed data management.
 
+## [A Vector Database in a Week](./entries/a_vector_database_in_a_week.md)
+
+Thursday, May 18, 2023
+
 ## [Straight Through Processing of Insurance](./entries/stp_insurance.md)
 
 Monday, April 24, 2023

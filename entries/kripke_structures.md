@@ -92,10 +92,10 @@ w ⊢ Gavin is at home
 w' ⊢ Gavin is at the store
 ```
 
-However, now we can say things like, "eventually, Gavin will be
-home". This means that in every accessible world, taking every path,
-there is a finite sequence of worlds before we encounter the fact that
-`wn ⊢ Gavin is at home`
+However, now we can say things like, "There is a world in which Gavin
+will be home". This means that in *some* accessible world, when all
+paths are accounted for, there is a finite sequence of worlds before
+we encounter the fact that `wn ⊢ Gavin is at home`
 
 We write this as:
 
@@ -103,11 +103,11 @@ We write this as:
 ◇ Gavin is at home
 ```
 
-With the `◇` as a modal logic operator which means eventually.
+With the `◇` as a modal logic operator which means *possibly*.
 
 We can also say something like "Gavin is a human". This means that at
-every accessible world, Gavin is a human.
-invariant.
+every accessible world, Gavin is a human. This is a type of
+invariance.
 
 ```
 □ Gavin is a human
