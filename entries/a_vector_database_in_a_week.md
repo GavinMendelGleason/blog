@@ -211,7 +211,7 @@ We get back a number of results as json which look like:
 [{"id":"terminusdb:///star-wars/Species/8","distance":0.09396297}, ...]
 ```
 
-What is the embedding string we used to produce this result?
+But what is the embedding string we used to produce this result? This is how the text rendered for the `Species/8` id:
 
 ```json
 "The species name is Mon Calamari. They have the following hair colours: none. Their skin colours are red, blue, brown, magenta. They speak the Mon Calamarian language."
