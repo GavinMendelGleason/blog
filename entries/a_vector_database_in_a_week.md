@@ -154,7 +154,8 @@ context. We tried initially just submitting TerminusDB JSON documents
 and the results were not fantastic.
 
 But we found that if we define a GraphQL query + Handlebars template,
-we can create very high quality embeddings.  For `People` in Star Wars, this pair, which is defined in our schema, looks like:
+we can create very high quality embeddings.  For `People` in Star
+Wars, this pair, which is defined in our schema, looks like:
 
 ```json
 {
@@ -243,7 +244,7 @@ the results of some of our experiments here soon.
 
 While there are really great vector databases out there in the wild,
 such as Pinecone, we want to have a sidecar that integrates well with
-TerminusDB and which ccan be used for less technical users who care
+TerminusDB and which can be used for less technical users who care
 about *content* primarily and are not going to be spinning up their
 own vector database.
 
