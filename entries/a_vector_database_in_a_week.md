@@ -62,12 +62,10 @@ to require you to compare with every single thing in the database
 every time.
 
 There are many approaches to indexing vector spaces, but we went with
-the HNSW (Hierarchical Navigable Small World) graph [See Malkov and
-Yashunin](https://arxiv.org/abs/1603.09320). HNSW is easy to
+the HNSW (Hierarchical Navigable Small World) graph [See Malkov and Yashunin](https://arxiv.org/abs/1603.09320). HNSW is easy to
 understand and provides good performance in both low and high
 dimensions so is flexible. Most importantly there was a very clear
-open source implementation which we found [HNSW for Rust Computer
-Vision](https://github.com/rust-cv/hnsw).
+open source implementation which we found [HNSW for Rust Computer Vision](https://github.com/rust-cv/hnsw).
 
 ## Storing the vectors
 
