@@ -85,7 +85,7 @@ Vectors:   | 0 [......]  2 [......]
            | 1 [......]  3 [......]
 ```
 
-The vector store is page based, where each page is designed to map
+The vector store is page based, where each buffer is designed to map
 cleanly to the operating system pages, but fit the vectors we use
 closely. We assign each vector an index and then we can map from the
 index to the appropriate page and offset.
