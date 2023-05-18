@@ -90,10 +90,12 @@ cleanly to the operating system pages, but fit the vectors we use
 closely. We assign each vector an index and then we can map from the
 index to the appropriate page and offset.
 
-Inside of the HNSW index, we refer to a `LoadedVec`. This is an object
-which can load itself on demand using an identifier into the *domain
-pool* such that we can perform our metric comparisons on the vectors
-of interest.
+Inside of the HNSW index, we refer to a `LoadedVec`. This ensures that
+the page lives in a buffer currently loaded such that we can perform
+our metric comparisons on the vectors of interest.
+
+As soon as the last `LoadedVec` drops from a buffer, the buffer can be
+added back into a buffer pool to be used to load a new page.
 
 ## Creating a versioned index
 
@@ -227,7 +229,7 @@ curl 'localhost:8080/search?commit=o2uq7k1mrun1vp4urktmw55962vlpto&domain=admin/
 "The person's name is Yoda. They are described with the following synopsis:  Yoda is a fictional character in the Star Wars franchise created by George Lucas, first appearing in the 1980 film The Empire Strikes Back. In the original films, he trains Luke Skywalker to fight against the Galactic Empire. In the prequel films, he serves as the Grand Master of the Jedi Order and as a high-ranking general of Clone Troopers in the Clone Wars. Following his death in Return of the Jedi at the age of 900, Yoda was the oldest living character in the Star Wars franchise in canon, until the introduction of Maz Kanata in Star Wars: The Force Awakens. Their gender is male. They have the following hair colours: white. They have a mass of 17. Their skin colours are green."
 ```
 
-Incredible. While we do say "oldest" in the text, we don't say "wise" or "man"!
+Incredible! While we do say "oldest" in the text, we don't say "wise" or "man"!
 
 Hopefully you can see how this could be helpful for you in getting
 high quality semantic indexing of your data!
