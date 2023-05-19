@@ -1,5 +1,7 @@
 # We wrote a vector database in a week (in rust)
 
+![vectors](../assets/vectors.png)
+
 Vector databases are currently all the rage these days in the tech
 world, and it isn't just hype. Vector search has become ever more
 important due to artificial intelligence advances which make use of
