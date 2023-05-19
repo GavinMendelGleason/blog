@@ -168,9 +168,10 @@ The meaning of each field in the `People` object is rendered as text
 which helps OpenAI understand what we mean, providing much better
 semantics.
 
-Ultimately it would be nice if we could *guess* these sentences from a
-combination of our schema documentation and the schema structure,
-which is probably also possible using AI chat! But for now this works
+Ultimately it would be nice if we could *guess* these templates from a
+combination of our schema documentation and the schema structure. In
+fact, in some internal experiments, we have seen that this works
+pretty well using AI chat! But for now the present example works
 brilliantly and does not require much technical sophistication.
 
 ## Indexing Star Wars
@@ -228,7 +229,8 @@ curl 'localhost:8080/search?commit=o2uq7k1mrun1vp4urktmw55962vlpto&domain=admin/
 "The person's name is Yoda. They are described with the following synopsis:  Yoda is a fictional character in the Star Wars franchise created by George Lucas, first appearing in the 1980 film The Empire Strikes Back. In the original films, he trains Luke Skywalker to fight against the Galactic Empire. In the prequel films, he serves as the Grand Master of the Jedi Order and as a high-ranking general of Clone Troopers in the Clone Wars. Following his death in Return of the Jedi at the age of 900, Yoda was the oldest living character in the Star Wars franchise in canon, until the introduction of Maz Kanata in Star Wars: The Force Awakens. Their gender is male. They have the following hair colours: white. They have a mass of 17. Their skin colours are green."
 ```
 
-Incredible! While we do say "oldest" in the text, we don't say "wise" or "man"!
+Incredible! While we do say "oldest" in the text, we don't say "wise"
+or "man"!
 
 Hopefully you can see how this could be helpful for you in getting
 high quality semantic indexing of your data!
@@ -246,9 +248,10 @@ TerminusDB and which can be used for less technical users who care
 about *content* primarily and are not going to be spinning up their
 own vector database.
 
-We are really excited about the potential of this and we will release
-all of the code open source after we clean it up a little so as not to
-be too embarrased by some of the error handling :D (again, only so
-much can be done in a week!)
+We are really excited about the potential of this
+[VectorLink](https://github.com/terminusdb-labs/terminusdb-semantic-indexer),
+and would love people to have a look at what we have so far! Please
+forgive us a bit for the relatively sparse error handling. We're
+working furiously on it!
 
 
