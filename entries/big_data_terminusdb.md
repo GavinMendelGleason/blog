@@ -33,8 +33,11 @@ publishing.
 TerminusDB's internals are designed to store very compact
 representations of graphs, so we figured (with some back-of-the-napkin
 calculations) that it might be possible to build a significant subset
-of OpenAlex into a single knowledge graph... with a few changes to
-TerminusDB to facilitate doing so without a custom ingestion.
+of [OpenAlex](https://openalex.org/) into a single knowledge
+graph... with a few changes to TerminusDB to facilitate doing so
+without a custom ingestion. Our [ingestion of
+OpenAlex](https://github.com/rrooij/openalex-terminusdb/blob/main/openalex_terminusdb/insert.py
+) logic is writen in python.
 
 ## Parallelising Ingest
 
@@ -46,14 +49,45 @@ RAM machine. Every time one completed, we'd start a new process. This
 way all processors are saturated with an ingest process until
 completion.
 
+The main part of the [ingest
+script](https://github.com/rrooij/openalex-terminusdb/blob/main/openalex_terminusdb/insert.py)
+is the following simple python code:
+
+```python
+def ingest_json(args):
+    start = time.time()
+    filename = args[0]
+    number = args[1]
+    schema = args[2]
+    db_name = f"openalex_{number}"
+    db = f'admin/{db_name}'
+    with open(f"log/{db_name}.log", 'w') as f:
+        subprocess.run(f"{TERMINUSDB_COMMAND} doc insert {db} -g schema --full-replace < {schema}", shell=True, stdout=f, stderr=f)
+        subprocess.run(f'{TERMINUSDB_COMMAND} doc insert {db} < {filename}', shell=True, stdout=f, stderr=f)
+        end_insert = time.time() - start
+        f.write(f"\n\nEND TIME: {end_insert}\n")
+```
+
+This fires off a `terminusdb doc insert` command for a given database,
+which we can form from an argument which we pass.  We can fire off
+just the right number of these (for as many processors as we have)
+with:
+
+```python
+    with Pool(args.threads) as p:
+        # Ingest JSON
+        p.map(ingest_json, args_process)
+```
+
 For our ingest, this process took about 7 hours to complete.
 
 ## Merging The Databases
 
 In order to merge these 500 databases, we needed a new approach to
 building a single union of a set of databases. We decided that we
-would write a new *merge* operation which could read any number of
-baselayers and merge them into a single new base layer.
+would write a new *merge* operation (which we added to TerminusDB)
+which could read any number of baselayers and merge them into a single
+new base layer.
 
 TerminusDB is immutable, so we perform updates by adding new layers
 which include changes to the database (delta-encoding). The first such
@@ -64,6 +98,19 @@ account for. Further, one can always acquire a base layer by first
 performing a squash on a layer, to obtain a single new base layer, if
 the database has a history of revisions. We figured requiring
 baselayers in merge was a reasonable compromise for the interface.
+
+Since we have so many databases, we don't want to have to specify them
+all on the command line (in fact we might not even be able to) so we
+take them on standard input.
+
+The command is of the form:
+
+```shell
+$ echo "admin/db1 admin/db2 ... admin/dbn" | terminusdb merge admin/final
+```
+
+Where the databases are space separated list of all of the input
+databases. That's all there is to it!
 
 ## Sparing use of Memory
 
