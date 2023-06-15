@@ -118,6 +118,9 @@ The final layer is only around 250GB so fits very comfortably in a
 able to fit so much into a single machine means you can get graph
 performance which would simply be impossible with a sharding approach.
 
+The merge step takes around 5 hours. So within 12 hours we can build a
+200GB database from JSON files to querable layers.
+
 ## The Future
 
 One of our central theses about graphs is that, due to the poor memory
