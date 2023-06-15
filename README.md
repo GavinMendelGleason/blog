@@ -3,6 +3,10 @@
 This is Gavin Mendel-Gleason's technical blog. I use this primarily to
 organize my thoughts on distributed data management.
 
+## [Big Data and TerminusDB](./entries/big_data_terminusdb.md)
+
+Thursday, Jun 15, 2023
+
 ## [A Vector Database in a Week](./entries/a_vector_database_in_a_week.md)
 
 Thursday, May 18, 2023
