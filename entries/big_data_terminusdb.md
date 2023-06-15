@@ -121,6 +121,31 @@ performance which would simply be impossible with a sharding approach.
 The merge step takes around 5 hours. So within 12 hours we can build a
 200GB database from JSON files to querable layers.
 
+The entire process looks something like this:
+
+```
+         JSON1     JSON2   JSON3    ....
+           |         |       |       |
+          DB1       DB2     DB3     DBN
+            \        |      /       /
+             \       |     /       /
+              \      |    /       /
+               \     |   /  _____/
+               merge process
+                    |
+merge nodes + merge predicates + merge values
+        \         |              /
+         \        |             /
+          \       |            /
+           \      |           /
+            \     |          /
+             merge triples
+                  |
+              build indexes
+                  |
+              write to disk
+```
+
 ## The Future
 
 One of our central theses about graphs is that, due to the poor memory
