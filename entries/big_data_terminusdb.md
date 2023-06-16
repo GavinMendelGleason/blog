@@ -1,16 +1,18 @@
 # Big Data and TerminusDB
 ## How we loaded 17 billion triples into TerminusDB
 
-Recently at TerminusDB, at the behest of someone in our community, we
-decided to do a large ingest, the OpenAlex Authors
-collection. Amazingly, we found that after ingest, not only did we
-have a dataset with 17 billion triples, but when we compared to
-MongoDB, our database is smaller, and much better indexed. You can
-basically search starting from anywhere, in any direction quickly.
+Recently at TerminusDB, at the behest of an active community member,
+we decided to do an ingest of the OpenAlex Authors collection. This is
+a pretty big data set. Amazingly, we found that after ingest, not only
+did we have a database with 17 billion triples, but when we compared
+to MongoDB, our database is smaller (only 212GB as compared to 280GB),
+even though much better indexed. With our version you can search
+starting from subject, object or predicate, in any direction, and get
+results quickly.
 
 ## Big Data is not always needed
 
-When TerminusDB was first getting started, we did a project to load
+When TerminusDB was first getting started, we did a project loading public
 information about the Polish economy into a giant knowledge graph. The
 project had a lot of custom code which would merge information into a
 single compressed representation of a graph which could then be
