@@ -1,5 +1,14 @@
 # Big Data and TerminusDB
-## How we loaded 18 billion triples into TerminusDB
+## How we loaded 17 billion triples into TerminusDB
+
+Recently at TerminusDB, at the behest of someone in our community, we
+decided to do a large ingest, the OpenAlex Authors
+collection. Amazingly, we found that after ingest, not only did we
+have a dataset with 17 billion triples, but when we compared to
+MongoDB, our database is smaller, and much better indexed. You can
+basically search starting from anywhere, in any direction quickly.
+
+## Big Data is not always needed
 
 When TerminusDB was first getting started, we did a project to load
 information about the Polish economy into a giant knowledge graph. The
@@ -7,7 +16,7 @@ project had a lot of custom code which would merge information into a
 single compressed representation of a graph which could then be
 efficiently searched. The dataset was around 3 billion triples.
 
-The ingestion was really a custom solution. It had to be ingested as a
+This ingestion was really a custom solution. It had to be ingested as a
 batch and could not be updated to correct information without starting
 over from scratch, and took a very long time (over a day) to ingest on
 a fairly large parallel computer with custom ingestion code.
@@ -26,9 +35,9 @@ important.
 
 However, sometimes, as with the original use-case, enormous datasets
 are precisely what we want. Recently one active member of TerminusDB's
-community asked us if we could load the OpenAlex data-set, which
-incorporates an enormous amount of information on scientific
-publishing.
+community asked us if we could load the Authors collection from the
+OpenAlex data-set, which incorporates an enormous amount of
+information on scientific publishing.
 
 TerminusDB's internals are designed to store very compact
 representations of graphs, so we figured (with some back-of-the-napkin
@@ -120,8 +129,8 @@ despite having a highly indexed data structure allowing traversal in
 every direction in the graph, due to the use of succinct data
 structures.
 
-Our final complete ingest, which represents 18 billion triples, is
-only 10 bytes per triple!
+Our final complete ingest, which represents 17 billion triples, is
+only 14 bytes per triple!
 
 This of course isn't the final word either, we have identified some
 approaches along the way that might shrink this further, but it's
