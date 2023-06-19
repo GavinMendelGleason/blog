@@ -31,17 +31,17 @@ readable, and including schema checking to ensure that we don't suffer
 from garbage data in the first place.
 
 Since most databases that are in active use are less than 2GB in size,
-this was almost certianly the right decision. Very many real world use
+this was probably the right decision. Very many real world use
 cases do not require enormous data sets and ease of use is more
 important.
 
 ## But I want a Gigantic Knowledge Graph!
 
-However, sometimes, as with the original use-case, enormous datasets
-are precisely what we want. Recently one active member of TerminusDB's
-community asked us if we could load the Authors collection from the
-OpenAlex data-set, which incorporates an enormous amount of
-information on scientific publishing.
+However, sometimes, as with the original Polish economy use-case,
+enormous datasets are precisely what we want. Recently one active
+member of TerminusDB's community asked us if we could load the Authors
+collection from the OpenAlex data-set, which incorporates an enormous
+amount of information on scientific publishing.
 
 TerminusDB's internals are designed to store very compact
 representations of graphs, so we figured (with some back-of-the-napkin
@@ -59,7 +59,7 @@ responsible for one chunk of the data input. We segmented the data
 input into 500 pieces. We then started 64 processes for ingest for one
 database-chunk pair for each processor on a large 64 processor, 500GB
 RAM machine. Every time one completed, we'd start a new process. This
-way all processors are saturated with an ingest process until
+way all processors were saturated with an ingest process until
 completion.
 
 The main part of the [ingest
@@ -127,7 +127,7 @@ databases. That's all there is to it!
 
 ## Sparing use of Memory
 
-Doing this 500 database merge requires some careful attention to
+Doing this 500-database-merge requires some careful attention to
 memory. TerminusDB's memory overhead for a database is quite low,
 despite having a highly indexed data structure allowing traversal in
 every direction in the graph, due to the use of succinct data
@@ -142,8 +142,10 @@ impressive none the less! Simply maintaining a table of triples of
 64bit identifiers would be significantly larger.
 
 The process of building our indexing structures however, was requiring
-signficantly more memory. So we spent a bit of time trying to make
-sure that we could do everything by *streaming* the input.
+signficantly more memory than the final index. So we spent a bit of
+time trying to make sure that we could do nearly everything by
+*streaming* the input, lowering the amount of working memory required
+to the absolute minimum.
 
 ## Streaming
 
@@ -151,7 +153,8 @@ We rewrote much of our layer writing code to take all the inputs as
 streams. Base-layers are composed of a number of different segments,
 including (node and value) dictionaries, and adjacency lists. These
 are all *ordered*, meaning that it's possible to do the second half of
-a merge sort (the conquere part of divide and conquere).
+a merge sort (the conquere part of divide and conquere) in order to
+merge them in a sorted order.
 
 To make the comparison of all of the next 500 elements fast we use a
 binary heap. This is initialized with the first 500 elements of each
@@ -173,15 +176,15 @@ recombine.
 
 ## A Giant Merge
 
-The final layer is only around 250GB so fits very comfortably in a
+The final layer is only around 212GB so fits very comfortably in a
 500GB machine. With GraphQL you can query this data quickly. Being
 able to fit so much into a single machine means you can get graph
 performance which would simply be impossible with a sharding approach.
 
 The merge step takes around 5 hours. So within 12 hours we can build a
-200GB database from JSON files to querable layers.
+~200GB database from JSON files to querable layers.
 
-The entire process looks something like this:
+The entire process, when mapped out, looks something like this:
 
 ```
          JSON1     JSON2   JSON3    ....
@@ -238,3 +241,10 @@ index *all* backwards links, but only those that we know are going to
 be used. This would require adding explicit indexing (or explicit
 non-indexing) of predicates in the schema design. We estimate this
 could be a savings of something like 10%-25% of memory.
+
+Other alternatives include using alternative indexing strategies which
+are also succinct. Perhaps an FM-index or a k^d-tree. Whether these
+will be smaller in practice would require some experimentation.
+
+In any case, we'll keep plumbing the limits with our motto in hand:
+Smaller is better.
