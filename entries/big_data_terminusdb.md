@@ -1,4 +1,4 @@
-# Big Data and TerminusDB
+# A Giant Data Merge
 ## How we loaded 17 billion triples into TerminusDB
 
 Recently at TerminusDB, at the behest of an active community member,
