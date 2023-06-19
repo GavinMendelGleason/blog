@@ -6,10 +6,13 @@ we decided to do an ingest of the OpenAlex Authors collection. This is
 a pretty big data set. We found that after ingest, not only did we
 have a database with 17 billion triples, but when we compared to
 MongoDB, our database is smaller (only 212GB as compared to 280GB),
-even though much better indexed. With TerminusDB you can search
-starting from subject, object or predicate, in any direction, and get
-results quickly with lower memory footprint. A testiment to the
-utility of [succinct data
+even though much better indexed. It's also among the smallest triple
+store we are aware of coming in at less than 14 bytes per triple for
+the tested dataset.
+
+With TerminusDB you can search starting from subject, object or
+predicate, in any direction, and get results quickly with an extremely
+low memory footprint. A testiment to the utility of [succinct data
 structures](https://en.wikipedia.org/wiki/Succinct_data_structure).
 
 ## Big Data is not always needed
@@ -134,7 +137,21 @@ every direction in the graph, due to the use of succinct data
 structures.
 
 Our final complete ingest, which represents 17 billion triples, is
-only 14 bytes per triple!
+only 13.57 bytes per triple!
+
+To give an idea of how this ranks next to other graph databases, here
+are some comparisons ([from
+here](https://www.inf.utfsm.cl/~darroyue/papers/sigmod21.pdf), with
+the caveate that they are working with a different dataset):
+
+| Database   | Bytes per triple |
+| ---------- | ---------------- |
+| Ring       | 13.86            |
+| Jena       | 85.83            |
+| Jena LTJ   | 168.84           |
+| RDF-3X     | 85.73            |
+| Virtuoso   | 60.07            |
+| Blazegraph | 90.79            |
 
 This of course isn't the final word either, we have identified some
 approaches along the way that might shrink this further, but it's
