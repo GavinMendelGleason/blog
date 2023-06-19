@@ -6,9 +6,9 @@ we decided to do an ingest of the OpenAlex Authors collection. This is
 a pretty big data set. We found that after ingest, not only did we
 have a database with 17 billion triples, but when we compared to
 MongoDB, our database is smaller (only 212GB as compared to 280GB),
-even though much better indexed. It's also among the smallest triple
-store we are aware of coming in at less than 14 bytes per triple for
-the tested dataset.
+even though much better indexed. It also has the most compact triple
+store representation we are aware of, coming in at less than 14 bytes
+per triple for the tested dataset.
 
 With TerminusDB you can search starting from subject, object or
 predicate, in any direction, and get results quickly with an extremely
