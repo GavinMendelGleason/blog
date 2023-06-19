@@ -3,12 +3,14 @@
 
 Recently at TerminusDB, at the behest of an active community member,
 we decided to do an ingest of the OpenAlex Authors collection. This is
-a pretty big data set. Amazingly, we found that after ingest, not only
-did we have a database with 17 billion triples, but when we compared
-to MongoDB, our database is smaller (only 212GB as compared to 280GB),
-even though much better indexed. With our version you can search
+a pretty big data set. We found that after ingest, not only did we
+have a database with 17 billion triples, but when we compared to
+MongoDB, our database is smaller (only 212GB as compared to 280GB),
+even though much better indexed. With TerminusDB you can search
 starting from subject, object or predicate, in any direction, and get
-results quickly.
+results quickly with lower memory footprint. A testiment to the
+utility of [succinct data
+structures](https://en.wikipedia.org/wiki/Succinct_data_structure).
 
 ## Big Data is not always needed
 
