@@ -97,12 +97,12 @@ with:
 
 For our ingest, this process took about 7 hours to complete.
 
-## Merging The Databases
+## Concatenating The Databases
 
-In order to merge these 500 databases, we needed a new approach to
+In order to concatenate these 500 databases, we needed a new approach to
 building a single union of a set of databases. We decided that we
-would write a new *merge* operation (which we added to TerminusDB)
-which could read any number of baselayers and merge them into a single
+would write a new *concatenate* operation (which we added to TerminusDB)
+which could read any number of baselayers and concatenate them into a single
 new base layer.
 
 TerminusDB is immutable, so we perform updates by adding new layers
@@ -113,7 +113,7 @@ Merging baselayers is less complicated as there is only one layer to
 account for. Further, one can always acquire a base layer by first
 performing a squash on a layer, to obtain a single new base layer, if
 the database has a history of revisions. We figured requiring
-baselayers in merge was a reasonable compromise for the interface.
+baselayers in concatenate was a reasonable compromise for the interface.
 
 Since we have so many databases, we don't want to have to specify them
 all on the command line (in fact we might not even be able to) so we
@@ -122,7 +122,7 @@ take them on standard input.
 The command is of the form:
 
 ```shell
-$ echo "admin/db1 admin/db2 ... admin/dbn" | terminusdb merge admin/final
+$ echo "admin/db1 admin/db2 ... admin/dbn" | terminusdb concat admin/final
 ```
 
 Where the databases are space separated list of all of the input
@@ -130,7 +130,7 @@ databases. That's all there is to it!
 
 ## Sparing use of Memory
 
-Doing this 500-database-merge requires some careful attention to
+Doing this 500-database-concatenate requires some careful attention to
 memory. TerminusDB's memory overhead for a database is quite low,
 despite having a highly indexed data structure allowing traversal in
 every direction in the graph, due to the use of succinct data
@@ -191,14 +191,14 @@ memory.
 Instead we had to chunk out pieces to sort, a bit at a time, and
 recombine.
 
-## A Giant Merge
+## A Giant Concatenation
 
 The final layer is only around 212GB so fits very comfortably in a
 500GB machine. With GraphQL you can query this data quickly. Being
 able to fit so much into a single machine means you can get graph
 performance which would simply be impossible with a sharding approach.
 
-The merge step takes around 5 hours. So within 12 hours we can build a
+The concatenate step takes around 5 hours. So within 12 hours we can build a
 ~200GB database from JSON files to querable layers.
 
 The entire process, when mapped out, looks something like this:
@@ -211,15 +211,15 @@ The entire process, when mapped out, looks something like this:
              \       |     /       /
               \      |    /       /
                \     |   /  _____/
-               merge process
+               concatenate process
                     |
-merge nodes + merge predicates + merge values
+concatenate nodes + concatenate predicates + concatenate values
         \         |              /
          \        |             /
           \       |            /
            \      |           /
             \     |          /
-             merge triples
+             concatenate triples
                   |
               build indexes
                   |
