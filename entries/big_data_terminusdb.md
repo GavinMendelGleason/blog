@@ -1,5 +1,5 @@
-# A Giant Data Merge
-## How we loaded 17 billion triples into TerminusDB
+# Smaller is better: Ultra-compact graph representations for Big Graphs
+## How we loaded 17 billion triples into TerminusDB on one machine
 
 Recently at TerminusDB, at the behest of an active community member,
 we decided to do an ingest of the OpenAlex Authors collection. This is
