@@ -65,6 +65,13 @@ RAM machine. Every time one completed, we'd start a new process. This
 way all processors were saturated with an ingest process until
 completion.
 
+The fragment size for ingest was calculated by the back-of-the-napkin
+calculation that an ingest requires about 10x the memory of the final
+database, and so we cut the input data into sizes that would fill
+memory when saturating all processors. It would eventually be nice if
+TerminusDB could just do this for you with its own calculations, but
+this works well enough for now.
+
 The main part of the [ingest
 script](https://github.com/rrooij/openalex-terminusdb/blob/main/openalex_terminusdb/insert.py)
 is the following simple python code:
