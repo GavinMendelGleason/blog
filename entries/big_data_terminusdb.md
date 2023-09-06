@@ -153,6 +153,7 @@ the caveate that they are working with a different dataset):
 
 | Database   | Bytes per triple |
 | ---------- | ---------------- |
+| TerminusDB | 13.57            |
 | Ring       | 13.86            |
 | Jena       | 85.83            |
 | Jena LTJ   | 168.84           |
