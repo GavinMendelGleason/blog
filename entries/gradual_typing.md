@@ -140,12 +140,12 @@ which are valid JSON documents as a mutually recursive definition.
 ```prolog
 type jsonvalue = bool ∨ number
 type jsonlist = list(json ∨ jsonvalue ∨ jsonlist)
-type json = { X : document | ∀ K ∈ keys(K) ⇒ X.K : string ‌
-                                            ∨ X.K : bool
-                                            ∨ X.K : null
-                                            ∨ X.K : number
-                                            ∨ X.K : json
-                                            ∨ X.K : jsonlist }
+type json = { X : document | ∀ K ∈ keys(K) ⇒ X.K : string ‌∨
+                                                    bool ∨
+                                                    null ∨
+                                                    number ∨
+                                                    json ∨
+                                                    jsonlist }
 ```
 
 ### Refined Documents
@@ -208,7 +208,7 @@ We may want a particular family of fields to be given a type. One
 could imagine a scenario in which there is a naming scheme for a
 number of fields which are relatively unstructured, as might be the
 case when we have fields from some external system which we want to
-track, for instance: 
+track, for instance:
 
 ```prolog
 type user = { X : json | ∃ K ∈ keys(X) ⇒ K == "first_name" ∧
@@ -221,7 +221,7 @@ type user = { X : json | ∃ K ∈ keys(X) ⇒ K == "first_name" ∧
                               then X.K : string ∧
                                    X.K ~= "[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}"
                          else if K ~="external_.*"
-                              then 
+                              then X.K : document
                          else X.K : value }
 ```
 
@@ -266,24 +266,62 @@ namespaces represented explicitly in the database to distinguish the
 semantics of various fields, but they will often want to be *implicit*
 when retrieved for processing, which aids simplicity of interface.
 
-Explicit and careful naming of fields is a hallmark of the RDF
+Explicit and careful naming of fields is a hallmark of the RDF data
 universe, but is often not carefully thought of outside of it. We need
 to be able to handle both cases with minimal effort.
 
-An example of objects which one might want explicitly presented in
-ones database, but which have properties from
+In programming languages, there are very explicit methods for the
+marshalling of semantics across name spaces, such that libraries can
+be imported with well defined schemes for manipulating the approriate
+associated code and avoiding clashes. This needs to also be true of
+data for data model reusability to become a genuine feature.
 
+Let's look at a few examples of the importation of names from other
+namespaces which allow simple display while preserving separate
+semantics.
+
+
+
+### GeoJSON
+
+First, let's look at GeoJSON, which is a JSON format that 
+
+
+## Components of a database type
+
+
+
+* A shape, which dictates satisfaction of some type regime
+  - Local checking
+  - Global obligations (referential integrity)
+* A ascription, which transfers a structural typing to a nominal typing
+* A naming scheme - which imposes requirements on the identifiers of a type
+
+To segregate the nominal and structural universe
+
+* Check that *any* rdf:type use is excluded from ascription in the
+  schema OR matches the shape for the type described.
+* Exclude any URI that is covered by a naming scheme OR ensure it is
+  within the ascribed or inferred type of the naming scheme.
 
 ```prolog
-type user = { X : json | ∃ K ∈ keys(X) ∧ K == "first_name" ∧
-                         ∃ K ∈ keys(X) ∧ K == "family_name" ∧
-                         ∀ K ∈ keys(X) ⇒
-                         if K == "first_name" then X.K : string
-                         else if K == "family_name" then X.K : string
-                         else if K == "date_of_birth" then X.K : dateTime
-                         else if K == "friend" then X.K : set(user)
-                         else if K == "email"
+type person = { X : json | ∃ K ∈ keys(X) ∧ K == "first_name" ∧
+                           ∃ K ∈ keys(X) ∧ K == "family_name" ∧
+                           ∀ K ∈ keys(X) ⇒
+                           if K == "first_name" then X.K : string
+                           else if K == "family_name" then X.K : string
+                           else if K == "date_of_birth" then X.K : dateTime
+                           else if K == "friend" then X.K : set(user)
+                           else X.K : value }
+
+type user = { X : person | ∀ K ∈ keys(X) ⇒
+                           if K == "email"
                               then X.K : { Y : string
                                          | Y  ~= "[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}" }
-                         else if K ~= ".*" then X.K : value }
+                           else X.K : value }
+naming user = { 'base' : '@base::User/',
+                'type' : 'Hash',
+                'fields' : ["first_name", "family_name"],
+                'template' : '{base}{fields}' }
+ascribe type for user
 ```
