@@ -1,4 +1,3 @@
-
 # Gradual Typing for Graph Data
 
 Gradual typing in the term we use to describe a variety of refinement
@@ -149,6 +148,8 @@ type json = { X : document | ∀ K ∈ keys(K) ⇒ X.K : string ‌
                                             ∨ X.K : jsonlist }
 ```
 
+### Refined Documents
+
 These json types could, however, be much more constrained. For
 instance, we might have a `user` document, which could be represented
 as follows:
@@ -163,10 +164,10 @@ type user = { X : json | ∀ K ∈ keys(X) ⇒
                                    X.K ~= "[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}" }
 ```
 
-Note: An empty `else` clause is simply false. The use of
-`if_then_else` simplifies exclusion of cases such as as might occur
-when matching a wildcard pattern for properties. For instance, if we
-wish to make the user record much less strict, with an *open*
+Note: An empty `else` clause is simply false if no clause matches. The
+use of `if_then_else` simplifies exclusion of cases such as as might
+occur when matching arbitrary unspecified properties. For instance,
+if we wish to make the user record much less strict, with an *open*
 definition for other properties, we might write:
 
 ```prolog
@@ -177,8 +178,55 @@ type user = { X : json | ∀ K ∈ keys(X) ⇒
                          else if K == "email"
                               then X.K : string ∧
                                    X.K ~= "[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}"
-                         else if K ~= ".*" then X.K : value }
+                         else X.K : value }
 ```
+
+### Required Fields
+
+But we can also make things *more* strict, adding requirements that
+fields exist, for instance:
+
+```prolog
+type user = { X : json | ∃ K ∈ keys(X) ⇒ K == "first_name" ∧
+                         ∃ K ∈ keys(X) ⇒ K == "family_name" ∧
+                         ∀ K ∈ keys(X) ⇒
+                         if K == "first_name" then X.K : string
+                         else if K == "family_name" then X.K : string
+                         else if K == "date_of_birth" then X.K : dateTime
+                         else if K == "email"
+                              then X.K : string ∧
+                                   X.K ~= "[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}"
+                         else X.K : value }
+```
+
+This ensures that the `first_name` field and `family_name` field, both
+exist and are well typed.
+
+### Field Patterns
+
+We may want a particular family of fields to be given a type. One
+could imagine a scenario in which there is a naming scheme for a
+number of fields which are relatively unstructured, as might be the
+case when we have fields from some external system which we want to
+track, for instance: 
+
+```prolog
+type user = { X : json | ∃ K ∈ keys(X) ⇒ K == "first_name" ∧
+                         ∃ K ∈ keys(X) ⇒ K == "family_name" ∧
+                         ∀ K ∈ keys(X) ⇒
+                         if K == "first_name" then X.K : string
+                         else if K == "family_name" then X.K : string
+                         else if K == "date_of_birth" then X.K : dateTime
+                         else if K == "email"
+                              then X.K : string ∧
+                                   X.K ~= "[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}"
+                         else if K ~="external_.*"
+                              then 
+                         else X.K : value }
+```
+
+This ensures that the `first_name` field and `family_name` field, both
+exist and are well typed.
 
 ## Shapes in the Graph
 
@@ -189,28 +237,41 @@ shapes in our graph. For instance we can change the defintion of user
 again to include friends in the following way:
 
 ```prolog
-type user = { X : json | ∃ K ∈ keys(X) ∧ K == "first_name" ∧
-                         ∃ K ∈ keys(X) ∧ K == "family_name" ∧
+type user = { X : json | ∃ K ∈ keys(X) ⇒ K == "first_name" ∧
+                         ∃ K ∈ keys(X) ⇒ K == "family_name" ∧
                          ∀ K ∈ keys(X) ⇒
                          if K == "first_name" then X.K : string
                          else if K == "family_name" then X.K : string
                          else if K == "date_of_birth" then X.K : dateTime
                          else if K == "friend" then X.K : set(user)
+                         else if K == "pet" then X.K : set(pet)
                          else if K == "email"
                               then X.K : { Y : string
                                          | Y  ~= "[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}" }
-                         else if K ~= ".*" then X.K : value }
-    with context = { "@base": "iri://", "ref": "foo://bar/", "ref:email" : "email" }
+                         else X.K : value }
+
+type pet = { X : json | ∃ K ∈ keys(X) ⇒ K == "name" ∧
+                        ∀ K ∈ keys(X) ⇒
+                        if K == "name" then X.K : string }
 ```
 
 Simply adding a property with a type range of user to our
-specification allows us to define a social graph.
+specification allows us to define a social graph, or an ownership tree (as is the case with pet).
 
-[required keys, [key types and refinements]]
 
 ## Prefixes and Namespaces
 
-Prefixing and namespaces,
+Information coming from multiple different schemata need to have their
+namespaces represented explicitly in the database to distinguish the
+semantics of various fields, but they will often want to be *implicit*
+when retrieved for processing, which aids simplicity of interface.
+
+Explicit and careful naming of fields is a hallmark of the RDF
+universe, but is often not carefully thought of outside of it. We need
+to be able to handle both cases with minimal effort.
+
+An example of objects which one might want explicitly presented in
+ones database, but which have properties from
 
 
 ```prolog
