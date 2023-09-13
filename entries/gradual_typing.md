@@ -258,17 +258,50 @@ type pet = { X : json | ∃ K ∈ keys(X) ⇒ K == "name" ∧
 Simply adding a property with a type range of user to our
 specification allows us to define a social graph, or an ownership tree (as is the case with pet).
 
+## Choosing a Naming Scheme
+
+Given a shape we can choose a *naming scheme*. A naming scheme is a
+method by which to assign an IRI. By default the naming scheme for a
+node will be *random* with a prefix of *don't care*. The *don't care*
+prefix will enable data to be exported as valid RDF, but will not use
+a custom IRI base.
+
+If we would like to assign a specific IRI base, we can do so by
+placing it in the naming scheme. In addition, we can choose suffixes
+that are other than random.
+
+NOTE: The random naming scheme has a large amount of information and
+is suitable for exceptionally large databases in the 10s of
+terrabytes. If larger databases are envisaged, then it is necessary to
+start TerminusDB with an alternative random key size.
+
+The naming *must* have an associated shape, or it will not be possible
+to ensure that the appropriate fields exist.
+
+```prolog
+naming pet = name('iri://Pet/',random)
+naming person = name('iri://Person/',lexical,["first_name","family_name", "date_of_birth"])
+```
+
+Note, that when entering data into the database, we can tell the
+document interface which type of document we are using with the
+`@type` parameter if it is ambiguous. In the event that we do not
+assign a type, one can be inferred assuming that there is no ambiguity.
 
 ## Prefixes and Namespaces
 
-Information coming from multiple different schemata need to have their
-namespaces represented explicitly in the database to distinguish the
-semantics of various fields, but they will often want to be *implicit*
-when retrieved for processing, which aids simplicity of interface.
+Information coming from multiple different schemata might define their
+own namespaces for either classes or properties, in order to
+explicitly distinguish different semantics for different properties.
+
+However, we will also want to be able to alias these so they can be
+*implicit* in retrieved documents, which simplifies processing and
+aids in data marshalling.
 
 Explicit and careful naming of fields is a hallmark of the RDF data
 universe, but is often not carefully thought of outside of it. We need
-to be able to handle both cases with minimal effort.
+to be able to handle cases from the RDF world, but also those from
+MongoDB or SQL Tables with minimal effort.
 
 In programming languages, there are very explicit methods for the
 marshalling of semantics across name spaces, such that libraries can
@@ -280,29 +313,84 @@ Let's look at a few examples of the importation of names from other
 namespaces which allow simple display while preserving separate
 semantics.
 
-
-
 ### GeoJSON
 
-First, let's look at GeoJSON, which is a JSON format that 
+First, let's look at GeoJSON, which is a JSON format that allows us to
+describe documents pertaining to geographical entities such as shapes
+and points.
 
+The following shape could be used to describe a GeoJSON structure:
 
-## Components of a database type
+```prolog
+prefix geojson = "https://datatracker.ietf.org/doc/html/rfc7946#"
+type geojson = { X: json | ∀ K ∈ keys(X) ⇒ if K == geojson::"bbox"
+                                            then X.K : array(decimal, 3) }
+type geometry = geojson
+point_type = { X : string | X ∈ "Point" }
+point = { X: geometry | ∃ K ∈ keys(X) ⇒ K == geojson::"coordinates" ∧
+                        ∀ K ∈ keys(X) ⇒ if K == geojson::"coordinates"
+                                            then X.K : array(decimal, 1)
+                                         else if K == geojson::"type" ∧
+                                              then X.K : point_type }
+```
 
+Here we allow the specification to describe precisely in which
+namespace each property used.
 
+## Data collection as modular components
 
-* A shape, which dictates satisfaction of some type regime
+A data collection can be thought of as a number of schema components
+together with the raw data which is aligned with these schema
+components.
+
+In particular, for the meta-logical or schema layer we have:
+
+* A *shape*, which dictates satisfaction of some type regime. This in
+  turn is comprised of:
   - Local checking
   - Global obligations (referential integrity)
-* A ascription, which transfers a structural typing to a nominal typing
-* A naming scheme - which imposes requirements on the identifiers of a type
+* An *ascription*, which transfers a structural typing to a nominal typing
+* A *naming scheme* - which imposes requirements on the identifiers of a type
 
-To segregate the nominal and structural universe
+The *shapes* we have described in the former sections and correspond
+with a *structural typing*. They can tell you whether a given document
+or data value is sound according to the shape, which can be used by
+name *or* they can be used to find all occurances of a shape in the
+database (as a sort of query).
+
+An *ascription* is a special designator which states that a data value
+or node in the graph has been shown to have a given *shape*. These are
+documents who are certified as having a specific shape. One may only
+ascribe *one* type to a given object, but it is possible to have many
+types from all those which are above this type in the inheritance
+hierarchy.
+
+Finally, we have a naming schema. Naming schemes provide us with
+uniqueness guarantees for objects, and a manner in which to create new
+IRIs from the data present in an object, or simply to randomly
+construct a unique *don't care* name.
+
+## Segregation of Structural and Nominal Types
+
+If we want to move to a safe, locked down designation for a particular
+object, we will ascribe a type. Doing so means that *all* elements of
+this type name must have an ascription. This increases the rigidity,
+but also the safety of the database for those types which are
+included. It also makes query for a given type faster.
+
+One can gradually move from an untyped, to a structurally typed and
+finally to a nominally typed situation. Further this can be done for
+segments of the database as needed allowing easy data ingest and data
+migration.
+
+In short, to segregate the nominal and structural universe
 
 * Check that *any* rdf:type use is excluded from ascription in the
   schema OR matches the shape for the type described.
 * Exclude any URI that is covered by a naming scheme OR ensure it is
   within the ascribed or inferred type of the naming scheme.
+
+An example of a type ascription is as follows:
 
 ```prolog
 type person = { X : json | ∃ K ∈ keys(X) ∧ K == "first_name" ∧
