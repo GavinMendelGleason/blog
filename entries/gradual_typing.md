@@ -1,20 +1,28 @@
 # Gradual Typing for Graph Data
 
-Gradual typing in the term we use to describe a variety of refinement
-typing which can be applied to data. By gradual typing we mean to
-imply that you can slowly move from an untyped (that is universally
-typed) situation to one with quite explicit typing.  Untyped is really
-the same as universally typed. Every piece of data is made to fit a
-generic type. This universal type we call `top`.
+Gradual typing is the term we use here to describe a variety of
+refinement typing which can be applied to data. By *gradual* typing we
+mean to imply that you can slowly move from an untyped (that is
+universally typed) situation to one with quite explicit typing.  To be
+clear, untyped is really the same as universally typed. Every piece of
+data is made to fit a generic type. This universal type we call `top`.
 
-In this model we have a "real" type hierarchy formed of discrete types
+We will use concepts of both structural typing and nominal typing, and
+our gradual typing will move smoothly between these two worlds.
+
+In our model we have a "real" type hierarchy formed of discrete types
 based on *data layout*, and *refinements* over these concrete
-types. Ultimately everything lies in a single multiple-inheritance
+types. By *data layout* we mean the literal bit patterns used to
+represent something. And by *refinements* we mean predicates which
+create sub-types of this *data layout*.
+
+Ultimately everything lies in a single multiple-inheritance
 type hierarchy and the types form a *complete lattice*.
 
 By a complete lattice we mean that every two types has a well defined
-*join* and *meet*. We will make this more concrete after we describe
-the basis of our type hiearchy with some primitive types.
+*join* (a sort of disjunction) and *meet* (a sort of conjunction). We
+will make this more concrete after we describe the basis of our type
+hiearchy with some primitive types.
 
 ```
                         top
@@ -28,8 +36,8 @@ The value hierarch itself is quite elaborate, and includes all of XSD,
 as well as BSON types but we have not drawn the entire thing
 here. Some elements in this data hierarchy are really themselves
 *refinements* in that they do not change data layout, and indeed which
-actually change data-layout is somewhat arbitrary since it could in
-principle be given a different layout.
+types actually change data-layout is somewhat arbitrary since many
+could, in principle be given a different layout or the same layout.
 
 An example of such a refinement of a layout is `Token` which is
 actually simply a `string` in terms of its representation.
