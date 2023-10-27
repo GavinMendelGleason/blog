@@ -3,6 +3,10 @@
 This is Gavin Mendel-Gleason's technical blog. I use this primarily to
 organize my thoughts on distributed data management.
 
+## [Type tagging of strings in Rust](./entries/type-tagging-strings-in-rust.md)
+
+Friday, Oct 27, 2023
+
 ## [Syntax Directed Qyery: GraphQL and TypeScript in TerminusDB](./entries/star_wars_genql.md)
 
 Friday, Oct 27, 2023
