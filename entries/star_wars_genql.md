@@ -1,4 +1,4 @@
-# Using Typescript with GraphQL and TerminusDB
+# Syntax Directed Query: Using Typescript with GraphQL and TerminusDB
 
 TerminusDB provides a very convenient environment for GraphQL. And
 there are few environments more natural for GraphQL than
