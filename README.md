@@ -3,6 +3,10 @@
 This is Gavin Mendel-Gleason's technical blog. I use this primarily to
 organize my thoughts on distributed data management.
 
+## [GraphQL and TypeScript in TerminusDB](./entries/star_wars_genql.md)
+
+Friday, Oct 27, 2023
+
 ## [Big Data and TerminusDB](./entries/big_data_terminusdb.md)
 
 Thursday, Jun 15, 2023
