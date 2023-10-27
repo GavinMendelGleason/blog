@@ -19,7 +19,11 @@ One technique which has been used for decades (I used this trick in
 SML in the early 2000s) is to tag your string with a type. Your
 vetting function is the only one which is allowed to introduce the
 type, and now you can safely ensure that everywhere the string is
-used, it is only the kind of string which is vetted.
+used, it is only the kind of string which is vetted, but including the
+vetting string type in the signature of the functions which use it.
+
+The key idea: We leverage our type system to give us static guarantees
+about what we are talking about and uncover misuses of names.
 
 ## The Problem: Three naming universes which must be distinct
 
