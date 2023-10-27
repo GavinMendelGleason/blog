@@ -1,5 +1,7 @@
 # Syntax Directed Query: Using Typescript with GraphQL and TerminusDB
 
+![Traversing the graph](../assets/three_dimensional_heads_up_display_of_person.png)
+
 TerminusDB provides a very convenient environment for GraphQL. And
 there are few environments more natural for GraphQL than
 typescript. So how can I use typescript and TerminusDB together?

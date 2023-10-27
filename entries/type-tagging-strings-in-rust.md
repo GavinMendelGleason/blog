@@ -1,5 +1,7 @@
 # Type-tagging strings in Rust
 
+![Colouring the Rusty Pipes](../assets/keeping_track_of_a_complex_of_interconnected.png)
+
 Strings are pretty general data structures which can contain,
 depending on the language, nearly arbitrary byte sequences. While this
 generality makes them a very useful way of representing everything
