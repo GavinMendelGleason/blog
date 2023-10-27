@@ -55,7 +55,7 @@ schema. To do this we can just use our command line client to clone a
 resource from TerminusCMS.
 
 ```bash
-terminsdb clone https://cloud.terminusdb.com/Terminusdb_demo/Terminusdb_demo/star_wars --user=anonymous --password=any
+terminusdb clone https://cloud.terminusdb.com/Terminusdb_demo/Terminusdb_demo/star_wars --user=anonymous --password=any
 ```
 
 ## Installing GenQL
