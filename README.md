@@ -7,7 +7,7 @@ organize my thoughts on distributed data management.
 
 Friday, Oct 27, 2023
 
-## [Syntax Directed Qyery: GraphQL and TypeScript in TerminusDB](./entries/star_wars_genql.md)
+## [Syntax Directed Query: GraphQL and TypeScript in TerminusDB](./entries/star_wars_genql.md)
 
 Friday, Oct 27, 2023
 
