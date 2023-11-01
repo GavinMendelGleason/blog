@@ -230,39 +230,15 @@ Once we have created these, we will update our schema document to
 contain the information about how to create an embedding for this
 object.
 
-```javascript
+```json
 { "@type" : "Class",
   "@id" : "Work",
   "@metadata" : {
     "embedding" : {
-      "query" : "
-query($id: ID){
-  Work(id: $id){
-    composed
-    composer
-    date
-    dedication
-    duration
-    key
-    language
-    movements
-    opus
-    period
-    text
+      "query" : "query($id: ID){  Work(id: $id){ composed composer date dedication duration key language movements opus period text"
   }
 }",
-      "template" : "
-{{#if composer}}The piece was composed by {{composer}}. {{/if}}
-{{#if opus}}It is opus number {{opus}}. {{/if}}
-{{#if composed}}The piece was composed during {{composed}}. {{/if}}
-{{#if date}}The piece is dated to {{date}}. {{/if}}
-{{#if dedication}}The piece was dedicated to {{dedication}}. {{/if}}
-{{#if duration}}The piece is {{duration}} long. {{/if}}
-{{#if key}}The piece is in the key of {{key}}. {{/if}}
-{{#if movements}}The piece has {{movements}} movements. {{/if}}
-{{#if period}}The piece was composed during the {{period}} period. {{/if}}
-{{#if text}}The piece is associated with the text {{text}}. {{/if}}
-"
+      "template" : "{{#if composer}}The piece was composed by {{composer}}. {{/if}} {{#if opus}}It is opus number {{opus}}. {{/if}} {{#if composed}}The piece was composed during {{composed}}. {{/if}} {{#if date}}The piece is dated to {{date}}. {{/if}} {{#if dedication}}The piece was dedicated to {{dedication}}. {{/if}}{{#if duration}}The piece is {{duration}} long. {{/if}} {{#if key}}The piece is in the key of {{key}}. {{/if}}{{#if movements}}The piece has {{movements}} movements. {{/if}}{{#if period}}The piece was composed during the {{period}} period. {{/if}}{{#if text}}The piece is associated with the text {{text}}. {{/if}}"
     }
   },
   "key": 	{ "@type" : "Optional", "@class" : "xsd:string" },
