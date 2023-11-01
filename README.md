@@ -3,6 +3,10 @@
 This is Gavin Mendel-Gleason's technical blog. I use this primarily to
 organize my thoughts on distributed data management.
 
+## [AI Entity Resolution: Bridging Records Across Human Languages](./entries/entity_resolution.md)
+
+Wednesday, Nov 1, 2023
+
 ## [Type tagging of strings in Rust](./entries/type-tagging-strings-in-rust.md)
 
 Friday, Oct 27, 2023
