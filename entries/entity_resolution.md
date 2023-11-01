@@ -24,15 +24,24 @@ large number of rules which help to normalize fields for comparison
 (Turning Mr. into Mister, St. Into Street, etc.) and then subsequently
 using some sort of distance measure (such as
 [Levinshtein](https://en.wikipedia.org/wiki/Levenshtein_distance)) to
-avoid spelling mistakes, we can leverage the full power of LLMs to
-provide us with a semantically meaningful embedding in a
-high-dimensional vector space in which to make our comparison.
+overcome spelling mistakes and the like, and then finally assembling
+many pieces of data into some aggregate using statistical models, we
+can take a short-cut.
 
-This approach both increases performance, and reduces programmer
-tuning for record structure. And as an added magic benefit along the
-way, we also get language agnosticism for free! We can actually
-compare records in German and English for instance, and get candidates
-for merger automatically.
+We can leverage the full power of LLMs to provide us with a
+semantically meaningful embedding in a high-dimensional vector space
+in which to make our comparison.
+
+This approach both increases performance of matches, reduces
+programmer tuning for record structure and makes it easy to perform
+incremental updates to the database. This last bit is very hard for
+many matching strategies which scale poorly as new records are
+added.
+
+And amazingly, as an added magic benefit AI along the way, we also get
+language agnosticism for free! We can actually compare records in
+German and English for instance, and get candidates for merger
+automatically.
 
 Let's see how this works.
 
