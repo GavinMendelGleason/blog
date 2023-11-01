@@ -230,7 +230,7 @@ Once we have created these, we will update our schema document to
 contain the information about how to create an embedding for this
 object.
 
-```json
+```javascript
 { "@type" : "Class",
   "@id" : "Work",
   "@metadata" : {
