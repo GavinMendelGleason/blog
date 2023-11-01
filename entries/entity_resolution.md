@@ -67,7 +67,9 @@ three documents which we produce by hand. In a later blog we'll see
 candidates over a more extensive corpus (and how to find thresholds
 for merger).
 
-In TerminusDB we start with a schema definition:
+In TerminusDB we start with a schema definition. We are going to be
+comparing symphonies so we will need a number of optional fields which
+are usually present in these types of works.
 
 ```json
 { "@type" : "Class",
@@ -86,9 +88,6 @@ In TerminusDB we start with a schema definition:
 }
 ```
 
-This schema definition describes a creative work which is structured
-to deal specifically with music.
-
 We can save this as the file `creative-work-schema.json`. To load this
 schema we will need to create a database and then add this schema document.
 
@@ -104,9 +103,10 @@ Next we insert the schema:
 tdb-cli doc insert -g schema admin/works < creative-work-schema.json
 ```
 
-Now we need some documents which meet the schema definition. We are
-going to use the following documents to get an idea of distances
-between them:
+Now we need some documents which meet the schema definition. We define
+a few by hand, but one can imagine getting such data from many
+different sources, csv, or wikidata or the like. We are going to use
+only the following documents to get an idea of distances between them:
 
 ```json
 [{ "@type" : "Work",
@@ -115,7 +115,7 @@ between them:
    "key": 	"D minor",
    "opus" : "125",
    "period" : "Classical-Romantic (transitional)",
-   "text" : "Friedrich Schiller's Od to Joy",
+   "text" : "Friedrich Schiller's Ode to Joy",
    "language" : "de",
    "composed" : "1822-1824",
    "dedication" : "King Frederick William III of Prussia",
