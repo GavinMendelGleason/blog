@@ -1,6 +1,6 @@
 # AI Entity Resolution: Bridging Records Across Human Languages
 
-![An AI Matching Records to perform Entity Resolution](../assets/A_neon_3D_network_of_interconnected_database.png)
+![An AI, Matching Records to perform Entity Resolution](../assets/A_neon_3D_network_of_interconnected_database.png)
 
 Nearly everyone is familiar with having the same person twice in their
 phone contacts list. Somehow you get a record of Joe Bloggs with just
@@ -51,14 +51,29 @@ To follow along with this tutorial, we will need to install a bit of
 software:
 
 First install a [TerminusDB
-server](https://github.com/terminusdb/terminusdb) acording to the
-directions here.
+server](https://github.com/terminusdb/terminusdb) according to the
+directions here for running terminusdb in a docker-compose setup.
+
+For this tutorial you need to set up your docker-compose to use an
+insecure setup, so we can fire off the indexer manually. For
+production you should keep these actions inside of the docker with
+some middle-ware. Change your `docker-compose.yml` to include this
+ports section for vectorlink:
+
+```
+  vectorlink:
+    ports:
+      - 8080:8080
+```
 
 Then install [tdb-cli](https://github.com/terminusdb-labs/tdb-cli) so
 we can easily perform operations from the command line against the server.
 
 You will also need a command line web client, such as
 [curl](https://curl.se/).
+
+And finally you will want [jq](https://www.npmjs.com/package/node-jq)
+to help with JSON checking and formatting.
 
 ## Defining an embedding for Creative Works
 
@@ -271,7 +286,7 @@ can't just have a branch name, we need to know precisely what commit
 we are referring to.
 
 ```shell
-export COMMIT_ID=`curl 127.0.0.1:6363/api/log/admin/works?count=1 -uadmin:root | jq '.[] | .identifier' | sed 's/"//g'`
+export COMMIT_ID=`curl 127.0.0.1:6363/api/log/admin/works?count=1 -uadmin:root | jq -r '.[] | .identifier'`
 ```
 
 This will extra the last commit id from the history log. In my case it is:
@@ -293,7 +308,7 @@ export VECTOR_LINK_EMBEDDING_API_KEY="..."
 Now we can ask vector link to index our data as follows:
 
 ```shell
-export TASK_ID=`curl -H "VECTORLINK_EMBEDDING_API_KEY: $VECTOR_LINK_EMBEDDING_API_KEY" 'localhost:8080/index?commit=$COMMIT_ID&domain=admin/works'`
+export TASK_ID=`curl -H "VECTORLINK_EMBEDDING_API_KEY: $VECTOR_LINK_EMBEDDING_API_KEY" "localhost:8080/index?commit=$COMMIT_ID&domain=admin/works"`
 ```
 
 This command will give you back a task id. We can use that to check
@@ -303,7 +318,7 @@ thousands or millions of documents). You can check what the status is
 with:
 
 ```shell
-curl -H "VECTORLINK_EMBEDDING_API_KEY: $VECTOR_LINK_EMBEDDING_API_KEY" 'localhost:8080/check?task_id=$TASK_ID'
+curl -H "VECTORLINK_EMBEDDING_API_KEY: $VECTOR_LINK_EMBEDDING_API_KEY" "localhost:8080/check?task_id=$TASK_ID"
 ```
 
 It should say:
@@ -320,7 +335,7 @@ is in the neighbourhood of a given vector. Let's look up the
 similarity of records to the record `Work/Ode_to_Joy`.
 
 ```shell
-curl -H "VECTORLINK_EMBEDDING_API_KEY: $VECTOR_LINK_EMBEDDING_API_KEY" 'localhost:8080/similar?commit=$COMMIT_ID&domain=admin/works&id=terminusdb:///data/Work/Ode_to_Joy'
+curl -H "VECTORLINK_EMBEDDING_API_KEY: $VECTOR_LINK_EMBEDDING_API_KEY" "localhost:8080/similar?commit=$COMMIT_ID&domain=admin/works&id=terminusdb:///data/Work/Ode_to_Joy"
 ```
 
 For this query we get back the following response:

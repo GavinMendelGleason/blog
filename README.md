@@ -3,6 +3,10 @@
 This is Gavin Mendel-Gleason's technical blog. I use this primarily to
 organize my thoughts on distributed data management.
 
+## [DBLP and ACM publication record matching](./entries/entity_resolution_dblp_and_acm.md)
+
+Wednesday, Nov 1, 2023
+
 ## [AI Entity Resolution: Bridging Records Across Human Languages](./entries/entity_resolution.md)
 
 Wednesday, Nov 1, 2023
