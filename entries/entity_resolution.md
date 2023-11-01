@@ -57,6 +57,9 @@ directions here.
 Then install [tdb-cli](https://github.com/terminusdb-labs/tdb-cli) so
 we can easily perform operations from the command line against the server.
 
+You will also need a command line web client, such as
+[curl](https://curl.se/).
+
 ## Defining an embedding for Creative Works
 
 To get an idea of how the approach works, we are going to start on
