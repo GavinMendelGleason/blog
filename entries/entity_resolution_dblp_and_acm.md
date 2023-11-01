@@ -1,6 +1,8 @@
 # DBLP and ACM publication record matching
 ## AI entity resolution using TerminusDB, OpenAI and VectorLink
 
+![An android wandering the halls of records](../assets/A_neon_3D_network_of_interconnected_database2.png)
+
 The DBPL / ACM publication record matching benchmark was constructed
 in order to have a good test-set for exploring the quality of
 automatic record matching algorithms.
