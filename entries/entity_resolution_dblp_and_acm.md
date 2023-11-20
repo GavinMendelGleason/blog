@@ -13,6 +13,9 @@ OpenAI's [LLM](https://en.wikipedia.org/wiki/Large_language_model)
 (Large Language Model), requires very little tuning or fiddling and
 which you can easily adapt to your own data problems.
 
+The punchline is that we can get a precision of 99.6% for entity
+resolution with about half an hour of work.
+
 ## Preliminaries
 
 See [Part1](entity_resolution.md) for a description on what software

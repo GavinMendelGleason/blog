@@ -3,6 +3,10 @@
 This is Gavin Mendel-Gleason's technical blog. I use this primarily to
 organize my thoughts on distributed data management.
 
+## [Using TerminusDB from the Command Line: tdb-cli](./entries/tdb_cli.md)
+
+Monday, Nov 20, 2023
+
 ## [DBLP and ACM publication record matching](./entries/entity_resolution_dblp_and_acm.md)
 
 Wednesday, Nov 1, 2023
