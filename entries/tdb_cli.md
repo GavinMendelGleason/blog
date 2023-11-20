@@ -195,7 +195,8 @@ your database!
 And now we can try some fun queries!
 
 ### Get all people
-```
+
+```graphql
 query {
   Person {
     name
@@ -204,7 +205,8 @@ query {
 ```
 
 ### Get Bella and her parents
-```
+
+```graphql
 query {
   Person(filter:{name:{eq: "Bella"}}) {
     name
@@ -214,7 +216,8 @@ query {
 ```
 
 ### Get the children of Arthur
-```
+
+```graphql
 query {
   Person(filter:{name:{eq: "Arthur"}}) {
     name
@@ -226,7 +229,8 @@ query {
 ```
 
 ### Get all ancestors of Clara
-```
+
+```graphql
 query {
   Person(filter:{name:{eq: "Clara"}}) {
     name
