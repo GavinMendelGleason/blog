@@ -234,7 +234,7 @@ query {
 query {
   Person(filter:{name:{eq: "Clara"}}) {
     name
-		_path_to_Person(path:"child_of*") {
+      _path_to_Person(path:"child_of*") {
       name
     }
   }
