@@ -15,7 +15,7 @@ be a bit more structured in our development than javascript gives you,
 and we enjoyed the assistance that can be provided in interactive
 development by the type checker.
 
-We will give a quick tour of the basics
+We will give a quick tour of the basics.
 
 ## Start a new terminusdb instance using docker
 
@@ -100,10 +100,10 @@ tdb-cli doc get family -g schema > schema.json
 
 add the following:
 
-We can then add the following to this schema:
+We can then add the following to this schema (with our favourite
+editor):
 
-```shell
-echo '
+```json
 {
   "@type": "Class",
   "@id": "Person",
@@ -111,7 +111,6 @@ echo '
            "@fields": ["name"]},
   "name": "xsd:string"
 }
-' >> schema.json
 ```
 
 This defines a `Person` class, in which each `Person` has a
@@ -126,6 +125,11 @@ Now we can put our schema into the database:
 tdb-cli doc insert family -f -g schema < schema.json
 ```
 
+Here the `-f` flag tells us we are wiping out the entire schema to
+replace with the data we are currently inserting (it's like a delete
+all/insert). The `-g` says that we are altering the schema, rather
+than the instance graph (where normal data resides).
+
 ## Adding data under schema control
 
 Once we have a basic schema we can start adding data:
@@ -137,10 +141,18 @@ tdb-cli doc insert family -d '{"name": "Bella"}'
 tdb-cli doc insert family -d '{"name": "Briana"}'
 tdb-cli doc insert family -d '{"name": "Bob"}'
 tdb-cli doc insert family -d '{"name": "Clara"}'
-tdb-cli doc insert family -d '{"name": "Carl"}'
 ```
 
-This adds a number of people to the database.
+This adds a number of people to the database. Note the use of `-d`,
+which specifies the data on the command line as a JSON string, rather
+than taking it from standard input. You could instead take it from
+standard in as follows:
+
+```shell
+tdb-cli doc insert family <<EOF
+{"name": "Carl"}
+EOF
+```
 
 ## Change  the schema
 
