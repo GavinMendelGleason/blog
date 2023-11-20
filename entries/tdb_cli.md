@@ -33,6 +33,16 @@ This will get a new version of TerminusDB and launch it with the name
 where your databases are kept (in case you wan to start another
 terminusdb later with the same data).
 
+## Install tdb-cli
+
+To get started with `tdb-cli`, we first have to install it!
+
+```shell
+npm install -g @terminusdb/tdb-cli
+```
+
+Now we are ready for action...
+
 ## Configure tdb-cli
 
 To configure `tdb-cli` you can run the interactive setup in a shell:
