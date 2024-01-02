@@ -1,6 +1,6 @@
 # Parallelising HNSW
 
-HNSW (heirarchical small word graphs) were introduced in an excellent
+HNSW (heirarchically navigable small word graphs) were introduced in an excellent
 and very readable paper [Yu A. Malkov,
 D. A. Yashunin](https://arxiv.org/abs/1603.09320) which has given rise
 to a large number of implementations which are at the core of many
